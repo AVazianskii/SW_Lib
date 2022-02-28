@@ -2,7 +2,7 @@
 
 namespace Races_libs
 {
-    public class Duro_race : Race_class
+    internal sealed class Duro_race : Race_class
     {
         #region // переменные класса 
         #endregion

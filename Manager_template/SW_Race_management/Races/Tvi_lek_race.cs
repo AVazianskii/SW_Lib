@@ -2,7 +2,7 @@
 
 namespace Races_libs
 {
-    public class Tvi_lek_race : Race_class
+    internal sealed class Tvi_lek_race : Race_class
     {
         #region // переменные класса 
         #endregion

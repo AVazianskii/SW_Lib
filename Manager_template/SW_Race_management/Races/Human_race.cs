@@ -2,7 +2,7 @@
 
 namespace Races_libs
 {
-    public class Human_race : Race_class
+    internal sealed class Human_race : Race_class
     {
         #region // переменные класса 
         #endregion

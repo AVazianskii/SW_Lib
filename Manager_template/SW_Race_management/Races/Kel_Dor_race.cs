@@ -2,7 +2,7 @@
 
 namespace Races_libs
 {
-    public class Kel_Dor_race : Race_class
+    internal sealed class Kel_Dor_race : Race_class
     {
         #region // переменные класса 
         #endregion

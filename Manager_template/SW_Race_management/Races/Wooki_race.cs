@@ -2,7 +2,7 @@
 
 namespace Races_libs
 {
-    public class Wooki_race : Race_class
+    internal sealed class Wooki_race : Race_class
     {
         #region // переменные класса 
         #endregion

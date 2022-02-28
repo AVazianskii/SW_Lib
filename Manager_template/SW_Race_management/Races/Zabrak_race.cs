@@ -2,7 +2,7 @@
 
 namespace Races_libs
 {
-    public class Zabrak_race : Race_class
+    internal sealed class Zabrak_race : Race_class
     {
         #region // переменные класса 
         #endregion

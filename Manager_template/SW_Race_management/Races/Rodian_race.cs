@@ -2,7 +2,7 @@
 
 namespace Races_libs
 {
-    public class Rodian_race : Race_class
+    internal sealed class Rodian_race : Race_class
     {
         #region // переменные класса 
         #endregion
