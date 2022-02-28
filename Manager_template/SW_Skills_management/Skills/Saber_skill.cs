@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Skills_libs
 {
-    public class Saber_skill :Skill_Class
+    internal sealed class Saber_skill :Skill_Class
     {
         #region // конструктор класса
         public Saber_skill()

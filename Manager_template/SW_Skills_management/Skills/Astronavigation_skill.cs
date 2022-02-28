@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Skills_libs
 {
-    public class Astronavigation_skill: Skill_Class
+    internal sealed class Astronavigation_skill: Skill_Class
     {
         #region // конструктор класса
         public Astronavigation_skill() // определяем конструктор класса, используя конструктор базового класса

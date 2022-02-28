@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Skills_libs
 {
-    public class Music_skill :Skill_Class
+    internal sealed class Music_skill :Skill_Class
     {
         #region // конструктор класса
         public Music_skill()

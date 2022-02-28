@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Skills_libs
 {
-    public class Observation_skill:Skill_Class
+    internal sealed class Observation_skill:Skill_Class
     {
         #region // конструктор класса
         public Observation_skill()

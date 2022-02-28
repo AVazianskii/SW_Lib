@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Skills_libs
 {
-    public class Interrogation_skill : Skill_Class
+    internal sealed class Interrogation_skill : Skill_Class
     {
         #region // конструктор класса
         public Interrogation_skill()

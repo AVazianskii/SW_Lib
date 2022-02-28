@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Skills_libs
 {
-    public class Evasion:Skill_Class
+    internal sealed class Evasion:Skill_Class
     {
         #region // конструктор класса
         public Evasion() // определяем конструктор класса, используя конструктор базового класса

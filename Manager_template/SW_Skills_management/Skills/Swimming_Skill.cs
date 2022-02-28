@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Skills_libs
 {
-    public class Swimming_Skill : Skill_Class
+    internal sealed class Swimming_Skill : Skill_Class
     {
         #region // конструктор класса
         public Swimming_Skill()

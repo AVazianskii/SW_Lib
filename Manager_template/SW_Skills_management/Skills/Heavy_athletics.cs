@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Skills_libs
 {
-    public class Heavy_athletics :Skill_Class
+    internal sealed class Heavy_athletics :Skill_Class
     {
         #region // конструктор класса
         public Heavy_athletics()

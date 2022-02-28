@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Skills_libs
 {
-    public class Training_pet_skill : Skill_Class
+    internal sealed class Training_pet_skill : Skill_Class
     {
         #region // конструктор класса
         public Training_pet_skill()

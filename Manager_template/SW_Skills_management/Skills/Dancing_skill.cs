@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Skills_libs
 {
-    public class Dancing_skill : Skill_Class
+    internal sealed class Dancing_skill : Skill_Class
     {
         #region // конструктор класса
         public Dancing_skill() // определяем конструктор класса, используя конструктор базового класса

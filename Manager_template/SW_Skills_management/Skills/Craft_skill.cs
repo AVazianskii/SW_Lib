@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Skills_libs
 {
-    public class Сraft_skill : Skill_Class
+    internal sealed class Сraft_skill : Skill_Class
     {
         #region // конструктор класса
         public Сraft_skill() // определяем конструктор класса, используя конструктор базового класса

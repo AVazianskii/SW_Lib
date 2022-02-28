@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Skills_libs
 {
-    public class Driving_skill : Skill_Class
+    internal sealed class Driving_skill : Skill_Class
     {
         #region // конструктор класса
         public Driving_skill()  // определяем конструктор класса, используя конструктор базового класса

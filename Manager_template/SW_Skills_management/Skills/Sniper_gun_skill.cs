@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Skills_libs
 {
-    public class Sniper_gun_skill:Skill_Class
+    internal sealed class Sniper_gun_skill:Skill_Class
     {
         #region // конструктор класса
         public Sniper_gun_skill()

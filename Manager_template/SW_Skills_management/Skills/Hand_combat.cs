@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Skills_libs
 {
-    public class Hand_combat : Skill_Class
+    internal sealed class Hand_combat : Skill_Class
     {
         #region // конструктор класса
         public Hand_combat()

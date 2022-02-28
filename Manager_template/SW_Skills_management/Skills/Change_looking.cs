@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Skills_libs
 {
-    public class Change_looking : Skill_Class
+    internal sealed class Change_looking : Skill_Class
     {
         #region // конструктор класса
         public Change_looking()  // определяем конструктор класса, используя конструктор базового класса

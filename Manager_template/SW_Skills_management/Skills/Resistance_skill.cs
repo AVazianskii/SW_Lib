@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Skills_libs
 {
-    public class Resistance_skill:Skill_Class
+    internal sealed class Resistance_skill:Skill_Class
     {
         #region // конструктор класса
         public Resistance_skill()

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Skills_libs
 {
-    public class Acrobatic_skill:Skill_Class
+    internal sealed class Acrobatic_skill:Skill_Class
     {
         #region // конструктор класса
         public Acrobatic_skill()  // определяем конструктор класса, используя конструктор базового класса

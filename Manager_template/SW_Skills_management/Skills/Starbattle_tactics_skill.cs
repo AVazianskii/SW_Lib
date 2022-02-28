@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Skills_libs
 {
-    public class Starbattle_tactics_skill : Skill_Class
+    internal sealed class Starbattle_tactics_skill : Skill_Class
     {
         #region // конструктор класса
         public Starbattle_tactics_skill()

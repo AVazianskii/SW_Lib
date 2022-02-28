@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Skills_libs
 {
-    public class Stealth_class : Skill_Class
+    internal sealed class Stealth_class : Skill_Class
     {
         #region // конструктор класса
         public Stealth_class()
