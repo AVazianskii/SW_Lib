@@ -298,8 +298,6 @@ namespace SW_Character_creation
             Race_attributes_bonus_coloumn_name = new List<string>();
             Race_age_statuses_coloumn_name = new List<string>();
             Race_combat_parameters_coloumn_name = new List<string>();
-
-
         }
     }
 }

@@ -6,27 +6,28 @@ namespace SW_Character_creation
 {
     public partial class Race_manager : Abstract_manager
     {
+        private static Race_manager Race_manager_instance;
         // Сегмент кода, отвечающий за инициализацию различных переменных
         #region Объявление переменной в виде коллекции рас
         public List<Race_class> _Races;
         #endregion
         #region Объявление переменных для каждой из рас
-        public Empty_race Empty_Race;
-        public Human_race Human;
-        public Botan_race Botan;
-        public Cereanin_race Cereanin;
-        public Duro_race Duro;
-        public Evok_race Evok;
-        public Gamor_race Gamor;
-        public Gungan_race Gungan;
-        public Kel_Dor_race Kel_Dor;
-        public Mon_Kalamari_race Mon_Kalamari;
-        public Rodian_race Rodian;
-        public Sullu_race Sullu;
-        public Trando_race Trando;
-        public Tvi_lek_race Tvi_lek;
-        public Wooki_race Wooki;
-        public Zabrak_race Zabrak;
+        private Empty_race Empty_Race;
+        private Human_race Human;
+        private Botan_race Botan;
+        private Cereanin_race Cereanin;
+        private Duro_race Duro;
+        private Evok_race Evok;
+        private Gamor_race Gamor;
+        private Gungan_race Gungan;
+        private Kel_Dor_race Kel_Dor;
+        private Mon_Kalamari_race Mon_Kalamari;
+        private Rodian_race Rodian;
+        private Sullu_race Sullu;
+        private Trando_race Trando;
+        private Tvi_lek_race Tvi_lek;
+        private Wooki_race Wooki;
+        private Zabrak_race Zabrak;
         #endregion
 
         #region переменные для обращения к базе SQLite

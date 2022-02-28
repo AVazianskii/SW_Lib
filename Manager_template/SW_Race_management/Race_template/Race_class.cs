@@ -128,9 +128,8 @@ namespace Races_libs
         #endregion
 
         #region // конструктор класса
-        public Race_class() // SW_Character SW_Char
+        internal Race_class() 
         {
-            //_SW_Char = SW_Char;
             Set_Error_Code(0);
         }
         #endregion
