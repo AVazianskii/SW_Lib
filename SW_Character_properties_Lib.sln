@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32002.185
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SW_Lib", "Manager_template\SW_Lib.csproj", "{6EC44512-7448-4786-A2ED-6C376D196087}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SW_Character_properties_Lib", "Manager_template\SW_Character_properties_Lib.csproj", "{6EC44512-7448-4786-A2ED-6C376D196087}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
