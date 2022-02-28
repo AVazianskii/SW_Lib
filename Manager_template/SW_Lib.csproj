@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6EC44512-7448-4786-A2ED-6C376D196087}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Manager_template</RootNamespace>
+    <AssemblyName>Manager_template</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Manager_template\Abstract_manager.cs" />
+    <Compile Include="Manager_template\IManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SW_Attribute_management\Attributes\Agility_atr.cs" />
+    <Compile Include="SW_Attribute_management\Attributes\Charm_atr.cs" />
+    <Compile Include="SW_Attribute_management\Attributes\Intelligence_atr.cs" />
+    <Compile Include="SW_Attribute_management\Attributes\Perception_atr.cs" />
+    <Compile Include="SW_Attribute_management\Attributes\Quickness_atr.cs" />
+    <Compile Include="SW_Attribute_management\Attributes\Stamina_atr.cs" />
+    <Compile Include="SW_Attribute_management\Attributes\Strength_atr.cs" />
+    <Compile Include="SW_Attribute_management\Attributes\Willpower_atr.cs" />
+    <Compile Include="SW_Attribute_management\Attribute_manager\00_Atr_manager_init.cs" />
+    <Compile Include="SW_Attribute_management\Attribute_manager\01_Atr_manager_Method_Upload_general_attribute_info.cs" />
+    <Compile Include="SW_Attribute_management\Attribute_manager\02_Atr_manager_Method_Upload_attribute_costs_info.cs" />
+    <Compile Include="SW_Attribute_management\Attribute_manager\03_Atr_manager_Method_Upload_attribute_age_status_limits.cs" />
+    <Compile Include="SW_Attribute_management\Attribute_manager\04_Atr_manager_Method_Upload_attribute_range_limits.cs" />
+    <Compile Include="SW_Attribute_management\Attribute_manager\05_Atr_manager_Method_run_download_from_SQLite.cs" />
+    <Compile Include="SW_Attribute_management\Attribute_manager\06_Atr_manager_Method_run_download_and_upload_data.cs" />
+    <Compile Include="SW_Attribute_management\Attribute_manager\07_Atr_manager_constructor.cs" />
+    <Compile Include="SW_Attribute_management\Attribute_template\Atribute_class.cs" />
+    <Compile Include="SW_Race_management\Races\Botan_race.cs" />
+    <Compile Include="SW_Race_management\Races\Cereanin_race.cs" />
+    <Compile Include="SW_Race_management\Races\Duro_race.cs" />
+    <Compile Include="SW_Race_management\Races\Empty_race.cs" />
+    <Compile Include="SW_Race_management\Races\Evok_race.cs" />
+    <Compile Include="SW_Race_management\Races\Gamor_race.cs" />
+    <Compile Include="SW_Race_management\Races\Gungan_race.cs" />
+    <Compile Include="SW_Race_management\Races\Human_race.cs" />
+    <Compile Include="SW_Race_management\Races\Kel_Dor_race.cs" />
+    <Compile Include="SW_Race_management\Races\Mon_Kalamari_race.cs" />
+    <Compile Include="SW_Race_management\Races\Rodian_race.cs" />
+    <Compile Include="SW_Race_management\Races\Sullu_race.cs" />
+    <Compile Include="SW_Race_management\Races\Trando_race.cs" />
+    <Compile Include="SW_Race_management\Races\Tvi_lek_race.cs" />
+    <Compile Include="SW_Race_management\Races\Wooki_race.cs" />
+    <Compile Include="SW_Race_management\Races\Zabrak_race.cs" />
+    <Compile Include="SW_Race_management\Race_manager\01_Race_manager_init.cs" />
+    <Compile Include="SW_Race_management\Race_manager\02_Race_manger_Method_run_download_from_SQLite.cs" />
+    <Compile Include="SW_Race_management\Race_manager\03_Race_manager_Method_upload_race_general_info.cs" />
+    <Compile Include="SW_Race_management\Race_manager\04_Race_manager_Method_upload_languages_info.cs" />
+    <Compile Include="SW_Race_management\Race_manager\05_Race_manager_Method_upload_race_skill_bonus.cs" />
+    <Compile Include="SW_Race_management\Race_manager\06_Race_manager_Method_Upload_race_attributes_bonus.cs" />
+    <Compile Include="SW_Race_management\Race_manager\07_Race_manager_Method_upload_race_age_statuses.cs" />
+    <Compile Include="SW_Race_management\Race_manager\08_Race_manager_Method_upload_combat_parameters.cs" />
+    <Compile Include="SW_Race_management\Race_manager\14_Race_manager_download_and_upload_process.cs" />
+    <Compile Include="SW_Race_management\Race_manager\15_Race_manager_constructor.cs" />
+    <Compile Include="SW_Race_management\Race_template\Race_class.cs" />
+    <Compile Include="SW_Skills_management\Skills\Acrobatic_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Astronavigation_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Bombing_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Change_looking.cs" />
+    <Compile Include="SW_Skills_management\Skills\Climbing_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Craft_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Dancing_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Deception_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Diplomacy_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Driving_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Drug_production_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Engineering_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Evasion.cs" />
+    <Compile Include="SW_Skills_management\Skills\Fortitude_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Hand_combat.cs" />
+    <Compile Include="SW_Skills_management\Skills\Heavy_athletics.cs" />
+    <Compile Include="SW_Skills_management\Skills\Heavy_gun_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Insight_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Interrogation_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Knowledge_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Language_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Leadership_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Light_gun_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Light_saber_crafting.cs" />
+    <Compile Include="SW_Skills_management\Skills\Light_saber_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Medicine_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Music_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Observation_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Old_weapon_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Pilot_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Programming_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Repair_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Resistance_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Riding_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Saber_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Science_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Security_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Seduction_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Singing_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Sniper_gun_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Starbattle_tactics_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Stealth_class.cs" />
+    <Compile Include="SW_Skills_management\Skills\Surviing_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Swimming_Skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Throw_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Trading_skill.cs" />
+    <Compile Include="SW_Skills_management\Skills\Training_pet_skill.cs" />
+    <Compile Include="SW_Skills_management\Skill_manager\00_Skill_manager_init.cs" />
+    <Compile Include="SW_Skills_management\Skill_manager\09_Skill_manager_Method_Run_download_from_SQLite.cs" />
+    <Compile Include="SW_Skills_management\Skill_manager\10_Skill_manager_Method_run_download_and_upload_data.cs" />
+    <Compile Include="SW_Skills_management\Skill_manager\11_Skill_manager_constructor.cs" />
+    <Compile Include="SW_Skills_management\Skill_template\Skill_Class.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="SW_Race_management\Race_pictures\Botan.jpg" />
+    <Content Include="SW_Race_management\Race_pictures\Cereanin.jpg" />
+    <Content Include="SW_Race_management\Race_pictures\Duro.jpg" />
+    <Content Include="SW_Race_management\Race_pictures\Evok.jpg" />
+    <Content Include="SW_Race_management\Race_pictures\Gamor.jpg" />
+    <Content Include="SW_Race_management\Race_pictures\Gungan.jpg" />
+    <Content Include="SW_Race_management\Race_pictures\Human.jpg" />
+    <Content Include="SW_Race_management\Race_pictures\Keldor.jpg" />
+    <Content Include="SW_Race_management\Race_pictures\MonKalamari.jpg" />
+    <Content Include="SW_Race_management\Race_pictures\Rodian.jpg" />
+    <Content Include="SW_Race_management\Race_pictures\Sullu.jpg" />
+    <Content Include="SW_Race_management\Race_pictures\Trando.jpg" />
+    <Content Include="SW_Race_management\Race_pictures\Tvilek.jpg" />
+    <Content Include="SW_Race_management\Race_pictures\Wooki.jpg" />
+    <Content Include="SW_Race_management\Race_pictures\Zabrak.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SW_Attribute_management\Database\Attributes.db" />
+    <None Include="SW_Race_management\Database\Races.db" />
+    <None Include="SW_Skills_management\Database\Skills.db" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
