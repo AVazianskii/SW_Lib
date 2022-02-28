@@ -2,7 +2,7 @@
 
 namespace Attribute_libs
 {
-    public class Willpower_atr : Atribute_class
+    internal sealed class Willpower_atr : Atribute_class
     {
         #region // конструктор класса
         public Willpower_atr()  // определяем конструктор класса, используя конструктор базового класса

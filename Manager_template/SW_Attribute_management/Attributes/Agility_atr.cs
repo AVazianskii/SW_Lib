@@ -2,7 +2,7 @@
 
 namespace Attribute_libs
 {
-    public class Agility_atr :Atribute_class
+    internal sealed class Agility_atr :Atribute_class
     {
         #region // конструктор класса
         public Agility_atr() // определяем конструктор класса, используя конструктор базового класса

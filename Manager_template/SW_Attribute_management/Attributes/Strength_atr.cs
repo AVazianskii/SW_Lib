@@ -2,7 +2,7 @@
 
 namespace Attribute_libs
 {
-    public class Strength_atr : Atribute_class
+    internal sealed class Strength_atr : Atribute_class
     {
         #region // конструктор класса
         public Strength_atr()// определяем конструктор класса, используя конструктор базового класса

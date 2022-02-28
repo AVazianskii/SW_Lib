@@ -2,7 +2,7 @@
 
 namespace Attribute_libs
 {
-    public class Stamina_atr: Atribute_class
+    internal sealed class Stamina_atr: Atribute_class
     {
         #region // конструктор класса
         public Stamina_atr()  // определяем конструктор класса, используя конструктор базового класса
