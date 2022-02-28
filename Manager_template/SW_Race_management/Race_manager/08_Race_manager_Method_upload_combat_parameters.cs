@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Races_libs;
 
-namespace Races_libs
+namespace SW_Character_creation
 {
     public partial class Race_manager
     {

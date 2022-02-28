@@ -1,11 +1,12 @@
 ﻿using System.Data.SQLite;
 using System.Collections.Generic;
+using Races_libs;
 
-namespace Races_libs
+namespace SW_Character_creation
 {
     public partial class Race_manager
     {
-        public Race_manager()
+        private Race_manager()
         {
             #region инициализация рас
             Empty_Race = new Empty_race();
@@ -288,7 +289,7 @@ namespace Races_libs
             Race_skills_bonus.Add(Insight_bonus);
             Race_skills_bonus.Add(Seduction_bonus);
             #endregion
-            SQLite_connection_string = @"Data Source=D:\STAR WARS Saga\Character_creation\Races_Libs\SW_Race_manager\Races.db;Version=3;";
+            SQLite_connection_string = @"Data Source=D:\STAR WARS Saga\Character_creation\Manager_template\Manager_template\SW_Race_management\Database\Races.db;Version=3;";
             SQLite_connection = new SQLiteConnection(SQLite_connection_string);
             
             Race_general_info_coloumn_name = new List<string>();

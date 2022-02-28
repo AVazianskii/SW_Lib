@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
+using Attribute_libs;
 
-namespace Attribute_libs
+namespace SW_Character_creation
 {
     public partial class Attribute_manager
     {
-        public Attribute_manager()
+        private Attribute_manager()
         {
-            SQLite_connection_string = @"Data Source=D:\STAR WARS Saga\Character_creation\Atributes_Libs\Attributes.db;Version=3;";
+            SQLite_connection_string = @"Data Source=D:\STAR WARS Saga\Character_creation\Manager_template\Manager_template\SW_Attribute_management\Database\Attributes.db;Version=3;";
             SQLite_connection = new SQLiteConnection(SQLite_connection_string);
 
             #region инициализация переменных обхектов атрибутов и коллекции этих атрибутов

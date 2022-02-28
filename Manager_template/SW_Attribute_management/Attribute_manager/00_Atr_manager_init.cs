@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
+using Attribute_libs;
 
-namespace Attribute_libs
+namespace SW_Character_creation
 {
-    public partial class Attribute_manager
+    public partial class Attribute_manager : Abstract_manager
     {
         public Strength_atr Strength;
         public Agility_atr Agility;
@@ -50,11 +51,6 @@ namespace Attribute_libs
 
         private List<string> Attribute_general_description;
 
-        private enum Type_of_var
-        {
-            string_type,
-            int_type
-        }
         public enum enum_Atributes // перечисляем порядок атрибутов в последовательности, начиная с 0
         {
             Strength,   

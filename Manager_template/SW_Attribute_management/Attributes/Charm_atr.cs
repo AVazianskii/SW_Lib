@@ -1,4 +1,4 @@
-﻿
+﻿using SW_Character_creation;
 namespace Attribute_libs
 {
     public class Charm_atr : Atribute_class

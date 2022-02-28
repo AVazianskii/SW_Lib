@@ -36,7 +36,8 @@ namespace Attribute_libs
         private string description;         // описание атрибута персонажа
         private string Error_msg;
 
-        private string path_read_description; // Путь к файлу для вычитывания текстового описания атрибута
+        private int attribute_cost_for_atr,
+                    attribute_cost_for_exp;
 
         #endregion
 
@@ -247,11 +248,12 @@ namespace Attribute_libs
 
         public void Set_atribute_code(int insert_int) { atribute_code = insert_int; }
         public int Get_atribute_code() { return atribute_code; }
+        public void Set_attribute_cost_for_atr(int insert_int) { attribute_cost_for_atr = insert_int; }
+        public int Get_attribute_cost_for_atr() { return attribute_cost_for_atr; }
+        public void Set_attribute_cost_for_exp(int insert_int) { attribute_cost_for_exp = insert_int; }
+        public int Get_attribute_cost_for_exp() { return attribute_cost_for_exp; }
         #endregion
-        // Устанавливаем путь к текстовому файлу с описанием навыка
-        public void Set_path_read_description(string input_text) { path_read_description = input_text; }
-        // Предоставляем путь к текстовому файлу с описанием навыка
-        public string Get_path_read_description() { return path_read_description; }
+
 
         #endregion
 

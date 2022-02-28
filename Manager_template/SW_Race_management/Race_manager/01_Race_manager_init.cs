@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Data.SQLite;
+using Races_libs;
 
-
-namespace Races_libs
+namespace SW_Character_creation
 {
-    public partial class Race_manager
+    public partial class Race_manager : Abstract_manager
     {
         // Сегмент кода, отвечающий за инициализацию различных переменных
         #region Объявление переменной в виде коллекции рас
@@ -187,11 +187,6 @@ namespace Races_libs
             _Tvilek,         // 13
             _Wooki,          // 14
             _Zabrak          // 15
-        }
-        enum Type_of_var
-        {
-            string_type,
-            int_type
         }
     }
 }

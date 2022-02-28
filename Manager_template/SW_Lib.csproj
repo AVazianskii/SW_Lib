@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,8 @@
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,8 +34,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.115.5\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.115.5\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,7 +76,6 @@
     <Compile Include="SW_Attribute_management\Attribute_manager\02_Atr_manager_Method_Upload_attribute_costs_info.cs" />
     <Compile Include="SW_Attribute_management\Attribute_manager\03_Atr_manager_Method_Upload_attribute_age_status_limits.cs" />
     <Compile Include="SW_Attribute_management\Attribute_manager\04_Atr_manager_Method_Upload_attribute_range_limits.cs" />
-    <Compile Include="SW_Attribute_management\Attribute_manager\05_Atr_manager_Method_run_download_from_SQLite.cs" />
     <Compile Include="SW_Attribute_management\Attribute_manager\06_Atr_manager_Method_run_download_and_upload_data.cs" />
     <Compile Include="SW_Attribute_management\Attribute_manager\07_Atr_manager_constructor.cs" />
     <Compile Include="SW_Attribute_management\Attribute_template\Atribute_class.cs" />
@@ -78,7 +96,6 @@
     <Compile Include="SW_Race_management\Races\Wooki_race.cs" />
     <Compile Include="SW_Race_management\Races\Zabrak_race.cs" />
     <Compile Include="SW_Race_management\Race_manager\01_Race_manager_init.cs" />
-    <Compile Include="SW_Race_management\Race_manager\02_Race_manger_Method_run_download_from_SQLite.cs" />
     <Compile Include="SW_Race_management\Race_manager\03_Race_manager_Method_upload_race_general_info.cs" />
     <Compile Include="SW_Race_management\Race_manager\04_Race_manager_Method_upload_languages_info.cs" />
     <Compile Include="SW_Race_management\Race_manager\05_Race_manager_Method_upload_race_skill_bonus.cs" />
@@ -136,7 +153,6 @@
     <Compile Include="SW_Skills_management\Skills\Trading_skill.cs" />
     <Compile Include="SW_Skills_management\Skills\Training_pet_skill.cs" />
     <Compile Include="SW_Skills_management\Skill_manager\00_Skill_manager_init.cs" />
-    <Compile Include="SW_Skills_management\Skill_manager\09_Skill_manager_Method_Run_download_from_SQLite.cs" />
     <Compile Include="SW_Skills_management\Skill_manager\10_Skill_manager_Method_run_download_and_upload_data.cs" />
     <Compile Include="SW_Skills_management\Skill_manager\11_Skill_manager_constructor.cs" />
     <Compile Include="SW_Skills_management\Skill_template\Skill_Class.cs" />
@@ -160,9 +176,21 @@
     <Content Include="SW_Race_management\Race_pictures\Zabrak.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
     <None Include="SW_Attribute_management\Database\Attributes.db" />
     <None Include="SW_Race_management\Database\Races.db" />
     <None Include="SW_Skills_management\Database\Skills.db" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
 </Project>

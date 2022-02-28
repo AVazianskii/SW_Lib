@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using Attribute_libs;
 
-namespace Attribute_libs
+namespace SW_Character_creation
 {
     public partial class Attribute_manager
     {

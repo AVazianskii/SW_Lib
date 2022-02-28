@@ -1,4 +1,6 @@
-﻿namespace Attribute_libs
+﻿using SW_Character_creation;
+
+namespace Attribute_libs
 {
     public class Agility_atr :Atribute_class
     {

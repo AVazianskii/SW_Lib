@@ -1,4 +1,5 @@
-﻿
+﻿using SW_Character_creation;
+
 namespace Attribute_libs
 {
     public class Stamina_atr: Atribute_class

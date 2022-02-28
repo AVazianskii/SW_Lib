@@ -1,5 +1,7 @@
 ﻿using System;
-namespace Attribute_libs
+using Attribute_libs;
+
+namespace SW_Character_creation
 {
     public partial class Attribute_manager
     {
