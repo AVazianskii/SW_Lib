@@ -5,7 +5,7 @@ namespace Attribute_libs
     internal sealed class Perception_atr : Atribute_class
     {
         #region // конструктор класса
-        public Perception_atr() // определяем конструктор класса, используя конструктор базового класса
+        internal Perception_atr() // определяем конструктор класса, используя конструктор базового класса
         {
             Set_atr_score(0);                       // Устанавливаем текущее показатель атрибута 
             Set_atribute_code((int)Attribute_manager.enum_Atributes.Perception);    // Устанавливаем код текущего атрибута

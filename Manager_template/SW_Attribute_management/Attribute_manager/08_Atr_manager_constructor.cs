@@ -79,10 +79,6 @@ namespace SW_Character_creation
             Attribute_range_limits.Add(Attribute_epic_limit);
             Attribute_range_limits.Add(Attribute_immortal_limit);
             #endregion
-
-
-
-
         }
     }
 }

@@ -5,7 +5,7 @@ namespace Attribute_libs
     internal sealed class Willpower_atr : Atribute_class
     {
         #region // конструктор класса
-        public Willpower_atr()  // определяем конструктор класса, используя конструктор базового класса
+        internal Willpower_atr()  // определяем конструктор класса, используя конструктор базового класса
         {
             Set_atr_score(0);                       // Устанавливаем текущее показатель атрибута 
             Set_atribute_code((int)Attribute_manager.enum_Atributes.Willpower);    // Устанавливаем код текущего атрибута

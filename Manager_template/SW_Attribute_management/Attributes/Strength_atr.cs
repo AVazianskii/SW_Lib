@@ -5,7 +5,7 @@ namespace Attribute_libs
     internal sealed class Strength_atr : Atribute_class
     {
         #region // конструктор класса
-        public Strength_atr()// определяем конструктор класса, используя конструктор базового класса
+        internal Strength_atr()// определяем конструктор класса, используя конструктор базового класса
         {
             Set_atr_score(0);                       // Устанавливаем текущее показатель атрибута 
             Set_atribute_code((int)Attribute_manager.enum_Atributes.Strength);    // Устанавливаем код текущего атрибута

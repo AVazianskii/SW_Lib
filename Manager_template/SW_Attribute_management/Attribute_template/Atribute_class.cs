@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Attribute_libs
+﻿namespace Attribute_libs
 {
     public class Atribute_class
     {
@@ -42,7 +36,7 @@ namespace Attribute_libs
         #endregion
 
         #region // Конструктор шаблона
-        public Atribute_class()
+        internal Atribute_class()
         {
             atribute_for_atr = 0;           // устанавливаем значение счетчика прокачки за очки атрибутов
             atribute_for_exp = 0;           // устанавливаем значение счетчика прокачки за очки опыта

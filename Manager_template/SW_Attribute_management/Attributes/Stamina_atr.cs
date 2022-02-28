@@ -5,7 +5,7 @@ namespace Attribute_libs
     internal sealed class Stamina_atr: Atribute_class
     {
         #region // конструктор класса
-        public Stamina_atr()  // определяем конструктор класса, используя конструктор базового класса
+        internal Stamina_atr()  // определяем конструктор класса, используя конструктор базового класса
         {
             Set_atr_score(0);                       // Устанавливаем текущее показатель атрибута 
             Set_atribute_code((int)Attribute_manager.enum_Atributes.Stamina);    // Устанавливаем код текущего атрибута

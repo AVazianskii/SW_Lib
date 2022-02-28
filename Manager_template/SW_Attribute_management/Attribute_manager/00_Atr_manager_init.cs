@@ -7,14 +7,16 @@ namespace SW_Character_creation
 {
     public partial class Attribute_manager : Abstract_manager
     {
-        public Strength_atr Strength;
-        public Agility_atr Agility;
-        public Stamina_atr Stamina;
-        public Perception_atr Perception;
-        public Quickness_atr Quickness;
-        public Intelligence_atr Intelligence;
-        public Charm_atr Charm;
-        public Willpower_atr Willpower;
+        private static Attribute_manager Attribute_manager_instance;
+
+        private Strength_atr Strength;
+        private Agility_atr Agility;
+        private Stamina_atr Stamina;
+        private Perception_atr Perception;
+        private Quickness_atr Quickness;
+        private Intelligence_atr Intelligence;
+        private Charm_atr Charm;
+        private Willpower_atr Willpower;
 
         private List<Atribute_class> _Attributes;
 

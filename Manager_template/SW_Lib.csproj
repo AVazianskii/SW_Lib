@@ -76,8 +76,10 @@
     <Compile Include="SW_Attribute_management\Attribute_manager\02_Atr_manager_Method_Upload_attribute_costs_info.cs" />
     <Compile Include="SW_Attribute_management\Attribute_manager\03_Atr_manager_Method_Upload_attribute_age_status_limits.cs" />
     <Compile Include="SW_Attribute_management\Attribute_manager\04_Atr_manager_Method_Upload_attribute_range_limits.cs" />
+    <Compile Include="SW_Attribute_management\Attribute_manager\05_Atr_manager_Return_manager_instance.cs" />
     <Compile Include="SW_Attribute_management\Attribute_manager\06_Atr_manager_Method_run_download_and_upload_data.cs" />
-    <Compile Include="SW_Attribute_management\Attribute_manager\07_Atr_manager_constructor.cs" />
+    <Compile Include="SW_Attribute_management\Attribute_manager\07_Atr_manager_Return_attributes.cs" />
+    <Compile Include="SW_Attribute_management\Attribute_manager\08_Atr_manager_constructor.cs" />
     <Compile Include="SW_Attribute_management\Attribute_template\Atribute_class.cs" />
     <Compile Include="SW_Race_management\Races\Botan_race.cs" />
     <Compile Include="SW_Race_management\Races\Cereanin_race.cs" />
