@@ -71,6 +71,11 @@
     <Compile Include="SW_Age_status_management\Age_statuses\Teen_age.cs" />
     <Compile Include="SW_Age_status_management\Age_statuses\Unknown_age_status.cs" />
     <Compile Include="SW_Age_status_management\Age_status_manager\00_Age_status_manager_Init.cs" />
+    <Compile Include="SW_Age_status_management\Age_status_manager\01_Age_status_manager_Method_upload_general_info.cs" />
+    <Compile Include="SW_Age_status_management\Age_status_manager\02_Age_status_manager_Method_attributes_bonus.cs" />
+    <Compile Include="SW_Age_status_management\Age_status_manager\03_Age_status_manager_Method_upload_attributes_limits.cs" />
+    <Compile Include="SW_Age_status_management\Age_status_manager\04_Age_status_manager_Method_upload_skills_limits.cs" />
+    <Compile Include="SW_Age_status_management\Age_status_manager\05_Age_status_manager_Method_run_download_and_upload.cs" />
     <Compile Include="SW_Age_status_management\Age_status_manager\06_Age_status_manager_Return_manager_instance.cs" />
     <Compile Include="SW_Age_status_management\Age_status_manager\07_Age_status_manager_Return_age_statuses.cs" />
     <Compile Include="SW_Age_status_management\Age_status_manager\08_Age_status_manager_constructor.cs" />

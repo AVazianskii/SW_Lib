@@ -26,6 +26,19 @@ namespace SW_Character_creation
 
             SQLite_connection_string = @"Data Source=C:\Users\avazi\Source\Repos\SW_Lib\Manager_template\SW_Age_status_management\Database\Age_statuses.db;Version=3;";
             SQLite_connection = new SQLiteConnection(SQLite_connection_string);
+
+            Age_status_general_coloumn_name = new List<string>();
+            Age_status_bonus_coloumn_name = new List<string>();
+            Age_status_attributes_limits_coloumn_name = new List<string>();
+            Age_status_skills_limits_coloumn_name = new List<string>();
+
+            Age_status_general_description = new List<List<string>>();
+            Age_status_attributes_bonus = new List<List<int>>();
+            Age_status_attributes_limits = new List<List<int>>();
+            Age_status_skills_limits = new List<List<int>>();
+
+            Age_status_description = new List<int>();
+            Age_status_feature = new List<int>();
         }
     }
 }
