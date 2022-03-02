@@ -179,6 +179,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="SW_Age_status_management\Age_status_manager\" />
+    <Folder Include="SW_Feature_management\Database\" />
+    <Folder Include="SW_Feature_management\Features\" />
+    <Folder Include="SW_Feature_management\Feature_manager\" />
+    <Folder Include="SW_Feature_management\Feature_template\" />
     <Folder Include="SW_Range_management\Range_manager\" />
   </ItemGroup>
   <ItemGroup>
