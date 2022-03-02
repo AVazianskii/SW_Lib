@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SW_Character_Class
+namespace Range_libs
 {
     public class Range_Class
     {
@@ -15,13 +15,13 @@ namespace SW_Character_Class
         private string range_description;   // описание ранга персонажа
         private string path_read_description; // Путь к файлу для вычитывания текстового описания расы
 
-        SW_Character _SW_Char;
+        
         #endregion
 
         #region // конструктор класса
-        public Range_Class(SW_Character SW_Char)
+        public Range_Class()
         {
-            _SW_Char = SW_Char;
+            
         }
         #endregion
 
