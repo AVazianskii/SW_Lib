@@ -179,7 +179,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="SW_Age_status_management\Age_status_manager\" />
-    <Folder Include="SW_Age_status_management\Database\" />
     <Folder Include="SW_Range_management\Range_manager\" />
   </ItemGroup>
   <ItemGroup>
@@ -202,6 +201,9 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="SW_Age_status_management\Database\Age_statuses.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="SW_Attribute_management\Database\Attributes.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
