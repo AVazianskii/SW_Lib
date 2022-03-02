@@ -33,12 +33,16 @@ namespace SW_Character_creation
             Age_status_skills_limits_coloumn_name = new List<string>();
 
             Age_status_general_description = new List<List<string>>();
+            Age_status_description = new List<string>();
+            Age_status_feature = new List<string>();
+            Age_status_general_description.Add(Age_status_description);
+            Age_status_general_description.Add(Age_status_feature);
+
             Age_status_attributes_bonus = new List<List<int>>();
             Age_status_attributes_limits = new List<List<int>>();
             Age_status_skills_limits = new List<List<int>>();
 
-            Age_status_description = new List<int>();
-            Age_status_feature = new List<int>();
+            
         }
     }
 }

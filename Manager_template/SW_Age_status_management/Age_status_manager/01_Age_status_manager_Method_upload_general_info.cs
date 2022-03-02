@@ -13,7 +13,8 @@ namespace SW_Character_creation
             foreach(Age_status_class age_status in Age_statuses)
             {
                 int index = Age_statuses.IndexOf(age_status);
-                age_status.Get_age_status_descr(Age_status_general_description[Age_status_general_description.IndexOf()][index]);
+                age_status.Set_age_status_descr         (Age_status_general_description[Age_status_general_description.IndexOf(Age_status_description)  ][index]);
+                age_status.Set_age_status_feature_descr (Age_status_general_description[Age_status_general_description.IndexOf(Age_status_feature)      ][index]);
             }
         }
     }

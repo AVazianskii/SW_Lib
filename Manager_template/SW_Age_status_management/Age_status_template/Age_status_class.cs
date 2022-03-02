@@ -25,6 +25,8 @@ namespace Age_status_libs
         private int age_status_intelligence_bonus;  // бонус к атрибуту Интеллект       при изменении возрастного статуса
         private int age_status_charm_bonus;         // бонус к атрибуту Обаяние         при изменении возрастного статуса
         private int age_status_willpower_bonus;     // бонус к атрибуту Сила воли       при изменении возрастного статуса
+
+        private string age_status_feature_descr;
         #endregion
 
         #region // Конструктор класса
@@ -203,6 +205,9 @@ namespace Age_status_libs
         public void Set_path_read_description(string input_text) { path_read_description = input_text; }
         // Предоставляем путь к текстовому файлу с описанием навыка
         public string Get_path_read_description() { return path_read_description; }
+
+        public void Set_age_status_feature_descr(string input_text) { age_status_feature_descr = input_text; }
+        public string Get_age_status_feature_descr() { return age_status_feature_descr; }
         #endregion
     }
 }

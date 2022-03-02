@@ -31,8 +31,8 @@ namespace SW_Character_creation
         private List<List<int>> Age_status_attributes_limits;
         private List<List<int>> Age_status_skills_limits;
 
-        private List<int> Age_status_description;
-        private List<int> Age_status_feature;
+        private List<string> Age_status_description;
+        private List<string> Age_status_feature;
         #endregion
     }
 }
