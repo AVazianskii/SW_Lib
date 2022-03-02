@@ -13,5 +13,10 @@ namespace SW_Character_creation
         private SQLiteConnection SQLite_connection;
         #endregion
 
+        List<string> Skill_general_info_coloumn_name;
+        List<string> Skill_costs_coloumn_name;
+        List<string> Skill_limits_due_age_coloumn_name;
+        List<string> Skill_limits_due_range_coloumn_name;
+        List<string> Skill_type_coloumn_name;
     }
 }

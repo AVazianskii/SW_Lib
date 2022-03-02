@@ -6,7 +6,10 @@ namespace SW_Character_creation
     {
         public void Run_download_and_upload_data()
         {
+            SQLite_connection.Open();
 
+
+            SQLite_connection.Close();
         }
     }
 }
