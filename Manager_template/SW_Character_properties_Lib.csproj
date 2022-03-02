@@ -63,6 +63,14 @@
     <Compile Include="Manager_template\Abstract_manager.cs" />
     <Compile Include="Manager_template\IManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SW_Age_status_management\Age_statuses\Adult_age.cs" />
+    <Compile Include="SW_Age_status_management\Age_statuses\Child_age.cs" />
+    <Compile Include="SW_Age_status_management\Age_statuses\Eldery_age.cs" />
+    <Compile Include="SW_Age_status_management\Age_statuses\Middle_age.cs" />
+    <Compile Include="SW_Age_status_management\Age_statuses\Old_age.cs" />
+    <Compile Include="SW_Age_status_management\Age_statuses\Teen_age.cs" />
+    <Compile Include="SW_Age_status_management\Age_statuses\Unknown_age_status.cs" />
+    <Compile Include="SW_Age_status_management\Age_status_template\Age_status_class.cs" />
     <Compile Include="SW_Attribute_management\Attributes\Agility_atr.cs" />
     <Compile Include="SW_Attribute_management\Attributes\Charm_atr.cs" />
     <Compile Include="SW_Attribute_management\Attributes\Intelligence_atr.cs" />
@@ -109,6 +117,12 @@
     <Compile Include="SW_Race_management\Race_manager\11_Race_manager_Return_races.cs" />
     <Compile Include="SW_Race_management\Race_manager\15_Race_manager_constructor.cs" />
     <Compile Include="SW_Race_management\Race_template\Race_class.cs" />
+    <Compile Include="SW_Range_management\Ranges\Epic_range.cs" />
+    <Compile Include="SW_Range_management\Ranges\Hero_range.cs" />
+    <Compile Include="SW_Range_management\Ranges\Immortal_range.cs" />
+    <Compile Include="SW_Range_management\Ranges\Private_range.cs" />
+    <Compile Include="SW_Range_management\Ranges\Veteran_range.cs" />
+    <Compile Include="SW_Range_management\Range_template\Range_Class.cs" />
     <Compile Include="SW_Skills_management\Skills\Acrobatic_skill.cs" />
     <Compile Include="SW_Skills_management\Skills\Astronavigation_skill.cs" />
     <Compile Include="SW_Skills_management\Skills\Bombing_skill.cs" />
@@ -163,7 +177,11 @@
     <Compile Include="SW_Skills_management\Skill_manager\13_Skill_manager_constructor.cs" />
     <Compile Include="SW_Skills_management\Skill_template\Skill_Class.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="SW_Age_status_management\Age_status_manager\" />
+    <Folder Include="SW_Age_status_management\Database\" />
+    <Folder Include="SW_Range_management\Range_manager\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="SW_Race_management\Race_pictures\Botan.jpg" />
     <Content Include="SW_Race_management\Race_pictures\Cereanin.jpg" />
@@ -184,9 +202,18 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="SW_Attribute_management\Database\Attributes.db" />
-    <None Include="SW_Race_management\Database\Races.db" />
-    <None Include="SW_Skills_management\Database\Skills.db" />
+    <None Include="SW_Attribute_management\Database\Attributes.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SW_Race_management\Database\Races.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SW_Range_management\Database\Ranges.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SW_Skills_management\Database\Skills.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
