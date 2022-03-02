@@ -70,6 +70,10 @@
     <Compile Include="SW_Age_status_management\Age_statuses\Old_age.cs" />
     <Compile Include="SW_Age_status_management\Age_statuses\Teen_age.cs" />
     <Compile Include="SW_Age_status_management\Age_statuses\Unknown_age_status.cs" />
+    <Compile Include="SW_Age_status_management\Age_status_manager\00_Age_status_manager_Init.cs" />
+    <Compile Include="SW_Age_status_management\Age_status_manager\06_Age_status_manager_Return_manager_instance.cs" />
+    <Compile Include="SW_Age_status_management\Age_status_manager\07_Age_status_manager_Return_age_statuses.cs" />
+    <Compile Include="SW_Age_status_management\Age_status_manager\08_Age_status_manager_constructor.cs" />
     <Compile Include="SW_Age_status_management\Age_status_template\Age_status_class.cs" />
     <Compile Include="SW_Attribute_management\Attributes\Agility_atr.cs" />
     <Compile Include="SW_Attribute_management\Attributes\Charm_atr.cs" />
@@ -178,7 +182,6 @@
     <Compile Include="SW_Skills_management\Skill_template\Skill_Class.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="SW_Age_status_management\Age_status_manager\" />
     <Folder Include="SW_Feature_management\Database\" />
     <Folder Include="SW_Feature_management\Features\" />
     <Folder Include="SW_Feature_management\Feature_manager\" />

@@ -28,7 +28,7 @@ namespace Age_status_libs
         #endregion
 
         #region // Конструктор класса
-        public Age_status_class()
+        internal Age_status_class()
         {
             
         }
