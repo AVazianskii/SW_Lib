@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SW_Character_Class
+namespace Age_status_libs
 {
     public class Age_status_class
     {
         #region // Переменные класса
-        private SW_Character _SW_Char;
-
+        
         private int age_status_code;            // уникальный код для определения возрастного статуса персонажа
 
         private string age_status_name;         // название возратсного статуса персонажа 
@@ -29,9 +28,9 @@ namespace SW_Character_Class
         #endregion
 
         #region // Конструктор класса
-        public Age_status_class(SW_Character SW_Char)
+        public Age_status_class()
         {
-            _SW_Char = SW_Char;
+            
         }
         #endregion
 
@@ -129,6 +128,7 @@ namespace SW_Character_Class
             return age_status_willpower_bonus;
         }
         // Добавляем бонусы к атрибутам при установке нового возрастного статуса персонажа
+        /*
         public void Set_age_status_atr_bonus() 
         {
             foreach (Atribute_class atribute in _SW_Char._Atributes)
@@ -162,7 +162,9 @@ namespace SW_Character_Class
                 }
             }
         }
+        */
         // Снимаем бонусы к атрибутам при смене текущего возрастного статуса персонажа
+        /*
         public void Reset_age_status_atr_bonus() 
         {
             foreach (Atribute_class atribute in _SW_Char._Atributes)
@@ -196,6 +198,7 @@ namespace SW_Character_Class
                 }
             }
         }
+        */
         // Устанавливаем путь к текстовому файлу с описанием навыка
         public void Set_path_read_description(string input_text) { path_read_description = input_text; }
         // Предоставляем путь к текстовому файлу с описанием навыка
