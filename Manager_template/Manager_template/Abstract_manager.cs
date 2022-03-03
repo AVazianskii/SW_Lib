@@ -71,5 +71,6 @@ namespace SW_Character_creation
                 }
             }
         }
+        public virtual void Run_download_and_upload_process() { }
     }
 }

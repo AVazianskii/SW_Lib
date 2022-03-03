@@ -11,5 +11,6 @@ namespace SW_Character_creation
                                       List<string> Names_of_coloumns,
                                       object List_for_reading_data,
                                       int reading_data_type);
+        void Run_download_and_upload_process();
     }
 }

@@ -4,7 +4,7 @@ namespace SW_Character_creation
 {
     public partial class Race_manager
     {
-        public void Run_download_and_upload_process()
+        public override void Run_download_and_upload_process()
         {
             SQLite_connection.Open();
 
