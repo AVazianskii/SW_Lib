@@ -1,9 +1,11 @@
-﻿using Races_libs;
+﻿using System.Collections.Generic;
+using Races_libs;
 
 namespace SW_Character_creation
 {
     public partial class Race_manager
     {
+        public List<Race_class> Get_Race_list()     {return _Races; }
         public Race_class Get_Empty_race()          { return Empty_Race; }
         public Race_class Get_Human_race()          { return Human; }
         public Race_class Get_Botan_race()          { return Botan; }
