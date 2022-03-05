@@ -495,7 +495,7 @@ namespace Races_libs
         public int Get_seduction_bonus() { return seduction_bonus; }
         public void Set_small_img_path(string insert_text) { small_img_path = insert_text; }
         // Устанавливаем метод для вывода пути картинки каждой расы по запросу
-        public string Get_small_img_path() { return img_path; }
+        public string Get_small_img_path() { return small_img_path; }
 
         #endregion
     }
