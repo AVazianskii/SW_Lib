@@ -8,7 +8,8 @@ namespace Races_libs
 {
     public class Race_class
     {
-
+        public string Race_name {get;set; }
+        public string Small_img_path { get; set; }
         #region // переменные класса
         private int Error_code;     /* код ошибки в дейстиях персонажа                  */
         private int min_child_age,  /* минимальный  детский      возраст выбранной расы */
@@ -179,7 +180,7 @@ namespace Races_libs
         // Предоставляем состояние флага выбранной расы по запросу
         public bool Get_is_choosen() { return is_choosen; }
         // Устанавливаем имя расы
-        public void Set_race_name (string insert_text) { race_name = insert_text; }
+        public void Set_race_name (string insert_text) { race_name = insert_text; Race_name = insert_text; }
         // Предоставляем значение выбранной расы по запросу
         public string Get_race_name(){ return race_name; }
         // Устанавливаем минимальный возраст персонажа - ребенка
@@ -493,7 +494,7 @@ namespace Races_libs
         public int Get_insight_bonus() { return insight_bonus; }
         public void Set_seduction_bonus(int insert_int) { seduction_bonus = insert_int; }
         public int Get_seduction_bonus() { return seduction_bonus; }
-        public void Set_small_img_path(string insert_text) { small_img_path = insert_text; }
+        public void Set_small_img_path(string insert_text) { small_img_path = insert_text; Small_img_path = insert_text; }
         // Устанавливаем метод для вывода пути картинки каждой расы по запросу
         public string Get_small_img_path() { return small_img_path; }
 
