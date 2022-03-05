@@ -209,6 +209,7 @@
     <Content Include="SW_Race_management\Race_pictures\Tvilek.jpg" />
     <Content Include="SW_Race_management\Race_pictures\Wooki.jpg" />
     <Content Include="SW_Race_management\Race_pictures\Zabrak.jpg" />
+    <Content Include="SW_Race_management\Race_small_pictures\Human.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

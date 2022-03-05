@@ -30,6 +30,7 @@ namespace Races_libs
         private string race_name;               // название расы персонажа
         private string path_read_description;   // Путь к файлу для вычитывания текстового описания расы
         private string path_read_description_2; // Путь к файлу для вычитывания текстового описания расы
+        private string small_img_path;          // путь к иконке расы
 
 
         private int race_code;              // задаем код расы, по которому можно будет определить выбранную расу
@@ -492,6 +493,9 @@ namespace Races_libs
         public int Get_insight_bonus() { return insight_bonus; }
         public void Set_seduction_bonus(int insert_int) { seduction_bonus = insert_int; }
         public int Get_seduction_bonus() { return seduction_bonus; }
+        public void Set_small_img_path(string insert_text) { small_img_path = insert_text; }
+        // Устанавливаем метод для вывода пути картинки каждой расы по запросу
+        public string Get_small_img_path() { return img_path; }
 
         #endregion
     }
