@@ -12,6 +12,7 @@ namespace Races_libs
             Set_race_name("");                      // Устанавливаем текущее показатель атрибута 
             Set_race_code((int)Race_manager.enum_Races._Empty_race);                       // Устанавливаем идентификатор расы
             Set_img_path("");                       // Устанавливаем путь к картинке расы
+            Set_small_img_path("");
         }
         #endregion
 
