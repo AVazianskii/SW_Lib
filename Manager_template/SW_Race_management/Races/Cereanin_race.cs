@@ -11,8 +11,8 @@ namespace Races_libs
         {
             Set_race_name("Цереанин");              // Устанавливаем текущее показатель атрибута 
             Set_race_code((int)Race_manager.enum_Races._Cereanin);                       // Устанавливаем идентификатор расы
-            Set_img_path(@"D:\STAR WARS Saga\Character_creation\Races_Libs\Races_lib\SW_Races\Pictures\Cereanin.jpg");                       // Устанавливаем путь к картинке расы
-            
+            Set_img_path(@"D:\STAR WARS Saga\Character_creation\Manager_template\Manager_template\SW_Race_management\Race_pictures\Cereanin.jpg");                       // Устанавливаем путь к картинке расы
+            Set_small_img_path(@"D:\STAR WARS Saga\Character_creation\Manager_template\Manager_template\SW_Race_management\Race_small_pictures\Botan.jpg");
         }
         #endregion
 
