@@ -28,6 +28,7 @@ namespace SW_Character_creation
                 Race.Set_feature_4(Feature_4[index]);
                 Race.Set_feature_5(Feature_5[index]);
                 Race.Set_feature_6(Feature_6[index]);
+                Race.Set_feature_7(Feature_7[index]);
             }
         }
     }

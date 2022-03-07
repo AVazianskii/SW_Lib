@@ -57,7 +57,8 @@ namespace Races_libs
                        feature_3,           // 3 особенность расы
                        feature_4,           // 4 особенность расы
                        feature_5,           // 5 особенность расы
-                       feature_6;           // 6 особенность расы
+                       feature_6,           // 6 особенность расы
+                       feature_7;           // 7 особенность расы
 
         private int language_1_lvl,         // навык владения 1 языком расы
                     language_2_lvl,         // навык владения 2 языком расы
@@ -374,6 +375,8 @@ namespace Races_libs
         public string Get_feature_5() { return feature_5; }
         public void Set_feature_6(string input_text) { feature_6 = input_text; }
         public string Get_feature_6() { return feature_6; }
+        public void Set_feature_7(string input_text) { feature_7 = input_text; }
+        public string Get_feature_7() { return feature_7; }
         public void Set_language_1_lvl(int input_int) { language_1_lvl = input_int; }
         public int Get_language_1_lvl() { return language_1_lvl; }
         public void Set_language_2_lvl(int input_int) { language_2_lvl = input_int; }
