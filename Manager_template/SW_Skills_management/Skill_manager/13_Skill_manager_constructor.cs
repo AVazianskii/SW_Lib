@@ -63,6 +63,8 @@ namespace SW_Character_creation
             Skill_limits_due_age_coloumn_name = new List<string>();
             Skill_limits_due_range_coloumn_name = new List<string>();
             Skill_type_coloumn_name = new List<string>();
+
+            _Skills = new List<Skill_Class>();
         }
     }
 }

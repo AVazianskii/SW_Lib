@@ -14,7 +14,7 @@ namespace SW_Character_creation
         private SQLiteConnection SQLite_connection;
         #endregion
 
-
+        public List<Skill_Class> _Skills;
 
         private List<List<string>> Skill_desription;
         private List<string> Skill_general_description;

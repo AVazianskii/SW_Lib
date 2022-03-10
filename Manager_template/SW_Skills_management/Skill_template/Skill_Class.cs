@@ -2,7 +2,7 @@
 
 namespace Skills_libs
 {
-    internal class Skill_Class
+    public class Skill_Class
     {
         #region // переменные класса
         private int score; // Величина навыка
@@ -44,7 +44,7 @@ namespace Skills_libs
 
         #region // конструктор класса
 
-        public Skill_Class()
+        internal Skill_Class()
         {
             counter = 0;
             Set_Error_Code(0);
