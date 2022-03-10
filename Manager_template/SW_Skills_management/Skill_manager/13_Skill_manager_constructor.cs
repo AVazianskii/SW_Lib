@@ -65,6 +65,11 @@ namespace SW_Character_creation
             Skill_type_coloumn_name = new List<string>();
 
             _Skills = new List<Skill_Class>();
+            _Combat_skills = new List<Skill_Class>();
+            _Survivng_skills = new List<Skill_Class>();
+            _Charming_skills = new List<Skill_Class>();
+            _Tech_skills = new List<Skill_Class>();
+            _Specific_skills = new List<Skill_Class>();
         }
     }
 }

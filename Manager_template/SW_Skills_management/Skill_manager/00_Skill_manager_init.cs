@@ -15,6 +15,11 @@ namespace SW_Character_creation
         #endregion
 
         public List<Skill_Class> _Skills;
+        public List<Skill_Class> _Combat_skills;
+        public List<Skill_Class> _Survivng_skills;
+        public List<Skill_Class> _Charming_skills;
+        public List<Skill_Class> _Tech_skills;
+        public List<Skill_Class> _Specific_skills;
 
         private List<List<string>> Skill_desription;
         private List<string> Skill_general_description;
