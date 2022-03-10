@@ -34,6 +34,12 @@ namespace Skills_libs
 
         private bool is_combat_skill;               // Флаг, является ли навык боевым умением. 1 - является, 0 - не является
 
+        private string skill_base_1,
+                       skill_base_2;
+
+        private int Non_force_user_cost,
+                    Forceuser_cost;
+
         #endregion
 
         #region // конструктор класса
@@ -252,6 +258,7 @@ namespace Skills_libs
         // Предоставляем значения флага боевого умения
         public bool Get_is_combat_skill() { return is_combat_skill; }
 
+        /*
         #region //Сравнение лимитов навыков. Используем меньший лимит
         public int Skill_limit(int age_limit, int range_limit)
         {
@@ -271,19 +278,23 @@ namespace Skills_libs
         }
 
         public int Get_Skill_limit() { return skill_limit; }
+        #endregion
+        */
 
         public void Set_skill_code(int insert_int) { skill_code = insert_int; }
         public int Get_skill_code() { return skill_code; }
-        #endregion
-
-        // Устанавливаем путь к текстовому файлу с описанием навыка
-        public void Set_path_read_description(string input_text) { path_read_description = input_text; }
-        // Предоставляем путь к текстовому файлу с описанием навыка
-        public string Get_path_read_description() { return path_read_description; }
         // Устанавливаем текстовое описание навыка персонажа
         public void Set_skill_description(string insert_text) { skill_description = insert_text; }
         // Предоставляем текстовое описание навыка персонажа
         public string Get_skill_description() { return skill_description; }
+        public void Set_skill_base_1(string input_text) { skill_base_1 = input_text; }
+        public string Get_skill_base_1() { return skill_base_1; }
+        public void Set_skill_base_2(string input_text) { skill_base_2 = input_text; }
+        public string Get_skill_base_2() { return skill_base_2; }
+        public void Set_Non_force_user_cost(int input_int) { Non_force_user_cost = input_int; }
+        public int Get_Non_force_user_cost() { return Non_force_user_cost; }
+        public void Set_Forceuser_cost(int input_int) { Forceuser_cost = input_int; }
+        public int Get_Forceuser_cost() { return Forceuser_cost; }
         #endregion
     }
 }
