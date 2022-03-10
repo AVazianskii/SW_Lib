@@ -40,6 +40,8 @@ namespace SW_Character_creation
 
 
             SQLite_connection.Close();
+
+            Upload_skill_general_info();
         }
     }
 }

@@ -181,6 +181,7 @@
     <Compile Include="SW_Skills_management\Skills\Trading_skill.cs" />
     <Compile Include="SW_Skills_management\Skills\Training_pet_skill.cs" />
     <Compile Include="SW_Skills_management\Skill_manager\00_Skill_manager_init.cs" />
+    <Compile Include="SW_Skills_management\Skill_manager\01_Skill_manager_Method_upload_skill_general_info.cs" />
     <Compile Include="SW_Skills_management\Skill_manager\10_Skill_manager_Method_run_download_and_upload_data.cs" />
     <Compile Include="SW_Skills_management\Skill_manager\11_Skill_manager_Return_manager_instance.cs" />
     <Compile Include="SW_Skills_management\Skill_manager\12_Skill_manager_Return_skills.cs" />
