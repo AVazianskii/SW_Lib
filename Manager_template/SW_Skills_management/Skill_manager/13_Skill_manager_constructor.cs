@@ -70,6 +70,10 @@ namespace SW_Character_creation
             _Charming_skills = new List<Skill_Class>();
             _Tech_skills = new List<Skill_Class>();
             _Specific_skills = new List<Skill_Class>();
+            for(int i = 0; i < 30; i++)
+            {
+                _Skills.Add(new Skill_Class());
+            }
             for (int i = 0; i < 6; i++)
             {
                 _Combat_skills.Add(_Skills[i]);
