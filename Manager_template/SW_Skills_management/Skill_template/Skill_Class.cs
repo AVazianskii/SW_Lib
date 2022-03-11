@@ -5,6 +5,8 @@ namespace Skills_libs
     public class Skill_Class
     {
         #region // переменные класса
+        public string Skill_name { get; set; }
+
         private int score; // Величина навыка
         private int cost;
         private int skill_limit;
@@ -296,7 +298,7 @@ namespace Skills_libs
         public int Get_Non_force_user_cost() { return Non_force_user_cost; }
         public void Set_Forceuser_cost(int input_int) { Forceuser_cost = input_int; }
         public int Get_Forceuser_cost() { return Forceuser_cost; }
-        public void Set_skill_name(string input_text) { skill_name = input_text; }
+        public void Set_skill_name(string input_text) { skill_name = input_text; Skill_name = input_text; }
         public string Get_skill_name() { return skill_name; }
         #endregion
     }
