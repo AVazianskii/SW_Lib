@@ -14,10 +14,10 @@ namespace SW_Character_creation
                 {
                     if (i == Skill.Get_skill_code())
                     {
-
-                        Skill.Set_skill_description (Skill_desription[1][_Skills.IndexOf(Skill)]);
-                        Skill.Set_skill_base_1      (Skill_desription[2][_Skills.IndexOf(Skill)]);
-                        Skill.Set_skill_base_2      (Skill_desription[3][_Skills.IndexOf(Skill)]);
+                        Skill.Set_skill_name        (Skill_desription[1][_Skills.IndexOf(Skill)]);
+                        Skill.Set_skill_description (Skill_desription[2][_Skills.IndexOf(Skill)]);
+                        Skill.Set_skill_base_1      (Skill_desription[3][_Skills.IndexOf(Skill)]);
+                        Skill.Set_skill_base_2      (Skill_desription[4][_Skills.IndexOf(Skill)]);
                         break;
                     }
                 }

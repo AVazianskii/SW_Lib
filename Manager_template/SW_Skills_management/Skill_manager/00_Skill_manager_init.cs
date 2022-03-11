@@ -26,6 +26,7 @@ namespace SW_Character_creation
         private List<string> Skill_atr_base_1;
         private List<string> Skill_atr_base_2;
         private List<string> Skill_ID;
+        private List<string> Skill_names;
 
         private List<List<int>> Skill_limits_due_age;
         private List<int> Skill_limits_unknown_age;

@@ -35,7 +35,8 @@ namespace Skills_libs
         private bool is_combat_skill;               // Флаг, является ли навык боевым умением. 1 - является, 0 - не является
 
         private string skill_base_1,
-                       skill_base_2;
+                       skill_base_2,
+                       skill_name;
 
         private int Non_force_user_cost,
                     Forceuser_cost;
@@ -295,6 +296,8 @@ namespace Skills_libs
         public int Get_Non_force_user_cost() { return Non_force_user_cost; }
         public void Set_Forceuser_cost(int input_int) { Forceuser_cost = input_int; }
         public int Get_Forceuser_cost() { return Forceuser_cost; }
+        public void Set_skill_name(string input_text) { skill_name = input_text; }
+        public string Get_skill_name() { return skill_name; }
         #endregion
     }
 }

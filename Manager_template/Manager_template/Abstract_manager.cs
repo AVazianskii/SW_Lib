@@ -97,7 +97,7 @@ namespace SW_Character_creation
                     {
                         Names_of_coloumns.Add(SQLite_reader.GetName(i));
                     }
-                    Names_of_coloumns.RemoveAt(1); // удаояем название столбца Название расы
+                    //Names_of_coloumns.RemoveAt(1); // удаояем название столбца Название расы
                     first_run = false;
                 }
                 int index;
