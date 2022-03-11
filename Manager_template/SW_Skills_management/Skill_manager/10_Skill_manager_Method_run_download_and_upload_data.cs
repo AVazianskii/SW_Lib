@@ -13,6 +13,7 @@ namespace SW_Character_creation
                                              Skill_general_info_coloumn_name,
                                              Skill_desription);
 
+            /*
             Run_download_from_SQLite("SELECT * FROM Skills_limits_due_age_status ORDER BY ID",
                                      SQLite_connection,
                                      Skill_limits_due_age_coloumn_name,
@@ -37,7 +38,7 @@ namespace SW_Character_creation
                                      Skill_type,
                                      (int)Type_of_var.bool_type);
 
-
+            */
             SQLite_connection.Close();
 
             Upload_skill_general_info();
