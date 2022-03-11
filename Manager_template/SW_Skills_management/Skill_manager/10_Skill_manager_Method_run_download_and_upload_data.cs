@@ -8,11 +8,10 @@ namespace SW_Character_creation
         {
             SQLite_connection.Open();
 
-            Run_download_from_SQLite("SELECT * FROM Skills_general ORDER BY ID",
-                                     SQLite_connection,
-                                     Skill_general_info_coloumn_name,
-                                     Skill_desription,
-                                     (int)Type_of_var.string_type);
+            Run_download_general_from_SQLite("SELECT * FROM Skills_general ORDER BY ID",
+                                             SQLite_connection,
+                                             Skill_general_info_coloumn_name,
+                                             Skill_desription);
 
             Run_download_from_SQLite("SELECT * FROM Skills_limits_due_age_status ORDER BY ID",
                                      SQLite_connection,

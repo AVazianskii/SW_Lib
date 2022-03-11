@@ -71,6 +71,48 @@ namespace SW_Character_creation
                 }
             }
         }
+        public void Run_download_general_from_SQLite(string SQLite_Command_text,
+                                                     SQLiteConnection SQLite_connection,
+                                                     List<string> Names_of_coloumns,
+                                                     object List_for_reading_data)
+        {
+            string SQLite_command_text;
+            SQLiteConnection SQLite_conn;
+            SQLiteDataReader SQLite_reader;
+            bool first_run;
+            List<List<string>> temp_string_list;
+
+            SQLite_command_text = SQLite_Command_text;
+            SQLite_conn = SQLite_connection;
+            SQLiteCommand SQLite_command = new SQLiteCommand(SQLite_command_text, SQLite_conn);
+            SQLite_reader = SQLite_command.ExecuteReader();
+
+            first_run = true;
+
+            while (SQLite_reader.Read())
+            {
+                if (first_run)
+                {
+                    for (int i = 0; i < SQLite_reader.FieldCount; i++)
+                    {
+                        Names_of_coloumns.Add(SQLite_reader.GetName(i));
+                    }
+                    Names_of_coloumns.RemoveAt(1); // удаояем название столбца Название расы
+                    first_run = false;
+                }
+                int index;
+                object temp_object;
+
+                foreach (string coloumn_name in Names_of_coloumns)
+                {
+                    temp_object = SQLite_reader[coloumn_name];
+                    index = Names_of_coloumns.IndexOf(coloumn_name);
+
+                    temp_string_list = (List<List<string>>)List_for_reading_data;
+                    if (!(temp_object is DBNull)) { temp_string_list[index].Add(Convert.ToString(temp_object)); } else { temp_string_list[index].Add(""); }
+                }
+            }
+        }
         public virtual void Run_download_and_upload_process() { }
     }
 }

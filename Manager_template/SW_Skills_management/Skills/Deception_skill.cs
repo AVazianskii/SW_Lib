@@ -10,6 +10,7 @@ namespace Skills_libs
             Set_cost(1);                        // Устанавиваем стоимость умения за очки опыта
             Set_score(0);                       // Устанавливаем текущее показатель умения 
             Set_counter(0);                     // Устанавливаем счетчик прокачки умения за очки опыта
+            //Set_skill_code((int)Skill_manager.enum_Skills.Deception_skill); // устанавливаем уникальный код навыка
         }
         #endregion
 

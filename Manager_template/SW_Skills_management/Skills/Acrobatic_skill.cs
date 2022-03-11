@@ -10,7 +10,7 @@ namespace Skills_libs
             Set_cost(2);                        // Устанавиваем стоимость умения за очки опыта
             Set_score(0);                       // Устанавливаем текущее показатель умения 
             Set_counter(0);                     // Устанавливаем счетчик прокачки умения за очки опыта
-            //Set_skill_code((int)SW_Character.enum_Skills.Acrobatic_skill); // устанавливаем уникальный код навыка
+            //Set_skill_code((int)Skill_manager.enum_Skills.Acrobatic_skill); // устанавливаем уникальный код навыка
             //Set_skill_description("");          // Устанавливаем текстовое описание навыка персонажа
             
 
