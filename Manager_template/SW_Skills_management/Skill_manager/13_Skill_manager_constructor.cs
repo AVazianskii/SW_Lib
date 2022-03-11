@@ -13,9 +13,11 @@ namespace SW_Character_creation
             SQLite_connection = new SQLiteConnection(SQLite_connection_string);
 
             Skill_desription = new List<List<string>>();
+            Skill_ID = new List<string>();
             Skill_general_description = new List<string>();
             Skill_atr_base_1 = new List<string>();
             Skill_atr_base_2 = new List<string>();
+            Skill_desription.Add(Skill_ID);
             Skill_desription.Add(Skill_general_description);
             Skill_desription.Add(Skill_atr_base_1);
             Skill_desription.Add(Skill_atr_base_2);
