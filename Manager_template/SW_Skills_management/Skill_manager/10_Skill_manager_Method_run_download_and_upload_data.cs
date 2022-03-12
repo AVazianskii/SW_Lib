@@ -31,17 +31,19 @@ namespace SW_Character_creation
                                      Skill_costs_coloumn_name,
                                      Skill_costs,
                                      (int)Type_of_var.int_type);
+            */
 
             Run_download_from_SQLite("SELECT * FROM Skills_type ORDER BY ID",
                                      SQLite_connection,
                                      Skill_type_coloumn_name,
                                      Skill_type,
-                                     (int)Type_of_var.bool_type);
+                                     (int)Type_of_var.int_type);
 
-            */
+            
             SQLite_connection.Close();
 
             Upload_skill_general_info();
+            Upload_skill_types();
         }
     }
 }

@@ -58,8 +58,8 @@ namespace SW_Character_creation
             Skill_costs.Add(Non_forceuser_costs);
             Skill_costs.Add(Forceuser_costs);
 
-            Skill_type = new List<List<bool>>();
-            Combat_skill = new List<bool>();
+            Skill_type = new List<List<int>>();
+            Combat_skill = new List<int>();
             Skill_type.Add(Combat_skill);
 
             Skill_general_info_coloumn_name = new List<string>();
@@ -74,29 +74,11 @@ namespace SW_Character_creation
             _Charming_skills = new List<Skill_Class>();
             _Tech_skills = new List<Skill_Class>();
             _Specific_skills = new List<Skill_Class>();
+
+            // инициализируем изначальное количество навыков персонажа
             for(int i = 0; i < 50; i++)
             {
                 _Skills.Add(new Skill_Class());
-            }
-            for (int i = 0; i < 6; i++)
-            {
-                _Combat_skills.Add(_Skills[i]);
-            }
-            for (int i = 6; i < 12; i++)
-            {
-                _Survivng_skills.Add(_Skills[i]);
-            }
-            for (int i = 12; i< 18; i++)
-            {
-                _Charming_skills.Add(_Skills[i]);
-            }
-            for (int i = 18; i < 24; i++)
-            {
-                _Tech_skills.Add(_Skills[i]);
-            }
-            for (int i = 24; i < 30; i++)
-            {
-                _Specific_skills.Add(_Skills[i]);
             }
         }
     }

@@ -48,8 +48,8 @@ namespace SW_Character_creation
         private List<int> Non_forceuser_costs;
         private List<int> Forceuser_costs;
 
-        private List<List<bool>> Skill_type;
-        private List<bool> Combat_skill;
+        private List<List<int>> Skill_type;
+        private List<int> Combat_skill;
 
         private List<string> Skill_general_info_coloumn_name;
         private List<string> Skill_costs_coloumn_name;
@@ -106,6 +106,14 @@ namespace SW_Character_creation
             Throw_skill,
             Trading_skill,
             Training_pet_skill
+        }
+        internal enum enum_skills_type
+        {
+            combat_skill = 1,
+            survivng_skill,
+            charming_skill,
+            tech_skill,
+            specific_skill
         }
     }
 }
