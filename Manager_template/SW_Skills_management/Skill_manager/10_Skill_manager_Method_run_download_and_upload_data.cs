@@ -20,7 +20,7 @@ namespace SW_Character_creation
                                      Skill_limits_due_age,
                                      (int)Type_of_var.int_type);
 
-            Run_download_from_SQLite("SELECT * FROM Skills_limits_due_range_status ORDER BY ID",
+            Run_download_from_SQLite("SELECT * FROM Skills_limits_due_range ORDER BY ID",
                                      SQLite_connection,
                                      Skill_limits_due_range_coloumn_name,
                                      Skill_limits_due_range,
@@ -42,8 +42,16 @@ namespace SW_Character_creation
             
             SQLite_connection.Close();
 
+            // TODO: переделать под динамическое определение предела цикла
+            for (int i = 0; i < 50; i++)
+            {
+                _Skills.Add(new Skill_Class());
+            }
+
             Upload_skill_general_info();
             Upload_skill_types();
+            Upload_skill_limits_due_range();
+            Upload_skill_limits_due_age();
         }
     }
 }

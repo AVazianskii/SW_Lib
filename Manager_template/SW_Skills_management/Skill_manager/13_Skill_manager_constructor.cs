@@ -75,11 +75,6 @@ namespace SW_Character_creation
             _Tech_skills = new List<Skill_Class>();
             _Specific_skills = new List<Skill_Class>();
 
-            // инициализируем изначальное количество навыков персонажа
-            for(int i = 0; i < 50; i++)
-            {
-                _Skills.Add(new Skill_Class());
-            }
         }
     }
 }
