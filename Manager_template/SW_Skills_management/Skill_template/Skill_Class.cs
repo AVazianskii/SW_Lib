@@ -300,6 +300,16 @@ namespace Skills_libs
         public int Get_Forceuser_cost() { return Forceuser_cost; }
         public void Set_skill_name(string input_text) { skill_name = input_text; Skill_name = input_text; }
         public string Get_skill_name() { return skill_name; }
+        public void Increase_score(ref int character_exp, ref int skill_score, int skill_cost)
+        {
+            skill_score = skill_score + 1;
+            character_exp = character_exp - skill_cost;
+        }
+        public void Decrease_score(ref int character_exp, ref int skill_score, int skill_cost)
+        {
+            skill_score = skill_score - 1;
+            character_exp = character_exp + skill_cost;
+        }
         #endregion
     }
 }
