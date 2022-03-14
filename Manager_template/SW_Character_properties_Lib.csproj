@@ -184,6 +184,7 @@
     <Compile Include="SW_Skills_management\Skill_manager\01_Skill_manager_Method_upload_skill_general_info.cs" />
     <Compile Include="SW_Skills_management\Skill_manager\02_Skill_manager_Method_upload_skill_limits_due_age.cs" />
     <Compile Include="SW_Skills_management\Skill_manager\03_Skill_manager_Method_upload_skill_limits_due_range.cs" />
+    <Compile Include="SW_Skills_management\Skill_manager\04_Skill_manager_Method_upload_skill_costs.cs" />
     <Compile Include="SW_Skills_management\Skill_manager\05_Skill_manager_Method_upload_skill_types.cs" />
     <Compile Include="SW_Skills_management\Skill_manager\10_Skill_manager_Method_run_download_and_upload_data.cs" />
     <Compile Include="SW_Skills_management\Skill_manager\11_Skill_manager_Return_manager_instance.cs" />

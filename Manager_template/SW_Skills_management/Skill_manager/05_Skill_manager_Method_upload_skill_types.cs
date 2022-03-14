@@ -10,23 +10,23 @@ namespace SW_Character_creation
         {
             foreach(Skill_Class Skill in _Skills)
             {
-                if (Skill_type[0][_Skills.IndexOf(Skill,0)] == (int)enum_skills_type.combat_skill)
+                if (Skill_type[0][_Skills.IndexOf(Skill)] == (int)enum_skills_type.combat_skill)
                 {
                     _Combat_skills.Add(Skill);
                 }
-                if (Skill_type[0][_Skills.IndexOf(Skill, 0)] == (int)enum_skills_type.survivng_skill)
+                if (Skill_type[0][_Skills.IndexOf(Skill)] == (int)enum_skills_type.survivng_skill)
                 {
                     _Survivng_skills.Add(Skill);
                 }
-                if (Skill_type[0][_Skills.IndexOf(Skill, 0)] == (int)enum_skills_type.charming_skill)
+                if (Skill_type[0][_Skills.IndexOf(Skill)] == (int)enum_skills_type.charming_skill)
                 {
                     _Charming_skills.Add(Skill);
                 }
-                if (Skill_type[0][_Skills.IndexOf(Skill, 0)] == (int)enum_skills_type.tech_skill)
+                if (Skill_type[0][_Skills.IndexOf(Skill)] == (int)enum_skills_type.tech_skill)
                 {
                     _Tech_skills.Add(Skill);
                 }
-                if (Skill_type[0][_Skills.IndexOf(Skill, 0)] == (int)enum_skills_type.specific_skill)
+                if (Skill_type[0][_Skills.IndexOf(Skill)] == (int)enum_skills_type.specific_skill)
                 {
                     _Specific_skills.Add(Skill);
                 }

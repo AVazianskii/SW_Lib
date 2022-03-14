@@ -52,6 +52,7 @@ namespace SW_Character_creation
             Upload_skill_types();
             Upload_skill_limits_due_range();
             Upload_skill_limits_due_age();
+            Upload_skill_costs();
         }
     }
 }
