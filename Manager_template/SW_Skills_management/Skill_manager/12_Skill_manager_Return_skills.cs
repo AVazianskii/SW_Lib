@@ -11,6 +11,7 @@ namespace SW_Character_creation
         public List<Skill_Class> Get_Charming_skills() { return _Charming_skills; }
         public List<Skill_Class> Get_Tech_skills() { return _Tech_skills; }
         public List<Skill_Class> Get_Specific_skills() { return _Specific_skills; }
+        public Skill_Class Get_Swimming() { return _swimming; }
 
     }
 }

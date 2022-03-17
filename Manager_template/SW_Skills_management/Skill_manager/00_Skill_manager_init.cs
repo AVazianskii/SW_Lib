@@ -8,6 +8,7 @@ namespace SW_Character_creation
     public partial class Skill_manager : Abstract_manager
     {
         private static Skill_manager Skill_manager_instance;
+        private Swimming_Skill _swimming;
 
         #region переменные для обращения к базе SQLite
         private string SQLite_connection_string;
