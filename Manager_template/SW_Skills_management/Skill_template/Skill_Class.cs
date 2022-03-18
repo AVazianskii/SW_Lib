@@ -303,13 +303,10 @@ namespace Skills_libs
         public void Increase_score()
         {
             score = score + 1;
-            //Skill.Set_score(Skill.Get_score() + 1);
-            //character_exp = character_exp - Skill.Get_cost();
         }
-        public void Decrease_score(ref int character_exp, ref int skill_score, int skill_cost)
+        public void Decrease_score()
         {
-            skill_score = skill_score - 1;
-            character_exp = character_exp + skill_cost;
+            score = score - 1;
         }
         #endregion
     }
