@@ -303,10 +303,12 @@ namespace Skills_libs
         public void Increase_score()
         {
             score = score + 1;
+            Increase_counter();
         }
         public void Decrease_score()
         {
             score = score - 1;
+            Decrease_counter();
         }
         #endregion
     }

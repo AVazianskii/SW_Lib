@@ -42,8 +42,9 @@ namespace SW_Character_creation
             
             SQLite_connection.Close();
 
-            // TODO: переделать под динамическое определение предела цикла
-            for (int i = 0; i < 50; i++)
+            // создаем итоговую коллекцию, количество элементов в которой определяется количеством строк в таблице 
+            // ориентируемся на столбец ID в таблице основного описания навыка. 
+            foreach (var count in Skill_desription[0]) 
             {
                 _Skills.Add(new Skill_Class());
             }
