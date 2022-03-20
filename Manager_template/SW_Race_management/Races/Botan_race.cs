@@ -1,4 +1,5 @@
 ﻿using SW_Character_creation;
+using System.IO;
 
 namespace Races_libs
 {
@@ -12,7 +13,8 @@ namespace Races_libs
 
             Set_race_name("Ботан");                  // Устанавливаем текущее показатель атрибута 
             Set_race_code((int)Race_manager.enum_Races._Botan);                       // Устанавливаем идентификатор расы
-            Set_img_path(@"D:\STAR WARS Saga\Character_creation\Manager_template\Manager_template\SW_Race_management\Race_pictures\Botan.jpg");                       // Устанавливаем путь к картинке расы
+            //Set_img_path(@"D:\STAR WARS Saga\Character_creation\Manager_template\Manager_template\SW_Race_management\Race_pictures\Botan.jpg");                       // Устанавливаем путь к картинке расы
+            Set_img_path(Directory.GetCurrentDirectory() + @"\Pictures\Races\Images\Botan.jpg");
             Set_small_img_path(@"D:\STAR WARS Saga\Character_creation\Manager_template\Manager_template\SW_Race_management\Race_small_pictures\Botan.jpg");
         }
         #endregion
