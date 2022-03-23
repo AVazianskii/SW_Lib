@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SQLite;
 using Skills_libs;
+using System.IO;
 
 namespace SW_Character_creation
 {
@@ -11,7 +12,8 @@ namespace SW_Character_creation
         { 
             _swimming = new Swimming_Skill();
 
-            SQLite_connection_string = @"Data Source=D:\STAR WARS Saga\Character_creation\Manager_template\Manager_template\SW_Skills_management\Database\Skills.db;Version=3;";
+            SQLite_connection_string = $@"Data Source={Directory.GetCurrentDirectory()}\Database\Skills.db;Version=3;";
+            //SQLite_connection_string = @"Data Source=D:\STAR WARS Saga\Character_creation\Manager_template\Manager_template\SW_Skills_management\Database\Skills.db;Version=3;";
             SQLite_connection = new SQLiteConnection(SQLite_connection_string);
 
             Skill_desription = new List<List<string>>();

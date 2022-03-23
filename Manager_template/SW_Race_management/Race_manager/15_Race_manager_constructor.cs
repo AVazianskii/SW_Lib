@@ -1,6 +1,7 @@
 ﻿using System.Data.SQLite;
 using System.Collections.Generic;
 using Races_libs;
+using System.IO;
 
 namespace SW_Character_creation
 {
@@ -289,7 +290,8 @@ namespace SW_Character_creation
             Race_skills_bonus.Add(Insight_bonus);
             Race_skills_bonus.Add(Seduction_bonus);
             #endregion
-            SQLite_connection_string = @"Data Source=D:\STAR WARS Saga\Character_creation\Manager_template\Manager_template\SW_Race_management\Database\Races.db;Version=3;";
+            SQLite_connection_string = $@"Data Source={Directory.GetCurrentDirectory()}\Database\Races.db;Version=3;";
+            //SQLite_connection_string = @"Data Source=D:\STAR WARS Saga\Character_creation\Manager_template\Manager_template\SW_Race_management\Database\Races.db;Version=3;";
             SQLite_connection = new SQLiteConnection(SQLite_connection_string);
             
             Race_general_info_coloumn_name = new List<string>();
