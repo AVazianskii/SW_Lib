@@ -1,6 +1,7 @@
 ﻿using System.Data.SQLite;
 using System.Collections.Generic;
 using Age_status_libs;
+using System.IO;
 
 namespace SW_Character_creation
 {
@@ -24,7 +25,7 @@ namespace SW_Character_creation
             Age_statuses.Add(Old);
             Age_statuses.Add(Eldery);
 
-            SQLite_connection_string = @"Data Source=C:\Users\avazi\Source\Repos\SW_Lib\Manager_template\SW_Age_status_management\Database\Age_statuses.db;Version=3;";
+            SQLite_connection_string = $@"Data Source={Directory.GetCurrentDirectory()}\Database\Age_statuses.db;Version=3;";
             SQLite_connection = new SQLiteConnection(SQLite_connection_string);
 
             Age_status_general_coloumn_name = new List<string>();
