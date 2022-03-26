@@ -47,6 +47,8 @@ namespace SW_Character_creation
             _Races.Add(Zabrak);
             #endregion
             #region инициализация полей основного описания рас
+            ID_Race = new List<string>();
+            Race_name = new List<string>();
             General_description = new List<string>();
             Personal_properties = new List<string>();
             Physical_properties = new List<string>();
@@ -65,6 +67,8 @@ namespace SW_Character_creation
             #endregion
             #region инициализация коллекции описаний рас
             Race_description = new List<List<string>>();
+            Race_description.Add(ID_Race);
+            Race_description.Add(Race_name);
             Race_description.Add(General_description);
             Race_description.Add(Personal_properties);
             Race_description.Add(Physical_properties);

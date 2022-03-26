@@ -14,21 +14,23 @@ namespace SW_Character_creation
             foreach(Race_class Race in _Races)
             {
                 int index = Race.Get_race_code();    // _Races.IndexOf(Race);
-                Race.Set_general_description(General_description[index]);
-                Race.Set_personal_properties(Personal_properties[index]);
-                Race.Set_physical_properties(Physical_properties[index]);
-                Race.Set_home_world(Home_world[index]);
-                Race.Set_language_1(Language_1[index]);
-                Race.Set_language_2(Language_2[index]);
-                Race.Set_language_3(Language_3[index]);
-                Race.Set_language_4(Language_4[index]);
-                Race.Set_feature_1(Feature_1[index]);
-                Race.Set_feature_2(Feature_2[index]);
-                Race.Set_feature_3(Feature_3[index]);
-                Race.Set_feature_4(Feature_4[index]);
-                Race.Set_feature_5(Feature_5[index]);
-                Race.Set_feature_6(Feature_6[index]);
-                Race.Set_feature_7(Feature_7[index]);
+                Race.Set_race_code(Convert.ToInt32( Race_description[00][_Races.IndexOf(Race)]));
+                Race.Set_race_name(                 Race_description[01][_Races.IndexOf(Race)]);
+                Race.Set_general_description(       Race_description[02][_Races.IndexOf(Race)]);
+                Race.Set_personal_properties(       Race_description[03][_Races.IndexOf(Race)]);
+                Race.Set_physical_properties(       Race_description[04][_Races.IndexOf(Race)]);
+                Race.Set_home_world(                Race_description[05][_Races.IndexOf(Race)]);
+                Race.Set_language_1(                Race_description[06][_Races.IndexOf(Race)]);
+                Race.Set_language_2(                Race_description[07][_Races.IndexOf(Race)]);
+                Race.Set_language_3(                Race_description[08][_Races.IndexOf(Race)]);
+                Race.Set_language_4(                Race_description[09][_Races.IndexOf(Race)]);
+                Race.Set_feature_1(                 Race_description[10][_Races.IndexOf(Race)]);
+                Race.Set_feature_2(                 Race_description[11][_Races.IndexOf(Race)]);
+                Race.Set_feature_3(                 Race_description[12][_Races.IndexOf(Race)]);
+                Race.Set_feature_4(                 Race_description[13][_Races.IndexOf(Race)]);
+                Race.Set_feature_5(                 Race_description[14][_Races.IndexOf(Race)]);
+                Race.Set_feature_6(                 Race_description[15][_Races.IndexOf(Race)]);
+                Race.Set_feature_7(                 Race_description[16][_Races.IndexOf(Race)]);
             }
         }
     }

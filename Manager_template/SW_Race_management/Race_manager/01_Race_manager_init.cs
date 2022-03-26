@@ -40,6 +40,8 @@ namespace SW_Character_creation
         private List<string> Race_general_info_coloumn_name;
         #endregion
         #region инициализация коллекций общего описания рас
+        private List<string> ID_Race;
+        private List<string> Race_name;
         private List<string> General_description;
         private List<string> Personal_properties;
         private List<string> Physical_properties;

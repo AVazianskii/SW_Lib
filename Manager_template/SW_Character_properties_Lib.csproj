@@ -116,6 +116,7 @@
     <Compile Include="SW_Race_management\Races\Wooki_race.cs" />
     <Compile Include="SW_Race_management\Races\Zabrak_race.cs" />
     <Compile Include="SW_Race_management\Race_manager\01_Race_manager_init.cs" />
+    <Compile Include="SW_Race_management\Race_manager\02_Race_manager_Method_upload_race_pics.cs" />
     <Compile Include="SW_Race_management\Race_manager\03_Race_manager_Method_upload_race_general_info.cs" />
     <Compile Include="SW_Race_management\Race_manager\04_Race_manager_Method_upload_languages_info.cs" />
     <Compile Include="SW_Race_management\Race_manager\05_Race_manager_Method_upload_race_skill_bonus.cs" />
@@ -198,38 +199,6 @@
     <Folder Include="SW_Feature_management\Feature_manager\" />
     <Folder Include="SW_Feature_management\Feature_template\" />
     <Folder Include="SW_Range_management\Range_manager\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="SW_Race_management\Race_pictures\Botan.jpg" />
-    <Content Include="SW_Race_management\Race_pictures\Cereanin.jpg" />
-    <Content Include="SW_Race_management\Race_pictures\Duro.jpg" />
-    <Content Include="SW_Race_management\Race_pictures\Evok.jpg" />
-    <Content Include="SW_Race_management\Race_pictures\Gamor.jpg" />
-    <Content Include="SW_Race_management\Race_pictures\Gungan.jpg" />
-    <Content Include="SW_Race_management\Race_pictures\Human.jpg" />
-    <Content Include="SW_Race_management\Race_pictures\Keldor.jpg" />
-    <Content Include="SW_Race_management\Race_pictures\MonKalamari.jpg" />
-    <Content Include="SW_Race_management\Race_pictures\Rodian.jpg" />
-    <Content Include="SW_Race_management\Race_pictures\Sullu.jpg" />
-    <Content Include="SW_Race_management\Race_pictures\Trando.jpg" />
-    <Content Include="SW_Race_management\Race_pictures\Tvilek.jpg" />
-    <Content Include="SW_Race_management\Race_pictures\Wooki.jpg" />
-    <Content Include="SW_Race_management\Race_pictures\Zabrak.jpg" />
-    <Content Include="SW_Race_management\Race_small_pictures\Botan.jpg" />
-    <Content Include="SW_Race_management\Race_small_pictures\Cereanin.jpg" />
-    <Content Include="SW_Race_management\Race_small_pictures\Duro.jpg" />
-    <Content Include="SW_Race_management\Race_small_pictures\Evok.jpg" />
-    <Content Include="SW_Race_management\Race_small_pictures\Gamor.jpg" />
-    <Content Include="SW_Race_management\Race_small_pictures\Gungan.jpg" />
-    <Content Include="SW_Race_management\Race_small_pictures\Human.jpg" />
-    <Content Include="SW_Race_management\Race_small_pictures\Keldor.jpg" />
-    <Content Include="SW_Race_management\Race_small_pictures\MonKalamari.jpg" />
-    <Content Include="SW_Race_management\Race_small_pictures\Rodian.jpg" />
-    <Content Include="SW_Race_management\Race_small_pictures\Sullu.jpg" />
-    <Content Include="SW_Race_management\Race_small_pictures\Trando.jpg" />
-    <Content Include="SW_Race_management\Race_small_pictures\Tvilek.jpg" />
-    <Content Include="SW_Race_management\Race_small_pictures\Wooki.jpg" />
-    <Content Include="SW_Race_management\Race_small_pictures\Zabrak.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

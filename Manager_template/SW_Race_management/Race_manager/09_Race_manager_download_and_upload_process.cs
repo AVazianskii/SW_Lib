@@ -8,11 +8,17 @@ namespace SW_Character_creation
         {
             SQLite_connection.Open();
 
+            /*
             Run_download_from_SQLite("SELECT * FROM Race_general ORDER BY ID",
                                       SQLite_connection,
                                       Race_general_info_coloumn_name,
                                       Race_description,
-                                      (int)Type_of_var.string_type);
+                                      (int)Type_of_var.string_type); */
+
+            Run_download_general_from_SQLite("SELECT * FROM Race_general ORDER BY ID",
+                                             SQLite_connection,
+                                             Race_general_info_coloumn_name,
+                                             Race_description);
 
             Run_download_from_SQLite("SELECT * FROM Race_languages ORDER BY ID",
                                      SQLite_connection,
@@ -47,6 +53,7 @@ namespace SW_Character_creation
             SQLite_connection.Close();
 
             Upload_general_info();       // Перекладываем считанные данные в конфигурационные поля объектов рас 
+            Upload_race_pics();
             Upload_languages_info();
             Upload_race_skill_bonus();
             Upload_race_attributes_bonus();
