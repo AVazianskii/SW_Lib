@@ -10,8 +10,7 @@ namespace SW_Character_creation
     {
         private Skill_manager()
         { 
-            _swimming = new Swimming_Skill();
-
+            
             SQLite_connection_string = $@"Data Source={Directory.GetCurrentDirectory()}\Database\Skills.db;Version=3;";
             SQLite_connection = new SQLiteConnection(SQLite_connection_string);
 

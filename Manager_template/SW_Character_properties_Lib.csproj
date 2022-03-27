@@ -133,6 +133,7 @@
     <Compile Include="SW_Range_management\Ranges\Immortal_range.cs" />
     <Compile Include="SW_Range_management\Ranges\Private_range.cs" />
     <Compile Include="SW_Range_management\Ranges\Veteran_range.cs" />
+    <Compile Include="SW_Range_management\Range_manager\Range_manager.cs" />
     <Compile Include="SW_Range_management\Range_template\Range_Class.cs" />
     <Compile Include="SW_Skills_management\Skills\Acrobatic_skill.cs" />
     <Compile Include="SW_Skills_management\Skills\Astronavigation_skill.cs" />
@@ -198,7 +199,6 @@
     <Folder Include="SW_Feature_management\Features\" />
     <Folder Include="SW_Feature_management\Feature_manager\" />
     <Folder Include="SW_Feature_management\Feature_template\" />
-    <Folder Include="SW_Range_management\Range_manager\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

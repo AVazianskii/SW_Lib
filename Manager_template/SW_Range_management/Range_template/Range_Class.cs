@@ -15,6 +15,7 @@ namespace Range_libs
         private string range_description;   // описание ранга персонажа
         private string path_read_description; // Путь к файлу для вычитывания текстового описания расы
 
+        public string Range_name { get; set; }
         
         #endregion
 
@@ -31,7 +32,7 @@ namespace Range_libs
         // Получаем универсальный код для определени ранга персонажа
         public int Get_range_code() { return range_code; }
         // Устанавливаем название ранга персонажа
-        public void Set_range_name(string insert_text) { range_name = insert_text; }
+        public void Set_range_name(string insert_text) { range_name = insert_text; Range_name = insert_text; }
         // Получаем название ранга персонажа
         public string Get_range_name() { return range_name; }
         // Устанавливаем бонусы к атрибутам от принятия нового ранга персонажа
