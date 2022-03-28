@@ -13,10 +13,58 @@ namespace Range_libs
 
         private string range_name;          // задаем название для ранга
         private string range_description;   // описание ранга персонажа
-        private string path_read_description; // Путь к файлу для вычитывания текстового описания расы
+        private int strength_limit;
+        private int agility_limit;
+        private int stamina_limit;
+        private int quickness_limit;
+        private int perception_limit;
+        private int intelligence_limit;
+        private int charm_limit;
+        private int willpower_limit;
+
 
         public string Range_name { get; set; }
-        
+        public int Strength_limit 
+        {   
+            get { return strength_limit;  }
+            set { strength_limit = value; }
+        }
+        public int Agility_limit
+        {
+            get { return agility_limit; }
+            set { agility_limit = value; }
+        }
+        public int Stamina_limit
+        {
+            get { return stamina_limit; }
+            set { stamina_limit = value; }
+        }
+        public int Quickness_limit
+        {
+            get { return quickness_limit; }
+            set { quickness_limit = value; }
+        }
+        public int Perception_limit
+        {
+            get { return perception_limit; }
+            set { perception_limit = value; }
+        }
+        public int Intelligence_limit
+        {
+            get { return intelligence_limit; }
+            set { intelligence_limit = value; }
+        }
+        public int Charm_limit
+        {
+            get { return charm_limit; }
+            set { charm_limit = value; }
+        }
+        public int Willpower_limit
+        {
+            get { return willpower_limit; }
+            set { willpower_limit = value; }
+        }
+
         #endregion
 
         #region // конструктор класса
@@ -43,10 +91,8 @@ namespace Range_libs
         public void Set_range_descr(string insert_text) { range_description = insert_text; }
         // Получаем описание ранга персонажа
         public string Get_range_descr() { return range_description; }
-        // Устанавливаем путь к текстовому файлу с описанием навыка
-        public void Set_path_read_description(string input_text) { path_read_description = input_text; }
-        // Предоставляем путь к текстовому файлу с описанием навыка
-        public string Get_path_read_description() { return path_read_description; }
+
+
         #endregion
     }
 }

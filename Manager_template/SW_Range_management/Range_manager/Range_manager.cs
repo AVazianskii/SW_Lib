@@ -21,14 +21,14 @@ namespace SW_Character_creation
 
         private List<List<string>> Range_general_info;
         private List<List<int>> Ranges_attributes_limits;
-        private List<int> Strength_limit;
-        private List<int> Agility_limit;
-        private List<int> Stamina_limit;
-        private List<int> Quickness_limit;
-        private List<int> Perception_limit;
-        private List<int> Intelligence_limit;
-        private List<int> Charm_limit;
-        private List<int> Willpower_limit;
+        //private List<int> Strength_limit;
+        //private List<int> Agility_limit;
+        //private List<int> Stamina_limit;
+        //private List<int> Quickness_limit;
+        //private List<int> Perception_limit;
+        //private List<int> Intelligence_limit;
+        //private List<int> Charm_limit;
+        //private List<int> Willpower_limit;
 
         private List<Range_Class> _Ranges;
 
@@ -55,11 +55,11 @@ namespace SW_Character_creation
                                              Range_general_info_coloumn_name,
                                              Range_general_info);
 
-            Run_download_from_SQLite("SELECT * FROM Ranges_attributes_limits ORDER BY ID",
-                                     SQLite_connection,
-                                     Ranges_attributes_limits_coloumn_name,
-                                     Ranges_attributes_limits,
-                                     (int)Type_of_var.int_type);
+            Run_download_from_SQLite_v2("SELECT * FROM Ranges_attributes_limits ORDER BY ID",
+                                        SQLite_connection,
+                                        Ranges_attributes_limits_coloumn_name,
+                                        Ranges_attributes_limits,
+                                        (int)Type_of_var.int_type);
 
             SQLite_connection.Clone();
 
