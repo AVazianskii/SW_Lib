@@ -15,8 +15,6 @@ namespace Range_libs
             //Set_range_code((int)SW_Character.enum_Range.Veteran);       // Устанваливаем код для определения ранга персонажа
             Set_range_name("Ветеран");                                  // Устанавливаем название ранга персонажа
             //Set_range_descr("");                                        // Устанавливаем описание текущего ранга
-
-            Set_path_read_description("");          // Путь к файлу для вычитывания текстового описания ранга
         }
     }
 }

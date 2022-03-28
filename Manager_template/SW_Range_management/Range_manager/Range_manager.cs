@@ -73,6 +73,15 @@ namespace SW_Character_creation
                 _Ranges[index].Set_range_code(Convert.ToInt32(  Range_general_info[00][index]));
                 _Ranges[index].Set_range_name(                  Range_general_info[01][index]);
                 _Ranges[index].Set_range_descr(                 Range_general_info[02][index]);
+
+                _Ranges[index].Strength_limit       = Ranges_attributes_limits[0][index];
+                _Ranges[index].Agility_limit        = Ranges_attributes_limits[1][index];
+                _Ranges[index].Stamina_limit        = Ranges_attributes_limits[2][index];
+                _Ranges[index].Quickness_limit      = Ranges_attributes_limits[3][index];
+                _Ranges[index].Perception_limit     = Ranges_attributes_limits[4][index];
+                _Ranges[index].Intelligence_limit   = Ranges_attributes_limits[5][index];
+                _Ranges[index].Charm_limit          = Ranges_attributes_limits[6][index];
+                _Ranges[index].Willpower_limit      = Ranges_attributes_limits[7][index];
             }
         }
 
