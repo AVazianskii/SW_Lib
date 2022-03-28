@@ -14,11 +14,21 @@ namespace SW_Character_creation
         private static Range_manager Range_manager_instance;
 
         private List<string> Range_general_info_coloumn_name;
+        private List<string> Ranges_attributes_limits_coloumn_name;
         private List<string> Range_ID;
         private List<string> Range_name;
         private List<string> Range_description;
 
         private List<List<string>> Range_general_info;
+        private List<List<int>> Ranges_attributes_limits;
+        private List<int> Strength_limit;
+        private List<int> Agility_limit;
+        private List<int> Stamina_limit;
+        private List<int> Quickness_limit;
+        private List<int> Perception_limit;
+        private List<int> Intelligence_limit;
+        private List<int> Charm_limit;
+        private List<int> Willpower_limit;
 
         private List<Range_Class> _Ranges;
 
@@ -45,6 +55,12 @@ namespace SW_Character_creation
                                              Range_general_info_coloumn_name,
                                              Range_general_info);
 
+            Run_download_from_SQLite("SELECT * FROM Ranges_attributes_limits ORDER BY ID",
+                                     SQLite_connection,
+                                     Ranges_attributes_limits_coloumn_name,
+                                     Ranges_attributes_limits,
+                                     (int)Type_of_var.int_type);
+
             SQLite_connection.Clone();
 
             // создаем итоговую коллекцию, количество элементов в которой определяется количеством строк в таблице 
@@ -70,6 +86,7 @@ namespace SW_Character_creation
             _Ranges = new List<Range_Class>();
 
             Range_general_info_coloumn_name = new List<string>();
+            Ranges_attributes_limits_coloumn_name = new List<string>();
             Range_general_info = new List<List<string>>();
             Range_ID = new List<string>();
             Range_name = new List<string>();
