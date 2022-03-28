@@ -97,6 +97,7 @@ namespace SW_Character_creation
             Range_general_info_coloumn_name = new List<string>();
             Ranges_attributes_limits_coloumn_name = new List<string>();
             Range_general_info = new List<List<string>>();
+            Ranges_attributes_limits = new List<List<int>>();
             Range_ID = new List<string>();
             Range_name = new List<string>();
             Range_description = new List<string>();

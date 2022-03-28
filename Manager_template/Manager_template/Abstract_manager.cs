@@ -157,27 +157,27 @@ namespace SW_Character_creation
                     if (reading_data_type == (int)Type_of_var.string_type)
                     {
                         temp_string_list = (List<List<string>>)List_for_reading_data;
+                        temp_string_list.Add(new List<string>());
                         if (!(temp_object is DBNull)) 
                         {
-                            temp_string_list.Add(new List<string>());
                             temp_string_list[index].Add(Convert.ToString(temp_object)); 
                         } else { temp_string_list[index].Add(""); }
                     }
                     else if (reading_data_type == (int)Type_of_var.int_type)
                     {
                         temp_int_list = (List<List<int>>)List_for_reading_data;
-                        if (!(temp_object is DBNull)) 
-                        {
-                            temp_int_list.Add(new List<int>());
+                        temp_int_list.Add(new List<int>());
+                        if (!(temp_object is DBNull))
+                        { 
                             temp_int_list[index].Add(Convert.ToInt32(temp_object));
                         } else { temp_int_list[index].Add(0); }
                     }
                     else if (reading_data_type == (int)Type_of_var.bool_type)
                     {
                         temp_bool_list = (List<List<bool>>)List_for_reading_data;
+                        temp_bool_list.Add(new List<bool>());
                         if (!(temp_object is DBNull)) 
                         {
-                            temp_bool_list.Add(new List<bool>());
                             temp_bool_list[index].Add(Convert.ToBoolean(temp_object)); 
                         } else { temp_bool_list[index].Add(false); }
                     }

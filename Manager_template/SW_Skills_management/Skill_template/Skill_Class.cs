@@ -101,48 +101,6 @@ namespace Skills_libs
             return Error_msg; 
         }
 
-        // Метод увеличения навыка на 1
-        /*
-        public void Score_Increase()  
-        {
-            Skill_limit(Get_age_skill_limit(),Get_range_skill_limit());                         // Получаем лимит прокачки умения
-
-            if (score < Get_Skill_limit())                                            // Проводим проверку на превышение лимита прокачки
-            {
-                if (_SW_Char.Get_experience() >= Get_cost())
-                {
-                    Set_score(Get_score() + 1);
-                    Increase_counter();                                             // Увеличиваем счетчик прокачек умения персонажа
-                    _SW_Char.Decrease_experience_on(Get_cost());                    // выражение для уменьшения значения очков опыта
-                    Set_Error_Code(0);                                              // Снимаем код ошибки
-                }
-                else
-                {
-                    Set_Error_Code(3);
-                }
-            }
-            else
-            {
-                Set_Error_Code(1);
-            }
-        }
-
-        // Метод уменьшения навыка на 1
-        public void Score_Decrease()  
-        {
-            if (score > 0)
-            {
-                Set_score(Get_score() - 1);
-                Decrease_counter();
-                _SW_Char.Increase_experience_on(Get_cost());                    // выражение для увеличения значения очков опыта
-                Set_Error_Code(0);                                              // Снимаем код ошибки
-            }
-            else
-            {
-                Set_Error_Code(2);
-            }
-        }
-        */
         #region // методы установки возрастных лимитов прокачки навыка
         // Устанавливаем значение возрастного лимита умения для Ребеной
         public void Set_child_skill_limit(int insert_int) { child_skill_limit = insert_int; }
@@ -173,30 +131,7 @@ namespace Skills_libs
         // Предоставление значение возрастного лимита умения для Неизвестный возрастной статус
         public int Get_unknown_age_status_skill_limit() { return unknown_age_status_skill_limit; }
         #endregion
-        /*
-        // Метод определения лимита прокачки навыка относительно возраста персонажа
-        public void Set_age_skill_limit(string age_status)
-        {
-            _SW_Char.Get_age_status();
-            foreach (Age_status_class Age_status in _SW_Char._Age_statuses)
-            {
-                if (Age_status.Get_age_status_name() == age_status)
-                {
-                    switch (Age_status.Get_age_status_code())
-                    {
-                        case (int)SW_Character.enum_Age_status.Child:   age_skill_limit = Get_child_skill_limit(); break; //2
-                        case (int)SW_Character.enum_Age_status.Teen:    age_skill_limit = Get_teen_skill_limit(); break; //4
-                        case (int)SW_Character.enum_Age_status.Adult:   age_skill_limit = Get_adult_skill_limit(); break; //10
-                        case (int)SW_Character.enum_Age_status.Middle:  age_skill_limit = Get_middle_skill_limit(); break; //10
-                        case (int)SW_Character.enum_Age_status.Old:     age_skill_limit = Get_old_skill_limit(); break; //10
-                        case (int)SW_Character.enum_Age_status.Eldery:  age_skill_limit = Get_eldery_skill_limit(); break; //10
-                        case (int)SW_Character.enum_Age_status.Unknown: age_skill_limit = Get_unknown_age_status_skill_limit(); break; //0
-                    }
-                    break;
-                }
-            }
-        }
-        */
+
         // Предоставляем значение возрасттного лиимита прокачки навыка
         public int Get_age_skill_limit() { return age_skill_limit; }
 
@@ -222,37 +157,7 @@ namespace Skills_libs
         // Предоставляем значение лимита прокачки навыка для Бессмертный
         public int Get_immortal_skill_limit() { return immortal_skill_limit; }
         #endregion
-        /*
-        // Устанавливаем лимит прокачка навыка оотносительно ранга персонажа 
-        public void Set_range_skill_limit(string range)
-        {
-            foreach (Range_Class Range in _SW_Char._Ranges)
-            {
-                if(Range.Get_range_name() == range)
-                {
-                    switch(Range.Get_range_code())
-                    {
-                        case (int)SW_Character.enum_Range.Private: 
-                            range_skill_limit = Get_private_skill_limit(); 
-                            break;
-                        case (int)SW_Character.enum_Range.Veteran:
-                            range_skill_limit = Get_veteran_skill_limit();
-                            break;
-                        case (int)SW_Character.enum_Range.Hero:
-                            range_skill_limit = Get_hero_skill_limit();
-                            break;
-                        case (int)SW_Character.enum_Range.Epic:
-                            range_skill_limit = Get_epic_skill_limit();
-                            break;
-                        case (int)SW_Character.enum_Range.Immortal:
-                            range_skill_limit = Get_immortal_skill_limit();
-                            break;
-                    }
 
-                }
-            }
-        }
-        */
         // Предоставляем значение лимита прокачки навыка относительно ранга персонажа
         public int Get_range_skill_limit() { return range_skill_limit; }
         // Устанавливаем флаг, является ли навык боевым умением
