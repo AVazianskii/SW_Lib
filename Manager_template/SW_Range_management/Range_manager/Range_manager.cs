@@ -15,20 +15,15 @@ namespace SW_Character_creation
 
         private List<string> Range_general_info_coloumn_name;
         private List<string> Ranges_attributes_limits_coloumn_name;
+        private List<string> Ranges_skills_limits_coloumn_name;
         private List<string> Range_ID;
         private List<string> Range_name;
         private List<string> Range_description;
 
         private List<List<string>> Range_general_info;
         private List<List<int>> Ranges_attributes_limits;
-        //private List<int> Strength_limit;
-        //private List<int> Agility_limit;
-        //private List<int> Stamina_limit;
-        //private List<int> Quickness_limit;
-        //private List<int> Perception_limit;
-        //private List<int> Intelligence_limit;
-        //private List<int> Charm_limit;
-        //private List<int> Willpower_limit;
+        private List<List<int>> Ranges_skills_limits;
+
 
         private List<Range_Class> _Ranges;
 
@@ -59,6 +54,12 @@ namespace SW_Character_creation
                                         SQLite_connection,
                                         Ranges_attributes_limits_coloumn_name,
                                         Ranges_attributes_limits,
+                                        (int)Type_of_var.int_type);
+
+            Run_download_from_SQLite_v2("SELECT * FROM Ranges_skills_limits ORDER BY ID",
+                                        SQLite_connection,
+                                        Ranges_skills_limits_coloumn_name,
+                                        Ranges_skills_limits,
                                         (int)Type_of_var.int_type);
 
             SQLite_connection.Clone();
@@ -96,8 +97,12 @@ namespace SW_Character_creation
 
             Range_general_info_coloumn_name = new List<string>();
             Ranges_attributes_limits_coloumn_name = new List<string>();
+            Ranges_skills_limits_coloumn_name = new List<string>();
+
             Range_general_info = new List<List<string>>();
             Ranges_attributes_limits = new List<List<int>>();
+            Ranges_skills_limits = new List<List<int>>();
+
             Range_ID = new List<string>();
             Range_name = new List<string>();
             Range_description = new List<string>();
