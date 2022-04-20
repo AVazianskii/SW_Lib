@@ -27,6 +27,8 @@ namespace Age_status_libs
         private int age_status_willpower_bonus;     // бонус к атрибуту Сила воли       при изменении возрастного статуса
 
         private string age_status_feature_descr;
+
+        public string Age_status_name { get; set; }
         #endregion
 
         #region // Конструктор класса
@@ -42,7 +44,7 @@ namespace Age_status_libs
         // Получаем уникальный код возрастного статуса персонажа
         public int Get_age_status_code() { return age_status_code; }
         // Устанавливаем название возрастного статуса персонажа
-        public void Set_age_status_name(string insert_text) { age_status_name = insert_text; }
+        public void Set_age_status_name(string insert_text) { age_status_name = insert_text; Age_status_name = insert_text; }
         // Получаем название возрастного статуса персонажа
         public string Get_age_status_name() { return age_status_name; }
         // Устанавливаем описание возрастного статуса персонажа

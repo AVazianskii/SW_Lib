@@ -33,6 +33,8 @@ namespace SW_Character_creation
 
         private List<string> Age_status_description;
         private List<string> Age_status_feature;
+        private List<string> Age_status_ID;
+        private List<string> Age_status_name;
         #endregion
     }
 }

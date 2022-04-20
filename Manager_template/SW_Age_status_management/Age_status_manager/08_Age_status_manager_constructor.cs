@@ -36,6 +36,10 @@ namespace SW_Character_creation
             Age_status_general_description = new List<List<string>>();
             Age_status_description = new List<string>();
             Age_status_feature = new List<string>();
+            Age_status_ID = new List<string>();
+            Age_status_name = new List<string>();
+            Age_status_general_description.Add(Age_status_ID);
+            Age_status_general_description.Add(Age_status_name);
             Age_status_general_description.Add(Age_status_description);
             Age_status_general_description.Add(Age_status_feature);
 

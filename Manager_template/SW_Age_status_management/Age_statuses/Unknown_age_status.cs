@@ -17,7 +17,7 @@ namespace Age_status_libs
         {
             
             //Set_age_status_code((int)SW_Character.enum_Age_status.Unknown);
-            Set_age_status_name("Неизвестный возрастной статус");
+            Set_age_status_name("Неизвестно");
             Set_age_status_descr("");
 
             //Set_age_status_strength_bonus(0);

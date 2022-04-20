@@ -16,7 +16,7 @@ namespace Age_status_libs
         public Adult_age()
         {
             //Set_age_status_code((int)SW_Character.enum_Age_status.Adult);
-            //Set_age_status_name("Взрослый");
+            Set_age_status_name("Взрослый");
             //Set_age_status_descr("");
 
             //Set_age_status_strength_bonus(0);

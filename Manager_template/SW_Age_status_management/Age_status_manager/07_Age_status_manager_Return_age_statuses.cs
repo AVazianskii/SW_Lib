@@ -1,9 +1,14 @@
-﻿using Age_status_libs;
+﻿using System.Collections.Generic;
+using Age_status_libs;
 
 namespace SW_Character_creation
 {
     public partial class Age_status_manager
     {
+        public List<Age_status_class> Age_Statuses ()
+        {
+            return Age_statuses;
+        }
         public Unknown_age_status Get_Unknown_age_status()
         {
             return Unknown_age;
