@@ -83,6 +83,12 @@ namespace SW_Character_creation
                 _Ranges[index].Intelligence_limit   = Ranges_attributes_limits[5][index];
                 _Ranges[index].Charm_limit          = Ranges_attributes_limits[6][index];
                 _Ranges[index].Willpower_limit      = Ranges_attributes_limits[7][index];
+
+                _Ranges[index].Combat_skill_limit    = Ranges_skills_limits[0][index];
+                _Ranges[index].Surviving_skill_limit = Ranges_skills_limits[1][index];
+                _Ranges[index].Charming_skill_limit  = Ranges_skills_limits[2][index];
+                _Ranges[index].Tech_skill_limit      = Ranges_skills_limits[0][index];
+                _Ranges[index].Specific_skill_limit  = Ranges_skills_limits[0][index];
             }
         }
 

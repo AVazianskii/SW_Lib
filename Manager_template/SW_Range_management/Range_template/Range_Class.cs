@@ -22,6 +22,12 @@ namespace Range_libs
         private int charm_limit;
         private int willpower_limit;
 
+        private int combat_skill_limit,
+                    surviving_skill_limit,
+                    charming_skill_limit,
+                    tech_skills_limit,
+                    specific_skills_limit;
+
 
         public string Range_name { get; set; }
         public int Strength_limit 
@@ -63,6 +69,31 @@ namespace Range_libs
         {
             get { return willpower_limit; }
             set { willpower_limit = value; }
+        }
+        public int Combat_skill_limit
+        {
+            get { return combat_skill_limit; }
+            set { combat_skill_limit = value; }
+        }
+        public int Surviving_skill_limit
+        {
+            get { return surviving_skill_limit; }
+            set { surviving_skill_limit = value; }
+        }
+        public int Charming_skill_limit
+        {
+            get { return charming_skill_limit; }
+            set { charming_skill_limit = value; }
+        }
+        public int Tech_skill_limit
+        {
+            get { return tech_skills_limit; }
+            set { tech_skills_limit = value; }
+        }
+        public int Specific_skill_limit
+        {
+            get { return specific_skills_limit; }
+            set { specific_skills_limit = value; }
         }
 
         #endregion
