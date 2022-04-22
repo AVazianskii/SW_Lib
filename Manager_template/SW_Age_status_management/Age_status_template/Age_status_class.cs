@@ -26,9 +26,66 @@ namespace Age_status_libs
         private int age_status_charm_bonus;         // бонус к атрибуту Обаяние         при изменении возрастного статуса
         private int age_status_willpower_bonus;     // бонус к атрибуту Сила воли       при изменении возрастного статуса
 
+        private int age_status_strength_limit,
+                    age_status_agility_limit,
+                    age_status_stamina_limit,
+                    age_status_quickness_limit,
+                    age_status_perception_limit,
+                    age_status_intelligence_limit,
+                    age_status_charm_limit,
+                    age_status_willpower_limit;
+
+        private int skill_limit;
+
         private string age_status_feature_descr;
 
         public string Age_status_name { get; set; }
+
+        public int Age_status_strength_limit
+        {
+            get { return age_status_strength_limit; }
+            set { age_status_strength_limit = value; }
+        }
+        public int Age_status_agility_limit
+        {
+            get { return age_status_agility_limit; }
+            set { age_status_agility_limit = value; }
+        }
+        public int Age_status_stamina_limit
+        {
+            get { return age_status_stamina_limit; }
+            set { age_status_stamina_limit = value; }
+        }
+        public int Age_status_quickness_limit
+        {
+            get { return age_status_quickness_limit; }
+            set { age_status_quickness_limit = value; }
+        }
+        public int Age_status_perception_limit
+        {
+            get { return age_status_perception_limit; }
+            set { age_status_perception_limit = value; }
+        }
+        public int Age_status_intelligence_limit
+        {
+            get { return age_status_intelligence_limit; }
+            set { age_status_intelligence_limit = value; }
+        }
+        public int Age_status_charm_limit
+        {
+            get { return age_status_charm_limit; }
+            set { age_status_charm_limit = value; }
+        }
+        public int Age_status_willpower_limit
+        {
+            get { return age_status_willpower_limit; }
+            set { age_status_willpower_limit = value; }
+        }
+        public int Skill_limit
+        {
+            get { return skill_limit; }
+            set { skill_limit = value; }
+        }
         #endregion
 
         #region // Конструктор класса
