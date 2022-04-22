@@ -43,6 +43,16 @@ namespace Skills_libs
         private int Non_force_user_cost,
                     Forceuser_cost;
 
+        private int skill_type;
+
+
+
+        public int Skill_type
+        {
+            get { return skill_type; }
+            set { skill_type = value; }
+        }
+
         #endregion
 
         #region // конструктор класса
