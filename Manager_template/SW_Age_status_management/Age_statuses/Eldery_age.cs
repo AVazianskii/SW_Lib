@@ -16,8 +16,8 @@ namespace Age_status_libs
         public Eldery_age()
         {
             //Set_age_status_code((int)SW_Character.enum_Age_status.Eldery);
-            Set_age_status_name("Почтенный возраст");
-            Set_age_status_descr("");
+            //Set_age_status_name("Почтенный возраст");
+            //Set_age_status_descr("");
 
             //Set_age_status_strength_bonus(-3);
             //Set_age_status_agility_bonus(-3);

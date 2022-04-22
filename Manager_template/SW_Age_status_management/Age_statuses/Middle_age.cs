@@ -16,8 +16,8 @@ namespace Age_status_libs
         public Middle_age()
         {
             //Set_age_status_code((int)SW_Character.enum_Age_status.Middle);
-            Set_age_status_name("Средний возраст");
-            Set_age_status_descr("");
+            //Set_age_status_name("Средний возраст");
+            //Set_age_status_descr("");
 
             //Set_age_status_strength_bonus(0);
             //Set_age_status_agility_bonus(0);

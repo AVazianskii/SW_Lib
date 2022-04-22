@@ -17,7 +17,7 @@ namespace Age_status_libs
         {
 
             //Set_age_status_code((int)SW_Character.enum_Age_status.Child);
-            Set_age_status_name("Ребенок");
+            //Set_age_status_name("Ребенок");
             //Set_age_status_descr("");
 
             //Set_age_status_strength_bonus(0);
