@@ -128,6 +128,14 @@ namespace Races_libs
         // SW_Character _SW_Char;      // Класс персонажа, с которым происходят изменения
 
         private bool is_choosen;            // Флаг выбранного состояния
+
+        private List<int> race_skill_bonus;
+
+        public List<int> Race_skill_bonus
+        {
+            get { return race_skill_bonus; }
+            set { race_skill_bonus = value; }
+        }
         #endregion
 
         #region // конструктор класса
