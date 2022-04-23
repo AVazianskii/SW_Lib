@@ -57,7 +57,7 @@
         public void Set_description(string insert_text) { description = insert_text; }
         public string Get_description () { return description; }
 
-        #region //Лимит значения атрибута по возрасту персонажа
+
         public void Set_child_attribute_limit       (int insert_int) { child_attribute_limit = insert_int; }                public int Get_child_attribute_limit()          { return child_attribute_limit; }
         public void Set_teen_attribute_limit        (int insert_int) { teen_attribute_limit = insert_int; }                 public int Get_teen_attribute_limit()           { return teen_attribute_limit; }
         public void Set_adult_attribute_limit       (int insert_int) { adult_attribute_limit = insert_int; }                public int Get_adult_attribute_limit()          { return adult_attribute_limit; }
@@ -68,34 +68,13 @@
         public int Get_age_attribute_limit() { return age_attribute_limit; }
         #endregion
 
-        #region //Лимит значения атрибута по рангу персонажа
+
         public void Set_private_range_attribute_limit   (int insert_int) { Private_range_limit = insert_int; }          public int Get_private_range_attribute_limit()  { return Private_range_limit; }
         public void Set_veteran_range_attribute_limit   (int insert_int) { Veteran_range_limit = insert_int; }          public int Get_veteran_range_attribute_limit()  { return Veteran_range_limit; }
         public void Set_hero_range_attribute_limit      (int insert_int) { Hero_range_limit = insert_int; }             public int Get_hero_range_attribute_limit()     { return Hero_range_limit; }
         public void Set_epic_range_attribute_limit      (int insert_int) { Epic_range_limit = insert_int; }             public int Get_epic_range_attribute_limit()     { return Epic_range_limit; }
         public void Set_immortal_range_attribute_limit  (int insert_int) { Immortal_range_limit = insert_int; }         public int Get_immortal_range_attribute_limit() { return Immortal_range_limit; }
         public int Get_range_attribute_limit() { return range_attribute_limit; }
-        #endregion
-
-        #region //Сравнение лимитов атрибутов. Используем меньший лимит
-        public int Atr_limit(int age_limit, int range_limit)
-        {
-            if (age_limit >= range_limit)
-            {
-                atr_limit = range_limit;
-            }
-            else if (range_limit > age_limit)
-            {
-                atr_limit = age_limit;
-            }
-            else
-            {
-                atr_limit = 0;
-            }
-            return atr_limit;
-        }
-
-        public int Get_Atr_limit() { return atr_limit; }
 
         public void Set_atribute_code(int insert_int) { atribute_code = insert_int; }
         public int Get_atribute_code() { return atribute_code; }
@@ -103,10 +82,6 @@
         public int Get_attribute_cost_for_atr() { return attribute_cost_for_atr; }
         public void Set_attribute_cost_for_exp(int insert_int) { attribute_cost_for_exp = insert_int; }
         public int Get_attribute_cost_for_exp() { return attribute_cost_for_exp; }
-        #endregion
-
-
-        #endregion
 
     }
 }
