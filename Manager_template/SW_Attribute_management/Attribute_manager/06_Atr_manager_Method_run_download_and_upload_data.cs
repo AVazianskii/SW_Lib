@@ -10,11 +10,10 @@ namespace SW_Character_creation
             SQLite_connection.Open();
 
 
-            Run_download_from_SQLite("SELECT * FROM Attributes_general ORDER BY ID",
+            Run_download_general_from_SQLite("SELECT * FROM Attributes_general ORDER BY ID",
                                       SQLite_connection,
                                       Attribute_general_coloumn_name,
-                                      Attributes_description,
-                                      (int)Type_of_var.string_type);
+                                      Attributes_description);
 
             Run_download_from_SQLite("SELECT * FROM Attributes_cost ORDER BY ID",
                                      SQLite_connection,

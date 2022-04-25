@@ -37,7 +37,11 @@ namespace SW_Character_creation
             #region инициализация коллекций для считывания общего описания атрибутов
             Attribute_general_coloumn_name = new List<string>();
             Attribute_general_description = new List<string>();
+            Attribute_ID = new List<string>();
+            Attribute_name = new List<string>();
             Attributes_description = new List<List<string>>();
+            Attributes_description.Add(Attribute_ID);
+            Attributes_description.Add(Attribute_name);
             Attributes_description.Add(Attribute_general_description);
             #endregion
             #region инициализация коллекций для считывания стоимости прокачки атрибутов

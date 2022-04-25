@@ -52,6 +52,8 @@ namespace SW_Character_creation
         private List<int> Attribute_eldery_limit;
 
         private List<string> Attribute_general_description;
+        private List<string> Attribute_ID;
+        private List<string> Attribute_name;
 
         public enum enum_Atributes // перечисляем порядок атрибутов в последовательности, начиная с 0
         {
