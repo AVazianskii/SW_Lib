@@ -43,12 +43,12 @@
 
         #region // Методы шаблона
 
-        private void Increase_atr_for_exp() { atribute_for_exp = atribute_for_exp + 1; }
-        private void Decrease_atr_for_exp() { atribute_for_exp = atribute_for_exp - 1; }
-        private int Get_atr_for_exp() { return atribute_for_exp; }
-        private void Increase_atr_for_atr() { atribute_for_atr = atribute_for_atr + 1; }
-        private void Decrease_atr_for_atr() { atribute_for_atr = atribute_for_atr - 1; }
-        private int Get_atr_for_atr() { return atribute_for_atr; }
+        public void Increase_atr_for_exp() { atribute_for_exp = atribute_for_exp + 1; }
+        public void Decrease_atr_for_exp() { atribute_for_exp = atribute_for_exp - 1; }
+        public int Get_atr_for_exp() { return atribute_for_exp; }
+        public void Increase_atr_for_atr() { atribute_for_atr = atribute_for_atr + 1; }
+        public void Decrease_atr_for_atr() { atribute_for_atr = atribute_for_atr - 1; }
+        public int Get_atr_for_atr() { return atribute_for_atr; }
         public void Increase_atr(int insert_value) { score = score + insert_value; }
 
         public void Decrease_atr(int insert_value) { score = score - insert_value; }
