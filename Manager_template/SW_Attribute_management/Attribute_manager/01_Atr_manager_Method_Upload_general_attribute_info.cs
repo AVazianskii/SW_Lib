@@ -14,6 +14,8 @@ namespace SW_Character_creation
             foreach (Atribute_class Attribute in _Attributes)
             {
                 int index = _Attributes.IndexOf(Attribute);
+                Attribute.Set_atribute_code(Convert.ToInt32(Attributes_description[0][index]));
+                Attribute.Atr_name = Attributes_description[1][index];
                 Attribute.Set_description(Attributes_description[Attributes_description.IndexOf(Attribute_general_description)][index]);
             }
         }

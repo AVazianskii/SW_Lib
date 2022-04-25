@@ -27,10 +27,17 @@
         private int atribute_code;          // Код атрибута
 
         private string description;         // описание атрибута персонажа
+        private string attribute_name;
 
         private int attribute_cost_for_atr,
                     attribute_cost_for_exp;
 
+
+        public string Atr_name
+        {
+            get { return attribute_name; }
+            set { attribute_name = value; }
+        }
         #endregion
 
         #region // Конструктор шаблона
