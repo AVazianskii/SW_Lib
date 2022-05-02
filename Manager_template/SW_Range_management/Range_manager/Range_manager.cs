@@ -62,7 +62,9 @@ namespace SW_Character_creation
                                         Ranges_skills_limits,
                                         (int)Type_of_var.int_type);
 
-            SQLite_connection.Clone();
+            SQLite_connection.Close();
+
+            int index = 0;
 
             // создаем итоговую коллекцию, количество элементов в которой определяется количеством строк в таблице 
             // ориентируемся на столбец ID в таблице основного описания навыка. 
@@ -70,7 +72,7 @@ namespace SW_Character_creation
             {
                 _Ranges.Add(new Range_Class());
 
-                int index = Range_general_info[0].IndexOf(count);
+                index = Range_general_info[0].IndexOf(count);
                 _Ranges[index].Set_range_code(Convert.ToInt32(  Range_general_info[00][index]));
                 _Ranges[index].Set_range_name(                  Range_general_info[01][index]);
                 _Ranges[index].Set_range_descr(                 Range_general_info[02][index]);

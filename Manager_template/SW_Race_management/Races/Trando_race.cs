@@ -9,10 +9,10 @@ namespace Races_libs
         #region // конструктор класса
         public Trando_race() 
         {
-            Set_race_name("Трандошанин");               // Устанавливаем текущее показатель атрибута 
-            Set_race_code((int)Race_manager.enum_Races._Trando);                       // Устанавливаем идентификатор расы
-            Set_img_path(@"D:\STAR WARS Saga\Character_creation\Manager_template\Manager_template\SW_Race_management\Race_pictures\Trando.jpg");                       // Устанавливаем путь к картинке расы
-            Set_small_img_path(@"D:\STAR WARS Saga\Character_creation\Manager_template\Manager_template\SW_Race_management\Race_small_pictures\Trando.jpg");
+            //Set_race_name("Трандошанин");               // Устанавливаем текущее показатель атрибута 
+            //Set_race_code((int)Race_manager.enum_Races._Trando);                       // Устанавливаем идентификатор расы
+            //Set_img_path(@"D:\STAR WARS Saga\Character_creation\Manager_template\Manager_template\SW_Race_management\Race_pictures\Trando.jpg");                       // Устанавливаем путь к картинке расы
+            //Set_small_img_path(@"D:\STAR WARS Saga\Character_creation\Manager_template\Manager_template\SW_Race_management\Race_small_pictures\Trando.jpg");
         }
         #endregion
 

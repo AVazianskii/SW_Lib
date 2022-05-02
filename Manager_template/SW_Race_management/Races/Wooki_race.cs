@@ -9,10 +9,10 @@ namespace Races_libs
         #region // конструктор класса
         public Wooki_race() 
         {
-            Set_race_name("Вуки");               // Устанавливаем текущее показатель атрибута 
-            Set_race_code((int)Race_manager.enum_Races._Wooki);                       // Устанавливаем идентификатор расы
-            Set_img_path(@"D:\STAR WARS Saga\Character_creation\Manager_template\Manager_template\SW_Race_management\Race_pictures\Wooki.jpg");                       // Устанавливаем путь к картинке расы
-            Set_small_img_path(@"D:\STAR WARS Saga\Character_creation\Manager_template\Manager_template\SW_Race_management\Race_small_pictures\Wooki.jpg");
+            //Set_race_name("Вуки");               // Устанавливаем текущее показатель атрибута 
+            //Set_race_code((int)Race_manager.enum_Races._Wooki);                       // Устанавливаем идентификатор расы
+            //Set_img_path(@"D:\STAR WARS Saga\Character_creation\Manager_template\Manager_template\SW_Race_management\Race_pictures\Wooki.jpg");                       // Устанавливаем путь к картинке расы
+            //Set_small_img_path(@"D:\STAR WARS Saga\Character_creation\Manager_template\Manager_template\SW_Race_management\Race_small_pictures\Wooki.jpg");
         }
         #endregion
 
