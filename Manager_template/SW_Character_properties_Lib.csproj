@@ -99,6 +99,8 @@
     <Compile Include="SW_Attribute_management\Attribute_manager\07_Atr_manager_Return_attributes.cs" />
     <Compile Include="SW_Attribute_management\Attribute_manager\08_Atr_manager_constructor.cs" />
     <Compile Include="SW_Attribute_management\Attribute_template\Atribute_class.cs" />
+    <Compile Include="SW_Force_skills_management\Force_skill_manager\Force_skill_manager.cs" />
+    <Compile Include="SW_Force_skills_management\Force_skill_template\Force_skill_class.cs" />
     <Compile Include="SW_Race_management\Races\Botan_race.cs" />
     <Compile Include="SW_Race_management\Races\Cereanin_race.cs" />
     <Compile Include="SW_Race_management\Races\Duro_race.cs" />
