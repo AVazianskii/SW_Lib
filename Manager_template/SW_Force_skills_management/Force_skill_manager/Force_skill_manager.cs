@@ -5,7 +5,7 @@ using System.IO;
 
 namespace SW_Character_creation
 {
-    internal class Force_skill_manager : Abstract_manager
+    public class Force_skill_manager : Abstract_manager
     {
         private static Force_skill_manager Race_manager_instance;
 
