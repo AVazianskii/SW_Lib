@@ -10,6 +10,9 @@ namespace SW_Character_creation
         private static Force_skill_manager Race_manager_instance;
 
         private List<Force_skill_class> _Force_skills;
+        private List<Force_skill_class> _Neutral_force_skills;
+        private List<Force_skill_class> _Jedi_force_skills;
+        private List<Force_skill_class> _Sith_force_skills;
 
         private string SQLite_connection_string;
         private SQLiteConnection SQLite_connection;
@@ -29,6 +32,9 @@ namespace SW_Character_creation
 
 
         public List<Force_skill_class> Force_Skills() { return _Force_skills; }
+        public List<Force_skill_class> Neutral_force_skills() { return _Neutral_force_skills; }
+        public List<Force_skill_class> Jedi_force_skills() { return _Jedi_force_skills; }
+        public List<Force_skill_class> Sith_force_skills() { return _Sith_force_skills; }
         public static Force_skill_manager GetInstance()
         {
             if (Race_manager_instance == null)
@@ -77,6 +83,13 @@ namespace SW_Character_creation
                 _Force_skills[index].Cost = Force_skill_costs[0][index];
 
                 _Force_skills[index].Type = Force_skill_types[0][index];
+
+                switch (_Force_skills[index].Type)
+                {
+                    case 1: _Neutral_force_skills.Add(_Force_skills[index]); break;
+                    case 2: _Jedi_force_skills.Add   (_Force_skills[index]); break;
+                    case 3: _Sith_force_skills.Add   (_Force_skills[index]); break;
+                }
             }
 
         }
