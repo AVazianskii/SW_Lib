@@ -31,10 +31,10 @@ namespace SW_Character_creation
 
 
 
-        public List<Force_skill_class> Force_Skills() { return _Force_skills; }
-        public List<Force_skill_class> Neutral_force_skills() { return _Neutral_force_skills; }
-        public List<Force_skill_class> Jedi_force_skills() { return _Jedi_force_skills; }
-        public List<Force_skill_class> Sith_force_skills() { return _Sith_force_skills; }
+        public List<Force_skill_class> Get_Force_Skills() { return _Force_skills; }
+        public List<Force_skill_class> Get_Neutral_force_skills() { return _Neutral_force_skills; }
+        public List<Force_skill_class> Get_Jedi_force_skills() { return _Jedi_force_skills; }
+        public List<Force_skill_class> Get_Sith_force_skills() { return _Sith_force_skills; }
         public static Force_skill_manager GetInstance()
         {
             if (Race_manager_instance == null)
@@ -115,6 +115,10 @@ namespace SW_Character_creation
             Force_skill_general_info.Add(Force_skill_ID);
             Force_skill_general_info.Add(Force_skill_name);
             Force_skill_general_info.Add(Force_skill_description);
+
+            _Neutral_force_skills   = new List<Force_skill_class>();
+            _Jedi_force_skills      = new List<Force_skill_class>();
+            _Sith_force_skills      = new List<Force_skill_class>();
 
             SQLite_connection_string = $@"Data Source={Directory.GetCurrentDirectory()}\Database\Force_skills.db;Version=3;";
 

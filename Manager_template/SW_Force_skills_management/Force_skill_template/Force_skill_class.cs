@@ -28,7 +28,7 @@ namespace SW_Character_creation
         public int Score
         {
             get { return score; }
-            private set { score = value; }
+            set { score = value; }
         }
         public int Cost
         {
