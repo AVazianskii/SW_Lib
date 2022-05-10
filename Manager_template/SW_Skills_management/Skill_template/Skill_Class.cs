@@ -38,7 +38,8 @@ namespace Skills_libs
 
         private string skill_base_1,
                        skill_base_2,
-                       skill_name;
+                       skill_name,
+                       img_path;
 
         private int Non_force_user_cost,
                     Forceuser_cost;
@@ -51,6 +52,11 @@ namespace Skills_libs
         {
             get { return skill_type; }
             set { skill_type = value; }
+        }
+        public string Img_path
+        {
+            get { return img_path; }
+            set { img_path = value; }
         }
 
         #endregion

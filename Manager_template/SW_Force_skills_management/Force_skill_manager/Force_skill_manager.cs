@@ -90,6 +90,8 @@ namespace SW_Character_creation
                     case 2: _Jedi_force_skills.Add   (_Force_skills[index]); break;
                     case 3: _Sith_force_skills.Add   (_Force_skills[index]); break;
                 }
+
+                _Force_skills[index].Img_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
             }
 
         }
