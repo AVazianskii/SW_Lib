@@ -190,9 +190,9 @@ namespace SW_Character_creation
                 // Определяем расовые бонусы боевых параметров
                 _Races[index].Set_race_reaction_bonus           (Race_combat_parameters[0][index]);
                 _Races[index].Set_race_armor_bonus              (Race_combat_parameters[1][index]);
-                _Races[index].Set_race_stealthiness_combat_bonus(Race_combat_parameters[2][index]);
-                _Races[index].Set_race_watchfulness_combat_bonus(Race_combat_parameters[3][index]);
-                _Races[index].Set_race_force_resist_bonus       (Race_combat_parameters[4][index]);
+                _Races[index].Set_race_force_resist_bonus       (Race_combat_parameters[2][index]);
+                _Races[index].Set_race_stealthiness_combat_bonus(Race_combat_parameters[3][index]);
+                _Races[index].Set_race_watchfulness_combat_bonus(Race_combat_parameters[4][index]);
                 _Races[index].Set_race_flow_control_bonus       (Race_combat_parameters[5][index]);
                 
             }
