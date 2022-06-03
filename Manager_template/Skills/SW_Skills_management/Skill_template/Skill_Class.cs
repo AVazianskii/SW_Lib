@@ -2,7 +2,7 @@
 
 namespace Skills_libs
 {
-    public class Skill_Class
+    public class Skill_Class : All_skill_template
     {
         #region // переменные класса
         public string Skill_name { get; set; }
