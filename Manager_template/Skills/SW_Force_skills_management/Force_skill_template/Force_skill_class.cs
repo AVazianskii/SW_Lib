@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SW_Character_creation
 {
-    public class Force_skill_class : All_skill_template
+    public class Force_skill_class 
     {
         private string description,
                        name,

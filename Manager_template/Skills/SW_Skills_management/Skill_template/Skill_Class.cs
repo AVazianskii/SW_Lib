@@ -1,8 +1,9 @@
 ﻿using SW_Character_creation;
+using Skills_libs;
 
-namespace Skills_libs
+namespace SW_Character_creation
 {
-    public class Skill_Class : All_skill_template
+    public class Skill_Class 
     {
         #region // переменные класса
         public string Skill_name { get; set; }
@@ -58,6 +59,11 @@ namespace Skills_libs
             get { return img_path; }
             set { img_path = value; }
         }
+        public int Score
+        {
+            get { return score; }
+            set { score = value; }
+        }
 
         #endregion
 
@@ -86,7 +92,7 @@ namespace Skills_libs
         #endregion
 
         #region // Методы установки значения умения навыка
-        public void Set_score(int insert_value) { score = insert_value; }
+        public void Set_score(int insert_value) { score = insert_value; Score = insert_value; }
         public int Get_score() { return score; }
         #endregion
 
@@ -181,29 +187,6 @@ namespace Skills_libs
         public void Reset_is_combat_skill() { is_combat_skill = false; }
         // Предоставляем значения флага боевого умения
         public bool Get_is_combat_skill() { return is_combat_skill; }
-
-        /*
-        #region //Сравнение лимитов навыков. Используем меньший лимит
-        public int Skill_limit(int age_limit, int range_limit)
-        {
-            if (age_limit >= range_limit)
-            {
-                skill_limit = range_limit;
-            }
-            else if (range_limit > age_limit)
-            {
-                skill_limit = age_limit;
-            }
-            else
-            {
-                skill_limit = 0;
-            }
-            return skill_limit;
-        }
-
-        public int Get_Skill_limit() { return skill_limit; }
-        #endregion
-        */
 
         public void Set_skill_code(int insert_int) { skill_code = insert_int; }
         public int Get_skill_code() { return skill_code; }
