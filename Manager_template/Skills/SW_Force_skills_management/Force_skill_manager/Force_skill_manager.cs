@@ -91,7 +91,14 @@ namespace SW_Character_creation
                     case 3: _Sith_force_skills.Add   (_Force_skills[index]); break;
                 }
 
-                _Force_skills[index].Img_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+                if (Directory.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Skills\\Images\\" + _Force_skills[index].Name))
+                {
+                    _Force_skills[index].Img_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Skills\Images\{_Force_skills[index].Name}";
+                }
+                else
+                {
+                    _Force_skills[index].Img_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+                }
             }
 
         }
