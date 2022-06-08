@@ -11,7 +11,8 @@ namespace SW_Character_creation
         private string description,
                        name,
                        img_path,
-                       icon_path;
+                       icon_path,
+                       skill_base;
 
         private int score,
                     code,
@@ -59,6 +60,11 @@ namespace SW_Character_creation
         {
             get { return icon_path; }
             set { icon_path = value; }
+        }
+        public string Skill_base
+        {
+            get { return skill_base; }
+            set { skill_base = value; }
         }
 
 

@@ -79,6 +79,7 @@ namespace SW_Character_creation
                 _Force_skills[index].Code        = Convert.ToInt32(Force_skill_general_info[0][index]);
                 _Force_skills[index].Name        =                 Force_skill_general_info[1][index];
                 _Force_skills[index].Description =                 Force_skill_general_info[2][index];
+                _Force_skills[index].Skill_base  =                 Force_skill_general_info[3][index];
 
                 _Force_skills[index].Cost = Force_skill_costs[0][index];
 
