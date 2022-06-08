@@ -28,6 +28,15 @@ namespace SW_Character_creation
                         {
                             Skill.Img_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
                         }
+
+                        if (Directory.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Skills\\Icons\\" + Skill.Get_skill_name()))
+                        {
+                            Skill.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Skills\Icons\{Skill.Get_skill_name()}";
+                        }
+                        else
+                        {
+                            Skill.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+                        }
                         break;
                     }
                 }

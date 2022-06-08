@@ -40,7 +40,8 @@ namespace SW_Character_creation
         private string skill_base_1,
                        skill_base_2,
                        skill_name,
-                       img_path;
+                       img_path,
+                       icon_path;
 
         private int Non_force_user_cost,
                     Forceuser_cost;
@@ -63,6 +64,11 @@ namespace SW_Character_creation
         {
             get { return score; }
             set { score = value; }
+        }
+        public string Icon_path
+        {
+            get { return icon_path; }
+            set { icon_path = value; }
         }
 
         #endregion
