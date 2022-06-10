@@ -23,6 +23,7 @@ namespace SW_Character_creation
         private List<string> Force_skill_ID;
         private List<string> Force_skill_name;
         private List<string> Force_skill_description;
+        private List<string> Force_skill_base;
 
         private List<List<string>> Force_skill_general_info;
 
@@ -125,6 +126,7 @@ namespace SW_Character_creation
             Force_skill_ID                          = new List<string>();
             Force_skill_name                        = new List<string>();
             Force_skill_description                 = new List<string>();
+            Force_skill_base                        = new List<string>();
 
             Force_skill_general_info = new List<List<string>>();
 
@@ -134,6 +136,7 @@ namespace SW_Character_creation
             Force_skill_general_info.Add(Force_skill_ID);
             Force_skill_general_info.Add(Force_skill_name);
             Force_skill_general_info.Add(Force_skill_description);
+            Force_skill_general_info.Add(Force_skill_base);
 
             _Neutral_force_skills   = new List<Force_skill_class>();
             _Jedi_force_skills      = new List<Force_skill_class>();

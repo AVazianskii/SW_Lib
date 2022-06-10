@@ -6,7 +6,7 @@ namespace SW_Character_creation
     public class Skill_Class 
     {
         #region // переменные класса
-        public string Skill_name { get; set; }
+        public string Name { get; set; }
 
         private int score; // Величина навыка
         private int cost;
@@ -208,7 +208,7 @@ namespace SW_Character_creation
         public int Get_Non_force_user_cost() { return Non_force_user_cost; }
         public void Set_Forceuser_cost(int input_int) { Forceuser_cost = input_int; }
         public int Get_Forceuser_cost() { return Forceuser_cost; }
-        public void Set_skill_name(string input_text) { skill_name = input_text; Skill_name = input_text; }
+        public void Set_skill_name(string input_text) { skill_name = input_text; Name = input_text; }
         public string Get_skill_name() { return skill_name; }
         public void Increase_score()
         {
