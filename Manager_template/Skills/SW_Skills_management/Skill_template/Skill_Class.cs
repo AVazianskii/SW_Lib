@@ -3,7 +3,7 @@ using Skills_libs;
 
 namespace SW_Character_creation
 {
-    public class Skill_Class 
+    public class Skill_Class : All_skill_template
     {
         #region // переменные класса
         public string Name { get; set; }

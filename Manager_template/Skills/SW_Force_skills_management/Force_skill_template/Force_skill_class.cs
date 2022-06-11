@@ -6,14 +6,8 @@ using System.Threading.Tasks;
 
 namespace SW_Character_creation
 {
-    public class Force_skill_class 
+    public class Force_skill_class : All_skill_template
     {
-        private string description,
-                       name,
-                       img_path,
-                       icon_path,
-                       skill_base;
-
         private int score,
                     code,
                     cost,
@@ -41,31 +35,7 @@ namespace SW_Character_creation
             get { return type; }
             set { type = value;  }
         }
-        public string Description
-        {
-            get { return description; }
-            set { description = value; }
-        }
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
-        public string Img_path
-        {
-            get { return img_path; }
-            set { img_path = value; }
-        }
-        public string Icon_path
-        {
-            get { return icon_path; }
-            set { icon_path = value; }
-        }
-        public string Skill_base
-        {
-            get { return skill_base; }
-            set { skill_base = value; }
-        }
+
 
 
 
