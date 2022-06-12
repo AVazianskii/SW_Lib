@@ -6,7 +6,6 @@ namespace SW_Character_creation
     public class Skill_Class : All_skill_template
     {
         #region // переменные класса
-        public string Name { get; set; }
 
         private int score; // Величина навыка
         private int cost;
