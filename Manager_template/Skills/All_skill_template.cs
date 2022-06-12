@@ -8,17 +8,23 @@ namespace SW_Character_creation
 {
     public class All_skill_template
     {
-        private string skill_base,
+        private string skill_base_1,
+                       skill_base_2,
                        description,
                        name,
                        img_path,
                        icon_path;
 
 
-        public string Skill_base
+        public string Skill_base_1
         {
-            get { return skill_base; }
-            set { skill_base = value; }
+            get { return skill_base_1; }
+            set { skill_base_1 = value; }
+        }
+        public string Skill_base_2
+        {
+            get { return skill_base_2; }
+            set { skill_base_2 = value; }
         }
         public string Description
         {

@@ -15,7 +15,6 @@ namespace SW_Character_creation
         private string Error_msg;
         private int counter;
         private int skill_code;                     // Уникальный код для каждого умения
-        private string skill_description;           // Текстовое описание умения
         private string path_read_description;       // Путь к файлу для вычитывания текстового описания навыка
 
         private int child_skill_limit,              // Возрастной лимит навыков для Ребенок
@@ -37,12 +36,6 @@ namespace SW_Character_creation
 
         private bool is_combat_skill;               // Флаг, является ли навык боевым умением. 1 - является, 0 - не является
 
-        private string skill_base_1,
-                       skill_base_2,
-                       skill_name,
-                       img_path,
-                       icon_path;
-
         private int Non_force_user_cost,
                     Forceuser_cost;
 
@@ -55,20 +48,10 @@ namespace SW_Character_creation
             get { return skill_type; }
             set { skill_type = value; }
         }
-        public string Img_path
-        {
-            get { return img_path; }
-            set { img_path = value; }
-        }
         public int Score
         {
             get { return score; }
             set { score = value; }
-        }
-        public string Icon_path
-        {
-            get { return icon_path; }
-            set { icon_path = value; }
         }
 
         #endregion
@@ -196,20 +179,10 @@ namespace SW_Character_creation
 
         public void Set_skill_code(int insert_int) { skill_code = insert_int; }
         public int Get_skill_code() { return skill_code; }
-        // Устанавливаем текстовое описание навыка персонажа
-        public void Set_skill_description(string insert_text) { skill_description = insert_text; }
-        // Предоставляем текстовое описание навыка персонажа
-        public string Get_skill_description() { return skill_description; }
-        public void Set_skill_base_1(string input_text) { skill_base_1 = input_text; }
-        public string Get_skill_base_1() { return skill_base_1; }
-        public void Set_skill_base_2(string input_text) { skill_base_2 = input_text; }
-        public string Get_skill_base_2() { return skill_base_2; }
         public void Set_Non_force_user_cost(int input_int) { Non_force_user_cost = input_int; }
         public int Get_Non_force_user_cost() { return Non_force_user_cost; }
         public void Set_Forceuser_cost(int input_int) { Forceuser_cost = input_int; }
         public int Get_Forceuser_cost() { return Forceuser_cost; }
-        public void Set_skill_name(string input_text) { skill_name = input_text; Name = input_text; }
-        public string Get_skill_name() { return skill_name; }
         public void Increase_score()
         {
             score = score + 1;

@@ -15,23 +15,23 @@ namespace SW_Character_creation
                 {
                     if (i == Skill.Get_skill_code())
                     {
-                        Skill.Set_skill_name        (Skill_desription[1][_Skills.IndexOf(Skill)]);
-                        Skill.Set_skill_description (Skill_desription[2][_Skills.IndexOf(Skill)]);
-                        Skill.Set_skill_base_1      (Skill_desription[3][_Skills.IndexOf(Skill)]);
-                        Skill.Set_skill_base_2      (Skill_desription[4][_Skills.IndexOf(Skill)]);
+                        Skill.Name          = Skill_desription[1][_Skills.IndexOf(Skill)];
+                        Skill.Description   = Skill_desription[2][_Skills.IndexOf(Skill)];
+                        Skill.Skill_base_1  = Skill_desription[3][_Skills.IndexOf(Skill)];
+                        Skill.Skill_base_2  = Skill_desription[4][_Skills.IndexOf(Skill)];
 
-                        if (Directory.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Skills\\Images\\" + Skill.Get_skill_name()))
+                        if (Directory.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Skills\\Images\\" + Skill.Name))
                         {
-                            Skill.Img_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Skills\Images\{Skill.Get_skill_name()}";
+                            Skill.Img_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Skills\Images\{Skill.Name}";
                         }
                         else
                         {
                             Skill.Img_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
                         }
 
-                        if (Directory.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Skills\\Icons\\" + Skill.Get_skill_name()))
+                        if (Directory.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Skills\\Icons\\" + Skill.Name))
                         {
-                            Skill.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Skills\Icons\{Skill.Get_skill_name()}";
+                            Skill.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Skills\Icons\{Skill.Name}";
                         }
                         else
                         {
