@@ -14,7 +14,6 @@ namespace Age_status_libs
 
         private string age_status_name;         // название возратсного статуса персонажа 
         private string age_status_descr;        // описание возрастного статуса персонажа
-        private string path_read_description;   // Путь к файлу для вычитывания текстового описания навыка
 
 
         private int age_status_strength_bonus;      // бонус к атрибуту Сила            при изменении возрастного статуса
@@ -35,7 +34,8 @@ namespace Age_status_libs
                     age_status_charm_limit,
                     age_status_willpower_limit;
 
-        private int skill_limit;
+        private int skill_limit,
+                    force_skill_limit;
 
         private string age_status_feature_descr;
 
@@ -85,6 +85,11 @@ namespace Age_status_libs
         {
             get { return skill_limit; }
             set { skill_limit = value; }
+        }
+        public int Force_skill_limit
+        {
+            get { return force_skill_limit; }
+            set { force_skill_limit = value; }
         }
         #endregion
 
@@ -188,83 +193,6 @@ namespace Age_status_libs
         {
             return age_status_willpower_bonus;
         }
-        // Добавляем бонусы к атрибутам при установке нового возрастного статуса персонажа
-        /*
-        public void Set_age_status_atr_bonus() 
-        {
-            foreach (Atribute_class atribute in _SW_Char._Atributes)
-            {
-                switch (atribute.Get_atribute_code())
-                {
-                    case (int)SW_Character.enum_Atributes.Strength:
-                        atribute.Increase_atr(Get_age_status_strength_bonus());
-                        break;
-                    case (int)SW_Character.enum_Atributes.Agility:
-                        atribute.Increase_atr(Get_age_status_agility_bonus());
-                        break;
-                    case (int)SW_Character.enum_Atributes.Stamina:
-                        atribute.Increase_atr(Get_age_status_stamina_bonus());
-                        break;
-                    case (int)SW_Character.enum_Atributes.Perception:
-                        atribute.Increase_atr(Get_age_status_perception_bonus());
-                        break;
-                    case (int)SW_Character.enum_Atributes.Quicness:
-                        atribute.Increase_atr(Get_age_status_quickness_bonus());
-                        break;
-                    case (int)SW_Character.enum_Atributes.Intelligence:
-                        atribute.Increase_atr(Get_age_status_intelligence_bonus());
-                        break;
-                    case (int)SW_Character.enum_Atributes.Charm:
-                        atribute.Increase_atr(Get_age_status_charm_bonus());
-                        break;
-                    case (int)SW_Character.enum_Atributes.Willpower:
-                        atribute.Increase_atr(Get_age_status_willpower_bonus());
-                        break;
-                }
-            }
-        }
-        */
-        // Снимаем бонусы к атрибутам при смене текущего возрастного статуса персонажа
-        /*
-        public void Reset_age_status_atr_bonus() 
-        {
-            foreach (Atribute_class atribute in _SW_Char._Atributes)
-            {
-                switch (atribute.Get_atribute_code())
-                {
-                    case (int)SW_Character.enum_Atributes.Strength:
-                        atribute.Decrease_atr(Get_age_status_strength_bonus());
-                        break;
-                    case (int)SW_Character.enum_Atributes.Agility:
-                        atribute.Decrease_atr(Get_age_status_agility_bonus());
-                        break;
-                    case (int)SW_Character.enum_Atributes.Stamina:
-                        atribute.Decrease_atr(Get_age_status_stamina_bonus());
-                        break;
-                    case (int)SW_Character.enum_Atributes.Perception:
-                        atribute.Decrease_atr(Get_age_status_perception_bonus());
-                        break;
-                    case (int)SW_Character.enum_Atributes.Quicness:
-                        atribute.Decrease_atr(Get_age_status_quickness_bonus());
-                        break;
-                    case (int)SW_Character.enum_Atributes.Intelligence:
-                        atribute.Decrease_atr(Get_age_status_intelligence_bonus());
-                        break;
-                    case (int)SW_Character.enum_Atributes.Charm:
-                        atribute.Decrease_atr(Get_age_status_charm_bonus());
-                        break;
-                    case (int)SW_Character.enum_Atributes.Willpower:
-                        atribute.Decrease_atr(Get_age_status_willpower_bonus());
-                        break;
-                }
-            }
-        }
-        */
-        // Устанавливаем путь к текстовому файлу с описанием навыка
-        public void Set_path_read_description(string input_text) { path_read_description = input_text; }
-        // Предоставляем путь к текстовому файлу с описанием навыка
-        public string Get_path_read_description() { return path_read_description; }
-
         public void Set_age_status_feature_descr(string input_text) { age_status_feature_descr = input_text; }
         public string Get_age_status_feature_descr() { return age_status_feature_descr; }
         #endregion

@@ -65,6 +65,7 @@ namespace SW_Character_creation
                                         Force_skill_types,
                                         (int)Type_of_var.int_type);
 
+
             SQLite_connection.Close();
 
             int index = 0;

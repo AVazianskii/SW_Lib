@@ -15,7 +15,6 @@ namespace SW_Character_creation
                        img_path,
                        icon_path;
 
-
         public string Skill_base_1
         {
             get { return skill_base_1; }
