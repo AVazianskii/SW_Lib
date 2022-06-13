@@ -13,7 +13,8 @@ namespace SW_Character_creation
             foreach (Age_status_class age_status in Age_statuses)
             {
                 int index = Age_statuses.IndexOf(age_status);
-                age_status.Skill_limit = Age_status_skills_limits[0][index];
+                age_status.Skill_limit       = Age_status_skills_limits      [0][index];
+                age_status.Force_skill_limit = Age_status_force_skills_limits[0][index];
             }
         }
     }

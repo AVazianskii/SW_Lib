@@ -25,11 +25,13 @@ namespace SW_Character_creation
         private List<string> Age_status_bonus_coloumn_name;
         private List<string> Age_status_attributes_limits_coloumn_name;
         private List<string> Age_status_skills_limits_coloumn_name;
+        private List<string> Age_status_force_skills_limits_coloumn_name;
 
         private List<List<string>> Age_status_general_description;
         private List<List<int>> Age_status_attributes_bonus;
         private List<List<int>> Age_status_attributes_limits;
         private List<List<int>> Age_status_skills_limits;
+        private List<List<int>> Age_status_force_skills_limits;
 
         private List<string> Age_status_description;
         private List<string> Age_status_feature;

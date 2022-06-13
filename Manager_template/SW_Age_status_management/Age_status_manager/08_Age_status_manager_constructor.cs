@@ -32,6 +32,7 @@ namespace SW_Character_creation
             Age_status_bonus_coloumn_name = new List<string>();
             Age_status_attributes_limits_coloumn_name = new List<string>();
             Age_status_skills_limits_coloumn_name = new List<string>();
+            Age_status_force_skills_limits_coloumn_name = new List<string>();
 
             Age_status_general_description = new List<List<string>>();
             Age_status_description = new List<string>();
@@ -46,8 +47,10 @@ namespace SW_Character_creation
             Age_status_attributes_bonus = new List<List<int>>();
             Age_status_attributes_limits = new List<List<int>>();
             Age_status_skills_limits = new List<List<int>>();
+            Age_status_force_skills_limits = new List<List<int>>();
 
-            
+
+
         }
     }
 }

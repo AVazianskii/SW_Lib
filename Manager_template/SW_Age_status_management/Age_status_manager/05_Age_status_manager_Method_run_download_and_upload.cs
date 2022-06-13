@@ -32,6 +32,12 @@ namespace SW_Character_creation
                                      Age_status_skills_limits,
                                      (int)Type_of_var.int_type);
 
+            Run_download_from_SQLite_v2("SELECT * FROM Age_statuses_force_skills_limits ORDER BY ID",
+                                        SQLite_connection,
+                                        Age_status_skills_limits_coloumn_name,
+                                        Age_status_force_skills_limits,
+                                        (int)Type_of_var.int_type);
+
             SQLite_connection.Close();
 
             Upload_general_info();
