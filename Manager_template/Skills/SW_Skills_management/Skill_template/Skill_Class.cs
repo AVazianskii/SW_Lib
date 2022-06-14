@@ -9,12 +9,10 @@ namespace SW_Character_creation
 
         private int score; // Величина навыка
         private int cost;
-        private int skill_limit;
         private int Error_code;
         private string Error_msg;
         private int counter;
         private int skill_code;                     // Уникальный код для каждого умения
-        private string path_read_description;       // Путь к файлу для вычитывания текстового описания навыка
 
         private int child_skill_limit,              // Возрастной лимит навыков для Ребенок
                     teen_skill_limit,               // Возрастной лимит навыков для Подросток
@@ -23,9 +21,6 @@ namespace SW_Character_creation
                     old_skill_limit,                // Возрастной лимит навыков для Пожилой
                     eldery_skill_limit,             // Возрастной лимит навыков для Почтенный
                     unknown_age_status_skill_limit; // Возрастной лимит навыков для Неизвестный возрастной статус
-
-        private int age_skill_limit,                // Текущий возрастной лимит навыка
-                    range_skill_limit;              // Текущий лимит навыка, исходя из ранга персонажа
 
         private int private_skill_limit,            // Лимит прокачки навыков для Рядовой
                     veteran_skill_limit,            // Лимит прокачки навыков для Ветеран
@@ -135,8 +130,6 @@ namespace SW_Character_creation
         public int Get_unknown_age_status_skill_limit() { return unknown_age_status_skill_limit; }
         #endregion
 
-        // Предоставляем значение возрасттного лиимита прокачки навыка
-        public int Get_age_skill_limit() { return age_skill_limit; }
 
         #region // методы лимиты прокачки навыка персонажа в относительности от ранга персонажа
         // Устаниваливаем значение лимита прокачки навыка для Рядовой
@@ -161,8 +154,6 @@ namespace SW_Character_creation
         public int Get_immortal_skill_limit() { return immortal_skill_limit; }
         #endregion
 
-        // Предоставляем значение лимита прокачки навыка относительно ранга персонажа
-        public int Get_range_skill_limit() { return range_skill_limit; }
         // Устанавливаем флаг, является ли навык боевым умением
         public void Set_is_combat_skill() { is_combat_skill = true; }
         public void Reset_is_combat_skill() { is_combat_skill = false; }
