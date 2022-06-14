@@ -15,6 +15,10 @@ namespace SW_Character_creation
                        img_path,
                        icon_path;
 
+        private int skill_type;
+
+
+
         public string Skill_base_1
         {
             get { return skill_base_1; }
@@ -44,6 +48,11 @@ namespace SW_Character_creation
         {
             get { return icon_path; }
             set { icon_path = value; }
+        }
+        public int Skill_type
+        {
+            get { return skill_type; }
+            set { skill_type = value; }
         }
     }
 }
