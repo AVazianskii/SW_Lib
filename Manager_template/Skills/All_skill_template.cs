@@ -15,7 +15,8 @@ namespace SW_Character_creation
                        img_path,
                        icon_path;
 
-        private int skill_type;
+        private int skill_type,
+                    skill_max_score;
 
 
 
@@ -53,6 +54,11 @@ namespace SW_Character_creation
         {
             get { return skill_type; }
             set { skill_type = value; }
+        }
+        public int Skill_max_score
+        {
+            get { return skill_max_score; }
+            set { skill_max_score = value; }
         }
     }
 }
