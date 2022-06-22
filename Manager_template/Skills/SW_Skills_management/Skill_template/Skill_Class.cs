@@ -12,7 +12,6 @@ namespace SW_Character_creation
         private int Error_code;
         private string Error_msg;
         private int counter;
-        private int skill_code;                     // Уникальный код для каждого умения
 
         private int child_skill_limit,              // Возрастной лимит навыков для Ребенок
                     teen_skill_limit,               // Возрастной лимит навыков для Подросток
@@ -160,8 +159,6 @@ namespace SW_Character_creation
         // Предоставляем значения флага боевого умения
         public bool Get_is_combat_skill() { return is_combat_skill; }
 
-        public void Set_skill_code(int insert_int) { skill_code = insert_int; }
-        public int Get_skill_code() { return skill_code; }
         public void Set_Non_force_user_cost(int input_int) { Non_force_user_cost = input_int; }
         public int Get_Non_force_user_cost() { return Non_force_user_cost; }
         public void Set_Forceuser_cost(int input_int) { Forceuser_cost = input_int; }

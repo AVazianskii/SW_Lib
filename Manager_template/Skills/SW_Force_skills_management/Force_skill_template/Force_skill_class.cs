@@ -9,17 +9,11 @@ namespace SW_Character_creation
     public class Force_skill_class : All_skill_template
     {
         private int score,
-                    code,
                     cost,
                     type;
 
 
 
-        public int Code
-        {
-            get { return code; }
-            set { code = value; }
-        }
         public int Score
         {
             get { return score; }

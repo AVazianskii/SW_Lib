@@ -16,7 +16,8 @@ namespace SW_Character_creation
                        icon_path;
 
         private int skill_type,
-                    skill_max_score;
+                    skill_max_score,
+                    id;
 
 
 
@@ -59,6 +60,11 @@ namespace SW_Character_creation
         {
             get { return skill_max_score; }
             set { skill_max_score = value; }
+        }
+        public int ID
+        {
+            get { return id; }
+            set { id = value; }
         }
     }
 }
