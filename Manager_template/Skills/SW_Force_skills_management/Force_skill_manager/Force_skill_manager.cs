@@ -78,7 +78,7 @@ namespace SW_Character_creation
                 // Определяем порядковый нмоер текущего инстанса
                 index = Force_skill_general_info[0].IndexOf(count);
 
-                _Force_skills[index].Code        = Convert.ToInt32(Force_skill_general_info[0][index]);
+                _Force_skills[index].ID          = Convert.ToInt32(Force_skill_general_info[0][index]);
                 _Force_skills[index].Name        =                 Force_skill_general_info[1][index];
                 _Force_skills[index].Description =                 Force_skill_general_info[2][index];
                 _Force_skills[index].Skill_base_1=                 Force_skill_general_info[3][index];
