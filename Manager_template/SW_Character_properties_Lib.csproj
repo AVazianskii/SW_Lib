@@ -61,6 +61,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abilities\All_abilities_template.cs" />
+    <Compile Include="Abilities\Combat_abilities\Combat_abilities_manager\Combat_ability_manager.cs" />
+    <Compile Include="Abilities\Combat_abilities\Combat_abilities_template\Combat_abilities_template.cs" />
+    <Compile Include="Abilities\Force_abilities\Force_abilities_manager\Force_abilities_manager.cs" />
+    <Compile Include="Abilities\Force_abilities\Force_abilities_template\Force_abilities_template.cs" />
     <Compile Include="Manager_template\Abstract_manager.cs" />
     <Compile Include="Manager_template\IManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
