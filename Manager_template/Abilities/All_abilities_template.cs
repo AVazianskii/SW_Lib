@@ -11,6 +11,7 @@ namespace SW_Character_creation
         private string description_base,
                        description_adept,
                        description_master,
+                       description,
                        name,
                        img_path,
                        icon_path;
@@ -40,6 +41,11 @@ namespace SW_Character_creation
         {
             get { return description_master; }
             set { description_master = value; }
+        }
+        public string Description
+        {
+            get { return description; }
+            set { description = value; }
         }
         public string Name
         {
