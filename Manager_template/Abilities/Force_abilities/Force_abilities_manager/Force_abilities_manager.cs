@@ -5,9 +5,9 @@ using System.Data.SQLite;
 
 namespace SW_Character_creation
 {
-    public class Force_abilities_manager : Abstract_manager
+    public class Force_ability_manager : Abstract_manager
     {
-        private static Force_abilities_manager Force_ability_manager_instance;
+        private static Force_ability_manager Force_ability_manager_instance;
 
         private string SQLite_connection_string;
         private SQLiteConnection SQLite_connection;
@@ -24,11 +24,11 @@ namespace SW_Character_creation
 
 
 
-        public static Force_abilities_manager GetInstance()
+        public static Force_ability_manager GetInstance()
         {
             if (Force_ability_manager_instance == null)
             {
-                Force_ability_manager_instance = new Force_abilities_manager();
+                Force_ability_manager_instance = new Force_ability_manager();
             }
             return Force_ability_manager_instance;
         }
@@ -86,7 +86,7 @@ namespace SW_Character_creation
 
 
 
-        private Force_abilities_manager()
+        private Force_ability_manager()
         {
             Force_abilities_general_coloumn_name        = new List<string>();
             Force_abilities_costs_coloumn_name          = new List<string>();
