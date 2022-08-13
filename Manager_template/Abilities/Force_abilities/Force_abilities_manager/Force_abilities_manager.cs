@@ -22,6 +22,11 @@ namespace SW_Character_creation
         private List<List<int>> Force_abilities_costs;
         private List<List<int>> Force_abilities_combat_bonuses;
 
+        private List<string> Force_abilities_ID;
+        private List<string> Force_abilities_name;
+        private List<string> Force_general_description;
+        private List<string> Force_description;
+
 
 
         public static Force_ability_manager GetInstance()
@@ -95,6 +100,17 @@ namespace SW_Character_creation
             Force_abilities_general_info    = new List<List<string>>();
             Force_abilities_costs           = new List<List<int>>();
             Force_abilities_combat_bonuses  = new List<List<int>>();
+
+
+            Force_abilities_ID = new List<string>();
+            Force_abilities_name = new List<string>();
+            Force_general_description = new List<string>();
+            Force_description = new List<string>();
+
+            Force_abilities_general_info.Add(Force_abilities_ID);
+            Force_abilities_general_info.Add(Force_abilities_name);
+            Force_abilities_general_info.Add(Force_general_description);
+            Force_abilities_general_info.Add(Force_description);
 
             _Force_abilities = new List<Force_abilities_template>();
 

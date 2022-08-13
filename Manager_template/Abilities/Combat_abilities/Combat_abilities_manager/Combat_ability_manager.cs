@@ -22,6 +22,11 @@ namespace SW_Character_creation
         private List<List<int>> Combat_abilities_costs;
         private List<List<int>> Combat_abilities_combat_bonuses;
 
+        private List<string> Combat_abilities_ID;
+        private List<string> Combat_abilities_name;
+        private List<string> Combat_general_description;
+        private List<string> Combat_description;
+
 
 
         public static Combat_ability_manager GetInstance()
@@ -95,6 +100,16 @@ namespace SW_Character_creation
             Combat_abilities_general_info   = new List<List<string>>();
             Combat_abilities_costs          = new List<List<int>>();
             Combat_abilities_combat_bonuses = new List<List<int>>();
+
+            Combat_abilities_ID         = new List<string>();
+            Combat_abilities_name       = new List<string>();
+            Combat_general_description  = new List<string>();
+            Combat_description          = new List<string>();
+
+            Combat_abilities_general_info.Add(Combat_abilities_ID);
+            Combat_abilities_general_info.Add(Combat_abilities_name);
+            Combat_abilities_general_info.Add(Combat_general_description);
+            Combat_abilities_general_info.Add(Combat_description);
 
             _Combat_abilities = new List<Combat_abilities_template>();
 
