@@ -12,7 +12,7 @@ namespace SW_Character_creation
         private string SQLite_connection_string;
         private SQLiteConnection SQLite_connection;
 
-        private List<Combat_abilities_template> _Force_abilities;
+        private List<Force_abilities_template> _Force_abilities;
 
         private List<string> Force_abilities_general_coloumn_name;
         private List<string> Force_abilities_costs_coloumn_name;
@@ -63,7 +63,7 @@ namespace SW_Character_creation
             foreach (var count in Force_abilities_general_info[0])
             {
                 // На каждую новую строку создаем новый инстанс
-                _Force_abilities.Add(new Combat_abilities_template());
+                _Force_abilities.Add(new Force_abilities_template());
 
                 // Определяем порядковый нмоер текущего инстанса
                 index = Force_abilities_general_info[0].IndexOf(count);
@@ -96,7 +96,7 @@ namespace SW_Character_creation
             Force_abilities_costs           = new List<List<int>>();
             Force_abilities_combat_bonuses  = new List<List<int>>();
 
-            _Force_abilities = new List<Combat_abilities_template>();
+            _Force_abilities = new List<Force_abilities_template>();
 
             SQLite_connection_string = $@"Data Source={Directory.GetCurrentDirectory()}\Database\Force_abilities.db;Version=3;";
 
