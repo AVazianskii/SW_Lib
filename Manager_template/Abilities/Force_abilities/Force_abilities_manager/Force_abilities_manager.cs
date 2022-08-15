@@ -37,7 +37,7 @@ namespace SW_Character_creation
             }
             return Force_ability_manager_instance;
         }
-        public List<Force_abilities_template> Get_Force_abilities() { return _Force_abilities; }
+        public List<Force_abilities_template> Get_abilities() { return _Force_abilities; }
 
 
 

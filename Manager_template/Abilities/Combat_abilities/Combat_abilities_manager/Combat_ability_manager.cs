@@ -37,7 +37,7 @@ namespace SW_Character_creation
             }
             return Combat_ability_manager_instance;
         }
-        public List<Combat_abilities_template> Get_Combat_abilities() { return _Combat_abilities; }
+        public List<Combat_abilities_template> Get_abilities() { return _Combat_abilities; }
 
 
 
