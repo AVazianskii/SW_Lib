@@ -24,6 +24,9 @@ namespace SW_Character_creation
                     watchfullness_bonus,
                     concentration_bonus;
 
+        private bool is_enable,
+                     is_chosen;
+
 
 
         public string General_description
@@ -90,6 +93,16 @@ namespace SW_Character_creation
         {
             get { return concentration_bonus; }
             set { concentration_bonus = value; }
+        }
+        public bool Is_enable
+        {
+            get { return is_enable; }
+            set { is_enable = value; }
+        }
+        public bool Is_chosen
+        {
+            get { return is_chosen; }
+            set { is_chosen = value; }
         }
     }
 }
