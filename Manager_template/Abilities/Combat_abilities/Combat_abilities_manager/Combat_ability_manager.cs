@@ -37,6 +37,7 @@ namespace SW_Character_creation
             }
             return Combat_ability_manager_instance;
         }
+        public List<Combat_abilities_template> Get_Combat_abilities() { return _Combat_abilities; }
 
 
 
@@ -86,6 +87,7 @@ namespace SW_Character_creation
                 _Combat_abilities[index].Stealthness_bonus      = Combat_abilities_combat_bonuses[3][index];
                 _Combat_abilities[index].Watchfullness_bonus    = Combat_abilities_combat_bonuses[4][index];
                 _Combat_abilities[index].Concentration_bonus    = Combat_abilities_combat_bonuses[5][index];
+
             }
         }
 
