@@ -132,6 +132,8 @@ namespace SW_Character_creation
             Echany.Enable_condition_adept   = Echany.Base_ability_lvl;
             Echany.Enable_condition_master  = Echany.Adept_ability_lvl;
 
+            Echany.Check_enable_state();
+
 
             Mandolor_style.Base_ability_lvl     = _Combat_abilities[3];
             Mandolor_style.Adept_ability_lvl    = _Combat_abilities[4];
@@ -140,6 +142,8 @@ namespace SW_Character_creation
             Mandolor_style.Enable_condition_base    = null;
             Mandolor_style.Enable_condition_adept   = Mandolor_style.Base_ability_lvl;
             Mandolor_style.Enable_condition_master  = Mandolor_style.Adept_ability_lvl;
+
+            Mandolor_style.Check_enable_state();
 
 
             Zeishen.Base_ability_lvl    = _Combat_abilities[6];
@@ -150,6 +154,8 @@ namespace SW_Character_creation
             Zeishen.Enable_condition_adept  = Zeishen.Base_ability_lvl;
             Zeishen.Enable_condition_master = Zeishen.Adept_ability_lvl;
 
+            Zeishen.Check_enable_state();
+
 
             Matukai.Base_ability_lvl    = _Combat_abilities[9];
             Matukai.Adept_ability_lvl   = _Combat_abilities[10];
@@ -159,6 +165,8 @@ namespace SW_Character_creation
             Matukai.Enable_condition_adept  = Matukai.Base_ability_lvl;
             Matukai.Enable_condition_master = Matukai.Adept_ability_lvl;
 
+            Matukai.Check_enable_state();
+
 
             Terras_kasi.Base_ability_lvl    = _Combat_abilities[12];
             Terras_kasi.Adept_ability_lvl   = _Combat_abilities[13];
@@ -167,6 +175,8 @@ namespace SW_Character_creation
             Terras_kasi.Enable_condition_base   = null;
             Terras_kasi.Enable_condition_adept  = Terras_kasi.Base_ability_lvl;
             Terras_kasi.Enable_condition_master = Terras_kasi.Adept_ability_lvl;
+
+            Terras_kasi.Check_enable_state();
         }
 
 
