@@ -66,19 +66,19 @@ namespace SW_Character_creation
 
         public void Check_enable_state()
         {
-            if ((enable_condition_base == null) || (enable_condition_base.Is_chosen))
+            if ((Enable_condition_base == null) || (Enable_condition_base.Is_chosen))
             {
                 Base_ability_lvl.Is_enable = true;
             }
             else { Base_ability_lvl.Is_enable = false; }
 
-            if ((enable_condition_adept == null) || (enable_condition_adept.Is_chosen))
+            if ((Enable_condition_adept == null) || (Enable_condition_adept.Is_chosen))
             {
                 Adept_ability_lvl.Is_enable = true;
             }
             else { Adept_ability_lvl.Is_enable = false; }
 
-            if ((enable_condition_master == null) || (enable_condition_master.Is_chosen))
+            if ((Enable_condition_master == null) || (Enable_condition_master.Is_chosen))
             {
                 Master_ability_lvl.Is_enable = true;
             }
