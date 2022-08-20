@@ -162,7 +162,7 @@ namespace SW_Character_creation
                 _Force_abilities[index].Watchfullness_bonus     = Force_abilities_combat_bonuses[4][index];
                 _Force_abilities[index].Concentration_bonus     = Force_abilities_combat_bonuses[5][index];
             }
-            /*
+            
             Shii_cho.Base_ability_lvl   = _Force_abilities[0];
             Shii_cho.Adept_ability_lvl  = _Force_abilities[1];
             Shii_cho.Master_ability_lvl = _Force_abilities[2];
@@ -228,7 +228,7 @@ namespace SW_Character_creation
 
             New_niman.Check_enable_state();
 
-
+            
             Juyo.Base_ability_lvl   = _Force_abilities[18];
             Juyo.Adept_ability_lvl  = _Force_abilities[19];
             Juyo.Master_ability_lvl = _Force_abilities[20];
@@ -245,8 +245,8 @@ namespace SW_Character_creation
             Juyo.Enable_condition_master    = Juyo.Adept_ability_lvl;
 
             Juyo.Check_enable_state();
-
-
+            
+            
             Vaapad.Base_ability_lvl     = null;
             Vaapad.Adept_ability_lvl    = _Force_abilities[21];
             Vaapad.Master_ability_lvl   = _Force_abilities[22];
@@ -256,8 +256,8 @@ namespace SW_Character_creation
             Vaapad.Enable_condition_master  = Vaapad.Adept_ability_lvl;
 
             Vaapad.Check_enable_state();
-
-
+            
+            
             Old_niman.Base_ability_lvl      = null;
             Old_niman.Adept_ability_lvl     = _Force_abilities[23];
             Old_niman.Master_ability_lvl    = _Force_abilities[24];
@@ -268,7 +268,7 @@ namespace SW_Character_creation
 
             Old_niman.Check_enable_state();
 
-
+            
             Sokan.Base_ability_lvl      = null;
             Sokan.Adept_ability_lvl     = _Force_abilities[25];
             Sokan.Master_ability_lvl    = _Force_abilities[26];
@@ -288,7 +288,7 @@ namespace SW_Character_creation
             Shien.Enable_condition_adept    = Diem_so.Base_ability_lvl;
             Shien.Enable_condition_master   = Shien.Adept_ability_lvl;
 
-            Shien.Check_enable_state();*/
+            Shien.Check_enable_state();
         }
 
 
