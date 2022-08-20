@@ -40,6 +40,8 @@ namespace SW_Character_creation
                                             shien;
         private Force_abilities_template juyo_special_condition;
 
+        private List<Abilities_sequence_template> _Force_sequences;
+
 
 
         public Abilities_sequence_template Shii_cho
@@ -109,6 +111,7 @@ namespace SW_Character_creation
             return Force_ability_manager_instance;
         }
         public List<Force_abilities_template> Get_abilities() { return _Force_abilities; }
+        public List<Abilities_sequence_template> Get_sequences() { return _Force_sequences; }
 
 
 
@@ -324,6 +327,20 @@ namespace SW_Character_creation
             Old_niman   = new Abilities_sequence_template();
             Sokan       = new Abilities_sequence_template();
             Shien       = new Abilities_sequence_template();
+
+            _Force_sequences = new List<Abilities_sequence_template>();
+
+            _Force_sequences.Add(Shii_cho);
+            _Force_sequences.Add(Makashi);
+            _Force_sequences.Add(Soresu);
+            _Force_sequences.Add(Ataro);
+            _Force_sequences.Add(Diem_so);
+            _Force_sequences.Add(New_niman);
+            _Force_sequences.Add(Juyo);
+            _Force_sequences.Add(Vaapad);
+            _Force_sequences.Add(Old_niman);
+            _Force_sequences.Add(Sokan);
+            _Force_sequences.Add(Shien);
 
             _Force_abilities = new List<Force_abilities_template>();
 
