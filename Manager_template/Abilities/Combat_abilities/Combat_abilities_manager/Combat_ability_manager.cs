@@ -128,6 +128,24 @@ namespace SW_Character_creation
                 _Combat_abilities[index].Watchfullness_bonus    = Combat_abilities_combat_bonuses[4][index];
                 _Combat_abilities[index].Concentration_bonus    = Combat_abilities_combat_bonuses[5][index];
 
+                if (Directory.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Combat_abilities\\Images\\" + _Combat_abilities[index].Name))
+                {
+                    _Combat_abilities[index].Img_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Combat_abilities\Images\{_Combat_abilities[index].Name}";
+                }
+                else
+                {
+                    _Combat_abilities[index].Img_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+                }
+
+                if (Directory.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Combat_abilities\\Icons\\" + _Combat_abilities[index].Name))
+                {
+                    _Combat_abilities[index].Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Combat_abilities\Icons\{_Combat_abilities[index].Name}";
+                }
+                else
+                {
+                    _Combat_abilities[index].Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+                }
+
             }
 
             Echany.Base_ability_lvl     = _Combat_abilities[0];
