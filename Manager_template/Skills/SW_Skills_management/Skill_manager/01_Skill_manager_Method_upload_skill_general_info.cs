@@ -20,18 +20,18 @@ namespace SW_Character_creation
                         Skill.Skill_base_1  = Skill_desription[3][_Skills.IndexOf(Skill)];
                         Skill.Skill_base_2  = Skill_desription[4][_Skills.IndexOf(Skill)];
 
-                        if (Directory.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Skills\\Images\\" + Skill.Name))
+                        if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Skills\\Images\\" + Skill.Name + ".jpg"))
                         {
-                            Skill.Img_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Skills\Images\{Skill.Name}";
+                            Skill.Img_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Skills\Images\{Skill.Name}.jpg";
                         }
                         else
                         {
                             Skill.Img_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
                         }
 
-                        if (Directory.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Skills\\Icons\\" + Skill.Name))
+                        if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Skills\\Icons\\" + Skill.Name + ".jpg"))
                         {
-                            Skill.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Skills\Icons\{Skill.Name}";
+                            Skill.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Skills\Icons\{Skill.Name}.jpg";
                         }
                         else
                         {
