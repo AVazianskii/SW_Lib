@@ -33,6 +33,8 @@ namespace SW_Character_creation
         private List<string> Combat_general_description;
         private List<string> Combat_description;
 
+        private List<Abilities_sequence_template> _Combat_sequences;
+
 
 
         public static Combat_ability_manager GetInstance()
@@ -75,6 +77,10 @@ namespace SW_Character_creation
 
 
         public List<Combat_abilities_template> Get_abilities() { return _Combat_abilities; }
+        public List<Abilities_sequence_template> Get_sequences() { return _Combat_sequences; }
+
+
+
         public override void Run_download_and_upload_process()
         {
             SQLite_connection.Open();
@@ -206,6 +212,14 @@ namespace SW_Character_creation
             Zeishen         = new Abilities_sequence_template();
             Matukai         = new Abilities_sequence_template();
             Terras_kasi     = new Abilities_sequence_template();
+
+            _Combat_sequences = new List<Abilities_sequence_template>();
+
+            _Combat_sequences.Add(Echany);
+            _Combat_sequences.Add(Mandolor_style);
+            _Combat_sequences.Add(Zeishen);
+            _Combat_sequences.Add(Matukai);
+            _Combat_sequences.Add(Terras_kasi);
 
             _Combat_abilities = new List<Combat_abilities_template>();
 
