@@ -232,13 +232,13 @@ namespace SW_Character_creation
             Terras_kasi     = new Abilities_sequence_template();
 
             _Combat_sequences = new List<Abilities_sequence_template>();
-
+            
             _Combat_sequences.Add(Echany);
             _Combat_sequences.Add(Mandolor_style);
             _Combat_sequences.Add(Zeishen);
             _Combat_sequences.Add(Matukai);
             _Combat_sequences.Add(Terras_kasi);
-
+            
             _Combat_abilities = new List<Combat_abilities_template>();
 
             SQLite_connection_string = $@"Data Source={Directory.GetCurrentDirectory()}\Database\Combat_abilities.db;Version=3;";

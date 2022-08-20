@@ -94,16 +94,16 @@ namespace SW_Character_creation
                     case 3: _Sith_force_skills.Add   (_Force_skills[index]); break;
                 }
 
-                if (Directory.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Force_skills\\Images\\" + _Force_skills[index].Name))
+                if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Force_skills\\Images\\" + _Force_skills[index].Name + ".jpg"))
                 {
-                    _Force_skills[index].Img_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_skills\Images\{_Force_skills[index].Name}";
+                    _Force_skills[index].Img_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_skills\Images\{_Force_skills[index].Name}.jpg";
                 }
                 else
                 {
                     _Force_skills[index].Img_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
                 }
 
-                if (Directory.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Force_skills\\Icons\\" + _Force_skills[index].Name))
+                if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Force_skills\\Icons\\" + _Force_skills[index].Name + ".jpg"))
                 {
                     _Force_skills[index].Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_skills\Icons\{_Force_skills[index].Name}";
                 }

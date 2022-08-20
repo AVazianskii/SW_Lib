@@ -162,7 +162,7 @@ namespace SW_Character_creation
                 _Force_abilities[index].Watchfullness_bonus     = Force_abilities_combat_bonuses[4][index];
                 _Force_abilities[index].Concentration_bonus     = Force_abilities_combat_bonuses[5][index];
             }
-
+            /*
             Shii_cho.Base_ability_lvl   = _Force_abilities[0];
             Shii_cho.Adept_ability_lvl  = _Force_abilities[1];
             Shii_cho.Master_ability_lvl = _Force_abilities[2];
@@ -288,7 +288,7 @@ namespace SW_Character_creation
             Shien.Enable_condition_adept    = Diem_so.Base_ability_lvl;
             Shien.Enable_condition_master   = Shien.Adept_ability_lvl;
 
-            Shien.Check_enable_state();
+            Shien.Check_enable_state();*/
         }
 
 
@@ -327,9 +327,9 @@ namespace SW_Character_creation
             Old_niman   = new Abilities_sequence_template();
             Sokan       = new Abilities_sequence_template();
             Shien       = new Abilities_sequence_template();
-
+            
             _Force_sequences = new List<Abilities_sequence_template>();
-
+            
             _Force_sequences.Add(Shii_cho);
             _Force_sequences.Add(Makashi);
             _Force_sequences.Add(Soresu);
@@ -341,7 +341,7 @@ namespace SW_Character_creation
             _Force_sequences.Add(Old_niman);
             _Force_sequences.Add(Sokan);
             _Force_sequences.Add(Shien);
-
+            
             _Force_abilities = new List<Force_abilities_template>();
 
             SQLite_connection_string = $@"Data Source={Directory.GetCurrentDirectory()}\Database\Force_abilities.db;Version=3;";
