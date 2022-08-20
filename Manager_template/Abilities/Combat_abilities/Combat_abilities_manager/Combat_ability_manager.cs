@@ -147,7 +147,7 @@ namespace SW_Character_creation
                 }
 
             }
-
+            Echany.Name = "Эхани";
             Echany.Base_ability_lvl     = _Combat_abilities[0];
             Echany.Adept_ability_lvl    = _Combat_abilities[1];
             Echany.Master_ability_lvl   = _Combat_abilities[2];
@@ -159,6 +159,7 @@ namespace SW_Character_creation
             Echany.Check_enable_state();
 
 
+            Mandolor_style.Name = "Мандолорский стиль";
             Mandolor_style.Base_ability_lvl     = _Combat_abilities[3];
             Mandolor_style.Adept_ability_lvl    = _Combat_abilities[4];
             Mandolor_style.Master_ability_lvl   = _Combat_abilities[5];
@@ -170,6 +171,7 @@ namespace SW_Character_creation
             Mandolor_style.Check_enable_state();
 
 
+            Zeishen.Name = "Зейшен Ши";
             Zeishen.Base_ability_lvl    = _Combat_abilities[6];
             Zeishen.Adept_ability_lvl   = _Combat_abilities[7];
             Zeishen.Master_ability_lvl  = _Combat_abilities[8];
@@ -181,6 +183,7 @@ namespace SW_Character_creation
             Zeishen.Check_enable_state();
 
 
+            Matukai.Name = "Матукай";
             Matukai.Base_ability_lvl    = _Combat_abilities[9];
             Matukai.Adept_ability_lvl   = _Combat_abilities[10];
             Matukai.Master_ability_lvl  = _Combat_abilities[11];
@@ -192,6 +195,7 @@ namespace SW_Character_creation
             Matukai.Check_enable_state();
 
 
+            Terras_kasi.Name = "Террас Каси";
             Terras_kasi.Base_ability_lvl    = _Combat_abilities[12];
             Terras_kasi.Adept_ability_lvl   = _Combat_abilities[13];
             Terras_kasi.Master_ability_lvl  = _Combat_abilities[14];
