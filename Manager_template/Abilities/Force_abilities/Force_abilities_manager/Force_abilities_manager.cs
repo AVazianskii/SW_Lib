@@ -161,6 +161,24 @@ namespace SW_Character_creation
                 _Force_abilities[index].Stealthness_bonus       = Force_abilities_combat_bonuses[3][index];
                 _Force_abilities[index].Watchfullness_bonus     = Force_abilities_combat_bonuses[4][index];
                 _Force_abilities[index].Concentration_bonus     = Force_abilities_combat_bonuses[5][index];
+
+                if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Combat_abilities\\Images\\" + _Force_abilities[index].Name + ".jpg"))
+                {
+                    _Force_abilities[index].Img_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Combat_abilities\Images\{_Force_abilities[index].Name}.jpg";
+                }
+                else
+                {
+                    _Force_abilities[index].Img_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+                }
+
+                if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Combat_abilities\\Icons\\" + _Force_abilities[index].Name + ".jpg"))
+                {
+                    _Force_abilities[index].Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Combat_abilities\Icons\{_Force_abilities[index].Name}.jpg";
+                }
+                else
+                {
+                    _Force_abilities[index].Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+                }
             }
             
             Shii_cho.Base_ability_lvl   = _Force_abilities[0];
