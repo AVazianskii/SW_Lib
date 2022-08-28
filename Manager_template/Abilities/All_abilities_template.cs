@@ -27,8 +27,15 @@ namespace SW_Character_creation
         private bool is_enable,
                      is_chosen;
 
+        private List<int> skill_bonuses;
 
 
+
+        public List<int> Skill_bonuses
+        {
+            get { return skill_bonuses; }
+            set { skill_bonuses = value; }
+        }
         public string General_description
         {
             get { return general_description; }
@@ -103,6 +110,13 @@ namespace SW_Character_creation
         {
             get { return is_chosen; }
             set { is_chosen = value; }
+        }
+
+
+
+        public All_abilities_template()
+        {
+            skill_bonuses = new List<int>();
         }
     }
 }

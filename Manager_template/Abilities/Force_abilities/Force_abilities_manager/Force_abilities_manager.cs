@@ -180,7 +180,8 @@ namespace SW_Character_creation
                     _Force_abilities[index].Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
                 }
             }
-            
+
+            Shii_cho.Name = "Шии Чо";
             Shii_cho.Base_ability_lvl   = _Force_abilities[0];
             Shii_cho.Adept_ability_lvl  = _Force_abilities[1];
             Shii_cho.Master_ability_lvl = _Force_abilities[2];
@@ -192,6 +193,7 @@ namespace SW_Character_creation
             Shii_cho.Check_enable_state();
 
 
+            Makashi.Name = "Макаши";
             Makashi.Base_ability_lvl    = _Force_abilities[3];
             Makashi.Adept_ability_lvl   = _Force_abilities[4];
             Makashi.Master_ability_lvl  = _Force_abilities[5];
@@ -203,6 +205,7 @@ namespace SW_Character_creation
             Makashi.Check_enable_state();
 
 
+            Soresu.Name = "Сорэсу";
             Soresu.Base_ability_lvl     = _Force_abilities[6];
             Soresu.Adept_ability_lvl    = _Force_abilities[7];
             Soresu.Master_ability_lvl   = _Force_abilities[8];
@@ -214,6 +217,7 @@ namespace SW_Character_creation
             Soresu.Check_enable_state();
 
 
+            Ataro.Name = "Атаро";
             Ataro.Base_ability_lvl      = _Force_abilities[9];
             Ataro.Adept_ability_lvl     = _Force_abilities[10];
             Ataro.Master_ability_lvl    = _Force_abilities[11];
@@ -225,6 +229,7 @@ namespace SW_Character_creation
             Ataro.Check_enable_state();
 
 
+            Diem_so.Name = "Дьем Со";
             Diem_so.Base_ability_lvl    = _Force_abilities[12];
             Diem_so.Adept_ability_lvl   = _Force_abilities[13];
             Diem_so.Master_ability_lvl  = _Force_abilities[14];
@@ -236,6 +241,7 @@ namespace SW_Character_creation
             Diem_so.Check_enable_state();
 
 
+            New_niman.Name = "Новый Ниман";
             New_niman.Base_ability_lvl      = _Force_abilities[15];
             New_niman.Adept_ability_lvl     = _Force_abilities[16];
             New_niman.Master_ability_lvl    = _Force_abilities[17];
@@ -246,7 +252,8 @@ namespace SW_Character_creation
 
             New_niman.Check_enable_state();
 
-            
+
+            Juyo.Name = "Джуйо";
             Juyo.Base_ability_lvl   = _Force_abilities[18];
             Juyo.Adept_ability_lvl  = _Force_abilities[19];
             Juyo.Master_ability_lvl = _Force_abilities[20];
@@ -263,8 +270,9 @@ namespace SW_Character_creation
             Juyo.Enable_condition_master    = Juyo.Adept_ability_lvl;
 
             Juyo.Check_enable_state();
-            
-            
+
+
+            Vaapad.Name = "Ваапад";
             Vaapad.Base_ability_lvl     = null;
             Vaapad.Adept_ability_lvl    = _Force_abilities[21];
             Vaapad.Master_ability_lvl   = _Force_abilities[22];
@@ -274,8 +282,9 @@ namespace SW_Character_creation
             Vaapad.Enable_condition_master  = Vaapad.Adept_ability_lvl;
 
             Vaapad.Check_enable_state();
-            
-            
+
+
+            Old_niman.Name = "Старый Ниман";
             Old_niman.Base_ability_lvl      = null;
             Old_niman.Adept_ability_lvl     = _Force_abilities[23];
             Old_niman.Master_ability_lvl    = _Force_abilities[24];
@@ -286,7 +295,8 @@ namespace SW_Character_creation
 
             Old_niman.Check_enable_state();
 
-            
+
+            Sokan.Name = "Сокан";
             Sokan.Base_ability_lvl      = null;
             Sokan.Adept_ability_lvl     = _Force_abilities[25];
             Sokan.Master_ability_lvl    = _Force_abilities[26];
@@ -298,6 +308,7 @@ namespace SW_Character_creation
             Sokan.Check_enable_state();
 
 
+            Shien.Name = "Шиен";
             Shien.Base_ability_lvl      = null;
             Shien.Adept_ability_lvl     = _Force_abilities[27];
             Shien.Master_ability_lvl    = _Force_abilities[28];

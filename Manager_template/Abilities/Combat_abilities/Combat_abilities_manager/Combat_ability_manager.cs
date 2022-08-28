@@ -23,10 +23,12 @@ namespace SW_Character_creation
         private List<string> Combat_abilities_general_coloumn_name;
         private List<string> Combat_abilities_costs_coloumn_name;
         private List<string> Combat_abilities_combat_bonuses_coloumn_name;
+        private List<string> Combat_abilities_skills_bonuses_coloumn_name;
 
         private List<List<string>> Combat_abilities_general_info;
         private List<List<int>> Combat_abilities_costs;
         private List<List<int>> Combat_abilities_combat_bonuses;
+        private List<List<int>> Combat_abilities_skills_bonuses;
 
         private List<string> Combat_abilities_ID;
         private List<string> Combat_abilities_name;
@@ -102,6 +104,12 @@ namespace SW_Character_creation
                                         Combat_abilities_combat_bonuses,
                                         (int)Type_of_var.int_type);
 
+            Run_download_from_SQLite_v2("SELECT * FROM Combat_abilities_skill_bonuses ORDER BY ID",
+                                        SQLite_connection,
+                                        Combat_abilities_skills_bonuses_coloumn_name,
+                                        Combat_abilities_skills_bonuses,
+                                        (int)Type_of_var.int_type);
+
             SQLite_connection.Close();
 
             int index = 0;
@@ -127,6 +135,11 @@ namespace SW_Character_creation
                 _Combat_abilities[index].Stealthness_bonus      = Combat_abilities_combat_bonuses[3][index];
                 _Combat_abilities[index].Watchfullness_bonus    = Combat_abilities_combat_bonuses[4][index];
                 _Combat_abilities[index].Concentration_bonus    = Combat_abilities_combat_bonuses[5][index];
+
+                foreach (List<int> list in Combat_abilities_skills_bonuses)
+                {
+                    _Combat_abilities[index].Skill_bonuses.Add(list[_Combat_abilities[index].ID - 1]);
+                }
 
                 if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Combat_abilities\\Images\\" + _Combat_abilities[index].Name + ".jpg"))
                 {
@@ -214,10 +227,12 @@ namespace SW_Character_creation
             Combat_abilities_general_coloumn_name           = new List<string>();
             Combat_abilities_costs_coloumn_name             = new List<string>();
             Combat_abilities_combat_bonuses_coloumn_name    = new List<string>();
+            Combat_abilities_skills_bonuses_coloumn_name    = new List<string>();
 
             Combat_abilities_general_info   = new List<List<string>>();
             Combat_abilities_costs          = new List<List<int>>();
             Combat_abilities_combat_bonuses = new List<List<int>>();
+            Combat_abilities_skills_bonuses = new List<List<int>>();
 
             Combat_abilities_ID         = new List<string>();
             Combat_abilities_name       = new List<string>();
