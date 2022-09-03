@@ -318,6 +318,19 @@ namespace SW_Character_creation
             Shien.Enable_condition_master   = Shien.Adept_ability_lvl;
 
             Shien.Check_enable_state();
+
+            // Обнуляем коллекции, в которые считываем из базы
+            Force_abilities_general_coloumn_name = null;
+            Force_abilities_costs_coloumn_name = null;
+            Force_abilities_combat_bonuses_coloumn_name = null;
+
+            Force_abilities_general_info = null;
+            Force_abilities_ID = null;
+            Force_abilities_name = null;
+            Force_general_description = null;
+            Force_description = null;
+            Force_abilities_costs = null;
+            Force_abilities_combat_bonuses = null;
         }
 
 

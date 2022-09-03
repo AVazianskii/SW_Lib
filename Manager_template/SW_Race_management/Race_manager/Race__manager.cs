@@ -196,6 +196,39 @@ namespace SW_Character_creation
                 _Races[index].Set_race_flow_control_bonus       (Race_combat_parameters[5][index]);
                 
             }
+
+
+            // Обнуляем коллекции, в которые считываем из базы
+            Race_general_info_coloumn_name = null;
+            Race_languages_coloumn_name = null;
+            Race_skill_bonus_coloumn_name = null;
+            Race_attributes_bonus_coloumn_name = null;
+            Race_age_statuses_coloumn_name = null;
+            Race_combat_parameters_coloumn_name = null;
+
+            Race_description = null;
+            ID_Race = null;
+            Race_name = null;
+            General_description = null;
+            Personal_properties = null;
+            Physical_properties = null;
+            Home_world = null;
+            Language_1 = null;
+            Language_2 = null;
+            Language_3 = null;
+            Language_4 = null;
+            Feature_1 = null;
+            Feature_2 = null;
+            Feature_3 = null;
+            Feature_4 = null;
+            Feature_5 = null;
+            Feature_6 = null;
+
+            Languages = null;
+            Race_skills_bonus = null;
+            Race_attributes_bonus = null;
+            Race_age_statuses = null;
+            Race_combat_parameters = null;
         }
 
 

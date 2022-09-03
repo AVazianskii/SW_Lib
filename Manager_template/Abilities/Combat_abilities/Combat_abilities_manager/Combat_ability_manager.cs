@@ -218,6 +218,20 @@ namespace SW_Character_creation
             Terras_kasi.Enable_condition_master = Terras_kasi.Adept_ability_lvl;
 
             Terras_kasi.Check_enable_state();
+
+
+            // Обнуляем коллекции, в которые считываем из базы
+            Combat_abilities_general_coloumn_name = null;
+            Combat_abilities_costs_coloumn_name = null;
+            Combat_abilities_combat_bonuses_coloumn_name = null;
+
+            Combat_abilities_general_info = null;
+            Combat_abilities_ID = null;
+            Combat_abilities_name = null;
+            Combat_general_description = null;
+            Combat_description = null;
+            Combat_abilities_costs = null;
+            Combat_abilities_combat_bonuses = null;
         }
 
 
