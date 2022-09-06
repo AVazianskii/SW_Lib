@@ -44,6 +44,25 @@ namespace SW_Character_creation
             Upload_attributes_bonus();
             Upload_attributes_limits();
             Upload_skills_limits();
+
+
+            // Обнуляем коллекции, в которые считываем из базы
+            Age_status_general_coloumn_name.Clear();
+            Age_status_bonus_coloumn_name.Clear();
+            Age_status_attributes_limits_coloumn_name.Clear();
+            Age_status_skills_limits_coloumn_name.Clear();
+            Age_status_force_skills_limits_coloumn_name.Clear();
+
+            Age_status_general_description.Clear();
+            Age_status_ID.Clear();
+            Age_status_name.Clear();
+            Age_status_description.Clear();
+            Age_status_feature.Clear();
+
+            Age_status_attributes_bonus.Clear();
+            Age_status_attributes_limits.Clear();
+            Age_status_skills_limits.Clear();
+            Age_status_force_skills_limits.Clear();
         }
     }
 }

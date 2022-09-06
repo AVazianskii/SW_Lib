@@ -199,36 +199,36 @@ namespace SW_Character_creation
 
 
             // Обнуляем коллекции, в которые считываем из базы
-            Race_general_info_coloumn_name = null;
-            Race_languages_coloumn_name = null;
-            Race_skill_bonus_coloumn_name = null;
-            Race_attributes_bonus_coloumn_name = null;
-            Race_age_statuses_coloumn_name = null;
-            Race_combat_parameters_coloumn_name = null;
+            Race_general_info_coloumn_name.Clear();
+            Race_languages_coloumn_name.Clear();
+            Race_skill_bonus_coloumn_name.Clear();
+            Race_attributes_bonus_coloumn_name.Clear();
+            Race_age_statuses_coloumn_name.Clear();
+            Race_combat_parameters_coloumn_name.Clear();
 
-            Race_description = null;
-            ID_Race = null;
-            Race_name = null;
-            General_description = null;
-            Personal_properties = null;
-            Physical_properties = null;
-            Home_world = null;
-            Language_1 = null;
-            Language_2 = null;
-            Language_3 = null;
-            Language_4 = null;
-            Feature_1 = null;
-            Feature_2 = null;
-            Feature_3 = null;
-            Feature_4 = null;
-            Feature_5 = null;
-            Feature_6 = null;
+            Race_description.Clear();
+            ID_Race.Clear();
+            Race_name.Clear();
+            General_description.Clear();
+            Personal_properties.Clear();
+            Physical_properties.Clear();
+            Home_world.Clear();
+            Language_1.Clear();
+            Language_2.Clear();
+            Language_3.Clear();
+            Language_4.Clear();
+            Feature_1.Clear();
+            Feature_2.Clear();
+            Feature_3.Clear();
+            Feature_4.Clear();
+            Feature_5.Clear();
+            Feature_6.Clear();
 
-            Languages = null;
-            Race_skills_bonus = null;
-            Race_attributes_bonus = null;
-            Race_age_statuses = null;
-            Race_combat_parameters = null;
+            Languages.Clear();
+            Race_skills_bonus.Clear();
+            Race_attributes_bonus.Clear();
+            Race_age_statuses.Clear();
+            Race_combat_parameters.Clear();
         }
 
 

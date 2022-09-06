@@ -39,6 +39,37 @@ namespace SW_Character_creation
             Upload_attribute_costs_info();
             Upload_attribute_age_status_limits();
             Upload_attribute_range_limits();
+
+            // Обнуляем коллекции, в которые считываем из базы
+            Attribute_general_coloumn_name.Clear();
+            Attributes_cost_coloumn_name.Clear();
+            Attributes_limits_due_range_coloumn_name.Clear();
+            Attributes_limits_due_age_status_coloumn_name.Clear();
+
+            Attributes_description.Clear();
+            Attribute_ID.Clear();
+            Attribute_name.Clear();
+            Attribute_general_description.Clear();
+
+            Attribute_costs.Clear();
+            Attribute_cost_atr.Clear();
+            Attribute_cost_exp.Clear();
+
+            Attribute_range_limits.Clear();
+            Attribute_private_limit.Clear();
+            Attribute_veteran_limit.Clear();
+            Attribute_hero_limit.Clear();
+            Attribute_epic_limit.Clear();
+            Attribute_immortal_limit.Clear();
+
+            Attribute_age_status_limits.Clear();
+            Attribute_unknown_age_limit.Clear();
+            Attribute_child_limit.Clear();
+            Attribute_teen_limit.Clear();
+            Attribute_adult_limit.Clear();
+            Attribute_middle_limit.Clear();
+            Attribute_old_limit.Clear();
+            Attribute_eldery_limit.Clear();
         }
     }
 }

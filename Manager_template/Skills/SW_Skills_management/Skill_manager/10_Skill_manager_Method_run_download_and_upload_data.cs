@@ -54,6 +54,44 @@ namespace SW_Character_creation
             Upload_skill_limits_due_range();
             Upload_skill_limits_due_age();
             Upload_skill_costs();
+
+
+            // Обнуляем коллекции, в которые считываем из базы
+            Skill_general_info_coloumn_name.Clear();
+            Skill_limits_due_age_coloumn_name.Clear();
+            Skill_limits_due_range_coloumn_name.Clear();
+            Skill_costs_coloumn_name.Clear();
+            Skill_type_coloumn_name.Clear();
+
+            Skill_desription.Clear();
+            Skill_ID.Clear();
+            Skill_names.Clear();
+            Skill_general_description.Clear();
+            Skill_atr_base_1.Clear();
+            Skill_atr_base_2.Clear();
+
+            Skill_limits_due_age.Clear();
+            Skill_limits_unknown_age.Clear();
+            Skill_limits_child.Clear();
+            Skill_limits_teen.Clear();
+            Skill_limits_adult.Clear();
+            Skill_limits_middle.Clear();
+            Skill_limits_old.Clear();
+            Skill_limits_eldery.Clear();
+
+            Skill_limits_due_range.Clear();
+            Skill_limits_private.Clear();
+            Skill_limits_veteran.Clear();
+            Skill_limits_hero.Clear();
+            Skill_limits_epic.Clear();
+            Skill_limits_immortal.Clear();
+
+            Skill_costs.Clear();
+            Non_forceuser_costs.Clear();
+            Forceuser_costs.Clear();
+
+            Skill_type.Clear();
+            Combat_skill.Clear();
         }
     }
 }

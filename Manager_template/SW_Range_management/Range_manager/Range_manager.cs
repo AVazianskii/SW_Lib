@@ -92,6 +92,19 @@ namespace SW_Character_creation
                 _Ranges[index].Tech_skill_limit      = Ranges_skills_limits[0][index];
                 _Ranges[index].Specific_skill_limit  = Ranges_skills_limits[0][index];
             }
+
+            // Обнуляем коллекции, в которые считываем из базы
+            Range_general_info_coloumn_name.Clear();
+            Ranges_attributes_limits_coloumn_name.Clear();
+            Ranges_skills_limits_coloumn_name.Clear();
+
+            Range_general_info.Clear();
+            Range_ID.Clear();
+            Range_name.Clear();
+            Range_description.Clear();
+
+            Ranges_attributes_limits.Clear();
+            Ranges_skills_limits.Clear();
         }
 
 
