@@ -77,7 +77,7 @@ namespace SW_Character_creation
 
             if (Adept_ability_lvl != null)
             {
-                if ((Enable_condition_adept == null) || (Enable_condition_adept.Is_chosen) || (Base_ability_lvl == null))
+                if ((Enable_condition_adept == null) || (Enable_condition_adept.Is_chosen)) //  || (Base_ability_lvl == null)
                 {
                     Adept_ability_lvl.Is_enable = true;
                 }
@@ -86,7 +86,7 @@ namespace SW_Character_creation
 
             if (Master_ability_lvl != null)
             {
-                if ((Enable_condition_master == null) || (Enable_condition_master.Is_chosen) || (Adept_ability_lvl == null))
+                if ((Enable_condition_master == null) || (Enable_condition_master.Is_chosen)) // || (Adept_ability_lvl == null)
                 {
                     Master_ability_lvl.Is_enable = true;
                 }
