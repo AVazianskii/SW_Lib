@@ -94,17 +94,13 @@ namespace SW_Character_creation
             }
 
             // Обнуляем коллекции, в которые считываем из базы
-            Range_general_info_coloumn_name.Clear();
-            Ranges_attributes_limits_coloumn_name.Clear();
-            Ranges_skills_limits_coloumn_name.Clear();
+            ClearList(Range_general_info_coloumn_name);
+            ClearList(Ranges_attributes_limits_coloumn_name);
+            ClearList(Ranges_skills_limits_coloumn_name);
 
-            Range_general_info.Clear();
-            Range_ID.Clear();
-            Range_name.Clear();
-            Range_description.Clear();
+            ClearDoubleLists(Range_general_info);
+            ClearDoubleLists(Ranges_attributes_limits);
 
-            Ranges_attributes_limits.Clear();
-            Ranges_skills_limits.Clear();
         }
 
 

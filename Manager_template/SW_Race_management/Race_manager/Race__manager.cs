@@ -199,36 +199,19 @@ namespace SW_Character_creation
 
 
             // Обнуляем коллекции, в которые считываем из базы
-            Race_general_info_coloumn_name.Clear();
-            Race_languages_coloumn_name.Clear();
-            Race_skill_bonus_coloumn_name.Clear();
-            Race_attributes_bonus_coloumn_name.Clear();
-            Race_age_statuses_coloumn_name.Clear();
-            Race_combat_parameters_coloumn_name.Clear();
+            ClearList(Race_general_info_coloumn_name);
+            ClearList(Race_languages_coloumn_name);
+            ClearList(Race_skill_bonus_coloumn_name);
+            ClearList(Race_attributes_bonus_coloumn_name);
+            ClearList(Race_age_statuses_coloumn_name);
+            ClearList(Race_combat_parameters_coloumn_name);
 
-            Race_description.Clear();
-            ID_Race.Clear();
-            Race_name.Clear();
-            General_description.Clear();
-            Personal_properties.Clear();
-            Physical_properties.Clear();
-            Home_world.Clear();
-            Language_1.Clear();
-            Language_2.Clear();
-            Language_3.Clear();
-            Language_4.Clear();
-            Feature_1.Clear();
-            Feature_2.Clear();
-            Feature_3.Clear();
-            Feature_4.Clear();
-            Feature_5.Clear();
-            Feature_6.Clear();
-
-            Languages.Clear();
-            Race_skills_bonus.Clear();
-            Race_attributes_bonus.Clear();
-            Race_age_statuses.Clear();
-            Race_combat_parameters.Clear();
+            ClearDoubleLists(Race_description);
+            ClearDoubleLists(Languages);
+            ClearDoubleLists(Race_skills_bonus);
+            ClearDoubleLists(Race_attributes_bonus);
+            ClearDoubleLists(Race_age_statuses);
+            ClearDoubleLists(Race_combat_parameters);
         }
 
 

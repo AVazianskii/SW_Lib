@@ -47,22 +47,14 @@ namespace SW_Character_creation
 
 
             // Обнуляем коллекции, в которые считываем из базы
-            Age_status_general_coloumn_name.Clear();
-            Age_status_bonus_coloumn_name.Clear();
-            Age_status_attributes_limits_coloumn_name.Clear();
-            Age_status_skills_limits_coloumn_name.Clear();
-            Age_status_force_skills_limits_coloumn_name.Clear();
+            ClearList(Age_status_general_coloumn_name);
+            ClearList(Age_status_bonus_coloumn_name);
+            ClearList(Age_status_attributes_limits_coloumn_name);
+            ClearList(Age_status_skills_limits_coloumn_name);
+            ClearList(Age_status_force_skills_limits_coloumn_name);
 
-            Age_status_general_description.Clear();
-            Age_status_ID.Clear();
-            Age_status_name.Clear();
-            Age_status_description.Clear();
-            Age_status_feature.Clear();
-
-            Age_status_attributes_bonus.Clear();
-            Age_status_attributes_limits.Clear();
-            Age_status_skills_limits.Clear();
-            Age_status_force_skills_limits.Clear();
+            ClearDoubleLists(Age_status_general_description);
+            ClearDoubleLists(Age_status_attributes_bonus);
         }
     }
 }

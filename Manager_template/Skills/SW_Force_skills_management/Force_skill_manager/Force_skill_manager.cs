@@ -114,17 +114,13 @@ namespace SW_Character_creation
             }
 
             // Обнуляем коллекции, в которые считываем из базы
-            Force_skill_general_info_coloumn_name.Clear();
-            Force_skill_costs_coloumn_name.Clear();
-            Force_skill_types_coloumn_name.Clear();
+            ClearList(Force_skill_general_info_coloumn_name);
+            ClearList(Force_skill_costs_coloumn_name);
+            ClearList(Force_skill_types_coloumn_name);
 
-            Force_skill_general_info.Clear();
-            Force_skill_ID.Clear();
-            Force_skill_name.Clear();
-            Force_skill_description.Clear();
-            Force_skill_base.Clear();
-            Force_skill_costs.Clear();
-            Force_skill_types.Clear();
+            ClearDoubleLists(Force_skill_general_info);
+            ClearDoubleLists(Force_skill_costs);
+            ClearDoubleLists(Force_skill_types);
         }
 
 

@@ -221,17 +221,13 @@ namespace SW_Character_creation
 
 
             // Обнуляем коллекции, в которые считываем из базы
-            Combat_abilities_general_coloumn_name.Clear();
-            Combat_abilities_costs_coloumn_name.Clear();
-            Combat_abilities_combat_bonuses_coloumn_name.Clear();
+            ClearList(Combat_abilities_general_coloumn_name);
+            ClearList(Combat_abilities_costs_coloumn_name);
+            ClearList(Combat_abilities_combat_bonuses_coloumn_name);
 
-            Combat_abilities_general_info.Clear();
-            Combat_abilities_ID.Clear();
-            Combat_abilities_name.Clear();
-            Combat_general_description.Clear();
-            Combat_description.Clear();
-            Combat_abilities_costs.Clear();
-            Combat_abilities_combat_bonuses.Clear();
+            ClearDoubleLists(Combat_abilities_general_info);
+            ClearDoubleLists(Combat_abilities_costs);
+            ClearDoubleLists(Combat_abilities_combat_bonuses);
         }
 
 

@@ -320,17 +320,13 @@ namespace SW_Character_creation
             Shien.Check_enable_state();
 
             // Обнуляем коллекции, в которые считываем из базы
-            Force_abilities_general_coloumn_name.Clear();
-            Force_abilities_costs_coloumn_name.Clear();
-            Force_abilities_combat_bonuses_coloumn_name.Clear();
+            ClearList(Force_abilities_general_coloumn_name);
+            ClearList(Force_abilities_costs_coloumn_name);
+            ClearList(Force_abilities_combat_bonuses_coloumn_name);
 
-            Force_abilities_general_info.Clear();
-            Force_abilities_ID.Clear();
-            Force_abilities_name.Clear();
-            Force_general_description.Clear();
-            Force_description.Clear();
-            Force_abilities_costs.Clear();
-            Force_abilities_combat_bonuses.Clear();
+            ClearDoubleLists(Force_abilities_general_info);
+            ClearDoubleLists(Force_abilities_costs);
+            ClearDoubleLists(Force_abilities_combat_bonuses);
         }
 
 

@@ -207,5 +207,45 @@ namespace SW_Character_creation
             }
         }
         public virtual void Run_download_and_upload_process() { }
+        public void ClearDoubleLists (List<List<int>> DoubleList)
+        {
+            if (DoubleList.Count > 0)
+            {
+                foreach(List<int> list in DoubleList)
+                {
+                    list.Clear();
+                }
+                DoubleList.Clear();
+            }
+        }
+        public void ClearDoubleLists(List<List<string>> DoubleList)
+        {
+            if (DoubleList.Count > 0)
+            {
+                foreach (List<string> list in DoubleList)
+                {
+                    list.Clear();
+                }
+                DoubleList.Clear();
+            }
+        }
+        public void ClearDoubleLists(List<List<bool>> DoubleList)
+        {
+            if (DoubleList.Count > 0)
+            {
+                foreach (List<bool> list in DoubleList)
+                {
+                    list.Clear();
+                }
+                DoubleList.Clear();
+            }
+        }
+        public void ClearList(List<string> list)
+        {
+            if (list.Count > 0)
+            {
+                list.Clear();
+            }
+        }
     }
 }
