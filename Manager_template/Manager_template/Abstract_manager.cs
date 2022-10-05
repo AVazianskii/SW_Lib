@@ -214,8 +214,10 @@ namespace SW_Character_creation
                 foreach(List<int> list in DoubleList)
                 {
                     list.Clear();
+                    list.TrimExcess();
                 }
                 DoubleList.Clear();
+                DoubleList.TrimExcess();
             }
         }
         public void ClearDoubleLists(List<List<string>> DoubleList)
@@ -225,8 +227,10 @@ namespace SW_Character_creation
                 foreach (List<string> list in DoubleList)
                 {
                     list.Clear();
+                    list.TrimExcess();
                 }
                 DoubleList.Clear();
+                DoubleList.TrimExcess();
             }
         }
         public void ClearDoubleLists(List<List<bool>> DoubleList)
@@ -236,8 +240,10 @@ namespace SW_Character_creation
                 foreach (List<bool> list in DoubleList)
                 {
                     list.Clear();
+                    list.TrimExcess();
                 }
                 DoubleList.Clear();
+                DoubleList.TrimExcess();
             }
         }
         public void ClearList(List<string> list)
@@ -245,6 +251,7 @@ namespace SW_Character_creation
             if (list.Count > 0)
             {
                 list.Clear();
+                list.TrimExcess();
             }
         }
     }
