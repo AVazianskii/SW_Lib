@@ -16,6 +16,7 @@ namespace SW_Character_creation
         private All_abilities_template enable_condition_master;
 
         private string name; // 
+        private string icon_path;
 
         private bool is_enabled;
 
@@ -60,6 +61,11 @@ namespace SW_Character_creation
         {
             get { return is_enabled; }
             set { is_enabled = value; }
+        }
+        public string Icon_path
+        {
+            get { return icon_path; }
+            set { icon_path = value; }
         }
 
 

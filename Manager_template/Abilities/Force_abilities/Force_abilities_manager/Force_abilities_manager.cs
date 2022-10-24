@@ -162,18 +162,18 @@ namespace SW_Character_creation
                 _Force_abilities[index].Watchfullness_bonus     = Force_abilities_combat_bonuses[4][index];
                 _Force_abilities[index].Concentration_bonus     = Force_abilities_combat_bonuses[5][index];
 
-                if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Combat_abilities\\Images\\" + _Force_abilities[index].Name + ".jpg"))
+                if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Force_abilities\\Images\\" + _Force_abilities[index].Name + ".jpg"))
                 {
-                    _Force_abilities[index].Img_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Combat_abilities\Images\{_Force_abilities[index].Name}.jpg";
+                    _Force_abilities[index].Img_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_abilities\Images\{_Force_abilities[index].Name}.jpg";
                 }
                 else
                 {
                     _Force_abilities[index].Img_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
                 }
 
-                if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Combat_abilities\\Icons\\" + _Force_abilities[index].Name + ".jpg"))
+                if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Force_abilities\\Icons\\" + _Force_abilities[index].Name + ".jpg"))
                 {
-                    _Force_abilities[index].Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Combat_abilities\Icons\{_Force_abilities[index].Name}.jpg";
+                    _Force_abilities[index].Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_abilities\Icons\{_Force_abilities[index].Name}.jpg";
                 }
                 else
                 {
@@ -190,6 +190,15 @@ namespace SW_Character_creation
             Shii_cho.Enable_condition_adept  = Shii_cho.Base_ability_lvl;
             Shii_cho.Enable_condition_master = Shii_cho.Adept_ability_lvl;
 
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Force_sequences\\Icons\\" + Shii_cho.Name + ".jpg"))
+            {
+                Shii_cho.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Icons\{Shii_cho.Name}.jpg";
+            }
+            else
+            {
+                Shii_cho.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+            }
+
             Shii_cho.Check_enable_state();
 
 
@@ -201,6 +210,15 @@ namespace SW_Character_creation
             Makashi.Enable_condition_base   = null;
             Makashi.Enable_condition_adept  = Makashi.Base_ability_lvl;
             Makashi.Enable_condition_master = Makashi.Adept_ability_lvl;
+
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Force_sequences\\Icons\\" + Makashi.Name + ".jpg"))
+            {
+                Makashi.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Icons\{Makashi.Name}.jpg";
+            }
+            else
+            {
+                Makashi.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+            }
 
             Makashi.Check_enable_state();
 
@@ -214,6 +232,15 @@ namespace SW_Character_creation
             Soresu.Enable_condition_adept   = Soresu.Base_ability_lvl;
             Soresu.Enable_condition_master  = Soresu.Adept_ability_lvl;
 
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Force_sequences\\Icons\\" + Soresu.Name + ".jpg"))
+            {
+                Soresu.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Icons\{Soresu.Name}.jpg";
+            }
+            else
+            {
+                Soresu.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+            }
+
             Soresu.Check_enable_state();
 
 
@@ -225,6 +252,15 @@ namespace SW_Character_creation
             Ataro.Enable_condition_base     = null;
             Ataro.Enable_condition_adept    = Ataro.Base_ability_lvl;
             Ataro.Enable_condition_master   = Ataro.Adept_ability_lvl;
+
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Force_sequences\\Icons\\" + Ataro.Name + ".jpg"))
+            {
+                Ataro.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Icons\{Ataro.Name}.jpg";
+            }
+            else
+            {
+                Ataro.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+            }
 
             Ataro.Check_enable_state();
 
@@ -238,6 +274,15 @@ namespace SW_Character_creation
             Diem_so.Enable_condition_adept  = Diem_so.Base_ability_lvl;
             Diem_so.Enable_condition_master = Diem_so.Adept_ability_lvl;
 
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Force_sequences\\Icons\\" + Diem_so.Name + ".jpg"))
+            {
+                Diem_so.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Icons\{Diem_so.Name}.jpg";
+            }
+            else
+            {
+                Diem_so.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+            }
+
             Diem_so.Check_enable_state();
 
 
@@ -249,6 +294,15 @@ namespace SW_Character_creation
             New_niman.Enable_condition_base     = null;
             New_niman.Enable_condition_adept    = New_niman.Base_ability_lvl;
             New_niman.Enable_condition_master   = New_niman.Adept_ability_lvl;
+
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Force_sequences\\Icons\\" + New_niman.Name + ".jpg"))
+            {
+                New_niman.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Icons\{New_niman.Name}.jpg";
+            }
+            else
+            {
+                New_niman.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+            }
 
             New_niman.Check_enable_state();
 
@@ -269,6 +323,15 @@ namespace SW_Character_creation
             Juyo.Enable_condition_adept     = Juyo.Base_ability_lvl;
             Juyo.Enable_condition_master    = Juyo.Adept_ability_lvl;
 
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Force_sequences\\Icons\\" + Juyo.Name + ".jpg"))
+            {
+                Juyo.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Icons\{Juyo.Name}.jpg";
+            }
+            else
+            {
+                Juyo.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+            }
+
             Juyo.Check_enable_state();
 
 
@@ -280,6 +343,15 @@ namespace SW_Character_creation
             Vaapad.Enable_condition_base    = null;
             Vaapad.Enable_condition_adept   = Juyo.Base_ability_lvl;
             Vaapad.Enable_condition_master  = Vaapad.Adept_ability_lvl;
+
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Force_sequences\\Icons\\" + Vaapad.Name + ".jpg"))
+            {
+                Vaapad.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Icons\{Vaapad.Name}.jpg";
+            }
+            else
+            {
+                Vaapad.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+            }
 
             Vaapad.Check_enable_state();
 
@@ -293,6 +365,15 @@ namespace SW_Character_creation
             Old_niman.Enable_condition_adept    = New_niman.Base_ability_lvl;
             Old_niman.Enable_condition_master   = Old_niman.Adept_ability_lvl;
 
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Force_sequences\\Icons\\" + Old_niman.Name + ".jpg"))
+            {
+                Old_niman.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Icons\{Old_niman.Name}.jpg";
+            }
+            else
+            {
+                Old_niman.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+            }
+
             Old_niman.Check_enable_state();
 
 
@@ -305,6 +386,15 @@ namespace SW_Character_creation
             Sokan.Enable_condition_adept    = Ataro.Base_ability_lvl;
             Sokan.Enable_condition_master   = Sokan.Adept_ability_lvl;
 
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Force_sequences\\Icons\\" + Sokan.Name + ".jpg"))
+            {
+                Sokan.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Icons\{Sokan.Name}.jpg";
+            }
+            else
+            {
+                Sokan.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+            }
+
             Sokan.Check_enable_state();
 
 
@@ -316,6 +406,15 @@ namespace SW_Character_creation
             Shien.Enable_condition_base     = null;
             Shien.Enable_condition_adept    = Diem_so.Base_ability_lvl;
             Shien.Enable_condition_master   = Shien.Adept_ability_lvl;
+
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Force_sequences\\Icons\\" + Shien.Name + ".jpg"))
+            {
+                Shien.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Icons\{Shien.Name}.jpg";
+            }
+            else
+            {
+                Shien.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+            }
 
             Shien.Check_enable_state();
 
