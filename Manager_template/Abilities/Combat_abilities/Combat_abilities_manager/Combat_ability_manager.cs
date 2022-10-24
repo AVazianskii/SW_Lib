@@ -169,6 +169,15 @@ namespace SW_Character_creation
             Echany.Enable_condition_adept   = Echany.Base_ability_lvl;
             Echany.Enable_condition_master  = Echany.Adept_ability_lvl;
 
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Combat_sequences\\Icons\\" + Echany.Name + ".jpg"))
+            {
+                Echany.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Combat_sequences\Icons\{Echany.Name}.jpg";
+            }
+            else
+            {
+                Echany.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+            }
+
             Echany.Check_enable_state();
 
 
@@ -180,6 +189,15 @@ namespace SW_Character_creation
             Mandolor_style.Enable_condition_base    = null;
             Mandolor_style.Enable_condition_adept   = Mandolor_style.Base_ability_lvl;
             Mandolor_style.Enable_condition_master  = Mandolor_style.Adept_ability_lvl;
+
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Combat_sequences\\Icons\\" + Mandolor_style.Name + ".jpg"))
+            {
+                Mandolor_style.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Combat_sequences\Icons\{Mandolor_style.Name}.jpg";
+            }
+            else
+            {
+                Mandolor_style.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+            }
 
             Mandolor_style.Check_enable_state();
 
@@ -193,6 +211,15 @@ namespace SW_Character_creation
             Zeishen.Enable_condition_adept  = Zeishen.Base_ability_lvl;
             Zeishen.Enable_condition_master = Zeishen.Adept_ability_lvl;
 
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Combat_sequences\\Icons\\" + Zeishen.Name + ".jpg"))
+            {
+                Zeishen.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Combat_sequences\Icons\{Zeishen.Name}.jpg";
+            }
+            else
+            {
+                Zeishen.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+            }
+
             Zeishen.Check_enable_state();
 
 
@@ -205,6 +232,15 @@ namespace SW_Character_creation
             Matukai.Enable_condition_adept  = Matukai.Base_ability_lvl;
             Matukai.Enable_condition_master = Matukai.Adept_ability_lvl;
 
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Combat_sequences\\Icons\\" + Matukai.Name + ".jpg"))
+            {
+                Matukai.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Combat_sequences\Icons\{Matukai.Name}.jpg";
+            }
+            else
+            {
+                Matukai.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+            }
+
             Matukai.Check_enable_state();
 
 
@@ -216,6 +252,15 @@ namespace SW_Character_creation
             Terras_kasi.Enable_condition_base   = null;
             Terras_kasi.Enable_condition_adept  = Terras_kasi.Base_ability_lvl;
             Terras_kasi.Enable_condition_master = Terras_kasi.Adept_ability_lvl;
+
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Combat_sequences\\Icons\\" + Terras_kasi.Name + ".jpg"))
+            {
+                Terras_kasi.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Combat_sequences\Icons\{Terras_kasi.Name}.jpg";
+            }
+            else
+            {
+                Terras_kasi.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+            }
 
             Terras_kasi.Check_enable_state();
 
