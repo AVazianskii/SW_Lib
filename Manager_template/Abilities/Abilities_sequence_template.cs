@@ -18,6 +18,8 @@ namespace SW_Character_creation
         private string name; // 
         private string icon_path;
 
+        private int level;
+
         private bool is_enabled;
 
 
@@ -66,6 +68,11 @@ namespace SW_Character_creation
         {
             get { return icon_path; }
             set { icon_path = value; }
+        }
+        public int Level
+        {
+            get { return level; }
+            set { level = value; }
         }
 
 
