@@ -194,10 +194,13 @@ namespace SW_Character_creation
             {
                 Shii_cho.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Icons\{Shii_cho.Name}.jpg";
             }
-            else
+            else { Shii_cho.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
+
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Force_sequences\\Images\\" + Shii_cho.Name + ".jpg"))
             {
-                Shii_cho.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+                Shii_cho.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Images\{Shii_cho.Name}.jpg";
             }
+            else { Shii_cho.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
 
             Shii_cho.Check_enable_state();
 
@@ -215,10 +218,13 @@ namespace SW_Character_creation
             {
                 Makashi.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Icons\{Makashi.Name}.jpg";
             }
-            else
+            else { Makashi.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
+
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Force_sequences\\Images\\" + Makashi.Name + ".jpg"))
             {
-                Makashi.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+                Makashi.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Images\{Makashi.Name}.jpg";
             }
+            else { Makashi.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
 
             Makashi.Check_enable_state();
 
@@ -236,10 +242,13 @@ namespace SW_Character_creation
             {
                 Soresu.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Icons\{Soresu.Name}.jpg";
             }
-            else
+            else { Soresu.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
+
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Force_sequences\\Images\\" + Soresu.Name + ".jpg"))
             {
-                Soresu.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+                Soresu.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Images\{Soresu.Name}.jpg";
             }
+            else { Soresu.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
 
             Soresu.Check_enable_state();
 
@@ -257,10 +266,13 @@ namespace SW_Character_creation
             {
                 Ataro.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Icons\{Ataro.Name}.jpg";
             }
-            else
+            else { Ataro.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
+
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Force_sequences\\Images\\" + Ataro.Name + ".jpg"))
             {
-                Ataro.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+                Ataro.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Images\{Ataro.Name}.jpg";
             }
+            else { Ataro.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
 
             Ataro.Check_enable_state();
 
@@ -278,10 +290,13 @@ namespace SW_Character_creation
             {
                 Diem_so.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Icons\{Diem_so.Name}.jpg";
             }
-            else
+            else { Diem_so.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
+
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Force_sequences\\Images\\" + Diem_so.Name + ".jpg"))
             {
-                Diem_so.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+                Diem_so.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Images\{Diem_so.Name}.jpg";
             }
+            else { Diem_so.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
 
             Diem_so.Check_enable_state();
 
@@ -299,10 +314,13 @@ namespace SW_Character_creation
             {
                 New_niman.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Icons\{New_niman.Name}.jpg";
             }
-            else
+            else { New_niman.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
+
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Force_sequences\\Images\\" + New_niman.Name + ".jpg"))
             {
-                New_niman.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+                New_niman.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Images\{New_niman.Name}.jpg";
             }
+            else { New_niman.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
 
             New_niman.Check_enable_state();
 
@@ -327,10 +345,13 @@ namespace SW_Character_creation
             {
                 Juyo.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Icons\{Juyo.Name}.jpg";
             }
-            else
+            else { Juyo.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
+
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Force_sequences\\Images\\" + Juyo.Name + ".jpg"))
             {
-                Juyo.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+                Juyo.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Images\{Juyo.Name}.jpg";
             }
+            else { Juyo.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
 
             Juyo.Check_enable_state();
 
@@ -348,10 +369,13 @@ namespace SW_Character_creation
             {
                 Vaapad.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Icons\{Vaapad.Name}.jpg";
             }
-            else
+            else { Vaapad.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
+
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Force_sequences\\Images\\" + Vaapad.Name + ".jpg"))
             {
-                Vaapad.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+                Vaapad.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Images\{Vaapad.Name}.jpg";
             }
+            else { Vaapad.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
 
             Vaapad.Check_enable_state();
 
@@ -369,10 +393,13 @@ namespace SW_Character_creation
             {
                 Old_niman.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Icons\{Old_niman.Name}.jpg";
             }
-            else
+            else { Old_niman.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
+
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Force_sequences\\Images\\" + Old_niman.Name + ".jpg"))
             {
-                Old_niman.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+                Old_niman.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Images\{Old_niman.Name}.jpg";
             }
+            else { Old_niman.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
 
             Old_niman.Check_enable_state();
 
@@ -390,10 +417,13 @@ namespace SW_Character_creation
             {
                 Sokan.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Icons\{Sokan.Name}.jpg";
             }
-            else
+            else { Sokan.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
+
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Force_sequences\\Images\\" + Sokan.Name + ".jpg"))
             {
-                Sokan.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+                Sokan.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Images\{Sokan.Name}.jpg";
             }
+            else { Sokan.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
 
             Sokan.Check_enable_state();
 
@@ -411,10 +441,13 @@ namespace SW_Character_creation
             {
                 Shien.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Icons\{Shien.Name}.jpg";
             }
-            else
+            else { Shien.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
+
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Force_sequences\\Images\\" + Shien.Name + ".jpg"))
             {
-                Shien.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+                Shien.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Force_sequences\Images\{Shien.Name}.jpg";
             }
+            else { Shien.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
 
             Shien.Check_enable_state();
 
