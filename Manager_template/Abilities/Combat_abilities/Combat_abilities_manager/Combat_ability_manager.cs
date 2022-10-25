@@ -173,10 +173,13 @@ namespace SW_Character_creation
             {
                 Echany.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Combat_sequences\Icons\{Echany.Name}.jpg";
             }
-            else
+            else { Echany.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
+
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Combat_sequences\\Images\\" + Echany.Name + ".jpg"))
             {
-                Echany.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+                Echany.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Combat_sequences\Images\{Echany.Name}.jpg";
             }
+            else { Echany.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
 
             Echany.Check_enable_state();
 
@@ -194,10 +197,13 @@ namespace SW_Character_creation
             {
                 Mandolor_style.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Combat_sequences\Icons\{Mandolor_style.Name}.jpg";
             }
-            else
+            else { Mandolor_style.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
+
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Combat_sequences\\Images\\" + Mandolor_style.Name + ".jpg"))
             {
-                Mandolor_style.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+                Mandolor_style.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Combat_sequences\Images\{Mandolor_style.Name}.jpg";
             }
+            else { Mandolor_style.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
 
             Mandolor_style.Check_enable_state();
 
@@ -215,10 +221,13 @@ namespace SW_Character_creation
             {
                 Zeishen.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Combat_sequences\Icons\{Zeishen.Name}.jpg";
             }
-            else
+            else { Zeishen.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
+
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Combat_sequences\\Images\\" + Zeishen.Name + ".jpg"))
             {
-                Zeishen.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+                Zeishen.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Combat_sequences\Images\{Zeishen.Name}.jpg";
             }
+            else { Zeishen.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
 
             Zeishen.Check_enable_state();
 
@@ -236,10 +245,13 @@ namespace SW_Character_creation
             {
                 Matukai.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Combat_sequences\Icons\{Matukai.Name}.jpg";
             }
-            else
+            else { Matukai.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
+
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Combat_sequences\\Images\\" + Matukai.Name + ".jpg"))
             {
-                Matukai.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+                Matukai.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Combat_sequences\Images\{Matukai.Name}.jpg";
             }
+            else { Matukai.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
 
             Matukai.Check_enable_state();
 
@@ -257,10 +269,13 @@ namespace SW_Character_creation
             {
                 Terras_kasi.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Combat_sequences\Icons\{Terras_kasi.Name}.jpg";
             }
-            else
+            else { Terras_kasi.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
+
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Combat_sequences\\Images\\" + Terras_kasi.Name + ".jpg"))
             {
-                Terras_kasi.Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+                Terras_kasi.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Combat_sequences\Images\{Terras_kasi.Name}.jpg";
             }
+            else { Terras_kasi.Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg"; }
 
             Terras_kasi.Check_enable_state();
 
