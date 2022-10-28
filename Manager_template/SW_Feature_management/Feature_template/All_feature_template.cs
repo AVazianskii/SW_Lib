@@ -12,8 +12,10 @@ namespace SW_Character_creation
                      type;
         private sbyte cost;
 
-        private string name;
-        private string description;
+        private string name,
+                       description,
+                       icon_path,
+                       image_path;
 
         private bool is_chosen;
 
@@ -43,6 +45,16 @@ namespace SW_Character_creation
         {
             get { return description; }
             set { description = value; }
+        }
+        public string Icon_path
+        {
+            get { return icon_path; }
+            set { icon_path = value; }
+        }
+        public string Image_path
+        {
+            get { return image_path; }
+            set { image_path = value; }
         }
         public bool Is_chosen
         {
