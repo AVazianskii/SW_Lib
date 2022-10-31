@@ -108,6 +108,7 @@
     <Compile Include="SW_Attribute_management\Attribute_template\Atribute_class.cs" />
     <Compile Include="Skills\SW_Force_skills_management\Force_skill_manager\Force_skill_manager.cs" />
     <Compile Include="Skills\SW_Force_skills_management\Force_skill_template\Force_skill_class.cs" />
+    <Compile Include="SW_Feature_management\Feature_manager\Feature_manager.cs" />
     <Compile Include="SW_Feature_management\Feature_template\All_feature_template.cs" />
     <Compile Include="SW_Race_management\Races\Botan_race.cs" />
     <Compile Include="SW_Race_management\Races\Cereanin_race.cs" />
@@ -195,7 +196,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="SW_Feature_management\Features\" />
-    <Folder Include="SW_Feature_management\Feature_manager\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
