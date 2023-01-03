@@ -18,6 +18,7 @@ namespace SW_Character_creation
         private List<string> Feature_name;
         private List<string> Feature_description;
         private List<string> Feature_general_info_coloumn_name;
+        private List<string> Feature_type_coloumn_name;
 
         private List<List<string>> Feature_general_info;
 
