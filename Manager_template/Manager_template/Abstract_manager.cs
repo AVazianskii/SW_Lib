@@ -282,6 +282,32 @@ namespace SW_Character_creation
                 DoubleList.TrimExcess();
             }
         }
+        public void ClearDoubleLists(List<List<byte>> DoubleList)
+        {
+            if (DoubleList.Count > 0)
+            {
+                foreach (List<byte> list in DoubleList)
+                {
+                    list.Clear();
+                    list.TrimExcess();
+                }
+                DoubleList.Clear();
+                DoubleList.TrimExcess();
+            }
+        }
+        public void ClearDoubleLists(List<List<sbyte>> DoubleList)
+        {
+            if (DoubleList.Count > 0)
+            {
+                foreach (List<sbyte> list in DoubleList)
+                {
+                    list.Clear();
+                    list.TrimExcess();
+                }
+                DoubleList.Clear();
+                DoubleList.TrimExcess();
+            }
+        }
         public void ClearList(List<string> list)
         {
             if (list.Count > 0)

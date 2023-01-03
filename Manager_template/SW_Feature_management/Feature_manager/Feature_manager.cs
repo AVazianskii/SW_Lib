@@ -20,9 +20,11 @@ namespace SW_Character_creation
         private List<string> Feature_general_info_coloumn_name;
         private List<string> Feature_type_coloumn_name;
         private List<string> Feature_cost_coloumn_name;
+        private List<string> Feature_common_bonuses_coloumn_name;
 
-        private List<List<byte>> Feature_types;
+        private List<List<byte>> Feature_type;
         private List<List<sbyte>> Feature_cost;
+        private List<List<sbyte>> Feature_common_bonuses;
 
         private List<List<string>> Feature_general_info;
 
@@ -50,7 +52,19 @@ namespace SW_Character_creation
                                         SQLite_connection,
                                         Feature_cost_coloumn_name,
                                         Feature_cost,
+                                        (int)Type_of_var.sbyte_type);
+
+            Run_download_from_SQLite_v2("SELECT * FROM Features_type ORDER BY ID",
+                                        SQLite_connection,
+                                        Feature_type_coloumn_name,
+                                        Feature_type,
                                         (int)Type_of_var.byte_type);
+
+            Run_download_from_SQLite_v2("SELECT * FROM Features_common_bonuses ORDER BY ID",
+                                        SQLite_connection,
+                                        Feature_common_bonuses_coloumn_name,
+                                        Feature_common_bonuses,
+                                        (int)Type_of_var.sbyte_type);
             SQLite_connection.Close();
 
             int index = 0;
@@ -69,8 +83,14 @@ namespace SW_Character_creation
             }
 
             ClearList(Feature_general_info_coloumn_name);
+            ClearList(Feature_type_coloumn_name);
+            ClearList(Feature_cost_coloumn_name);
+            ClearList(Feature_common_bonuses_coloumn_name);
 
             ClearDoubleLists(Feature_general_info);
+            ClearDoubleLists(Feature_type);
+            ClearDoubleLists(Feature_cost);
+            ClearDoubleLists(Feature_common_bonuses);
         }
 
 
@@ -88,7 +108,14 @@ namespace SW_Character_creation
             Feature_general_info.Add(Feature_name);
             Feature_general_info.Add(Feature_description);
 
-            Feature_general_info_coloumn_name = new List<string>();
+            Feature_general_info_coloumn_name   = new List<string>();
+            Feature_type_coloumn_name           = new List<string>();
+            Feature_cost_coloumn_name           = new List<string>();
+            Feature_common_bonuses_coloumn_name = new List<string>();
+
+            Feature_type            = new List<List<byte>>();
+            Feature_cost            = new List<List<sbyte>>();
+            Feature_common_bonuses  = new List<List<sbyte>>();
 
             SQLite_connection_string = $@"Data Source={Directory.GetCurrentDirectory()}\Database\Features.db;Version=3;";
 
