@@ -9,6 +9,8 @@ namespace SW_Character_creation
         private List<List<int>> temp_int_list;
         private List<List<string>> temp_string_list;
         private List<List<bool>> temp_bool_list;
+        private List<List<byte>> temp_byte_list;
+        private List<List<sbyte>> temp_sbyte_list;
 
 
 
@@ -16,7 +18,9 @@ namespace SW_Character_creation
         {
             string_type,
             int_type,
-            bool_type
+            bool_type,
+            byte_type,
+            sbyte_type
         }
         public void Run_download_from_SQLite(string SQLite_Command_text,
                                              SQLiteConnection SQLite_connection,
@@ -152,6 +156,14 @@ namespace SW_Character_creation
                     {
                         temp_bool_list = (List<List<bool>>)List_for_reading_data;
                     }
+                    else if (reading_data_type == (int)Type_of_var.byte_type)
+                    {
+                        temp_byte_list = (List<List<byte>>)List_for_reading_data;
+                    }
+                    else if (reading_data_type == (int)Type_of_var.sbyte_type)
+                    {
+                        temp_sbyte_list = (List<List<sbyte>>)List_for_reading_data;
+                    }
 
                     for (int i = 2; i < SQLite_reader.FieldCount; i++)
                     {
@@ -167,6 +179,14 @@ namespace SW_Character_creation
                         else if (reading_data_type == (int)Type_of_var.bool_type)
                         {
                             temp_bool_list.Add(new List<bool>());
+                        }
+                        else if (reading_data_type == (int)Type_of_var.byte_type)
+                        {
+                            temp_byte_list.Add(new List<byte>()); 
+                        }
+                        else if (reading_data_type == (int)Type_of_var.sbyte_type)
+                        {
+                            temp_sbyte_list.Add(new List<sbyte>());
                         }
                     }
                     first_run = false;
@@ -202,6 +222,22 @@ namespace SW_Character_creation
                             temp_bool_list[index].Add(Convert.ToBoolean(temp_object));
                         }
                         else { temp_bool_list[index].Add(false); }
+                    }
+                    else if (reading_data_type == (int)Type_of_var.byte_type)
+                    {
+                        if (!(temp_object is DBNull))
+                        {
+                            temp_byte_list[index].Add(Convert.ToByte(temp_object));
+                        }
+                        else { temp_byte_list[index].Add(0); }
+                    }
+                    else if (reading_data_type == (int)Type_of_var.sbyte_type)
+                    {
+                        if (!(temp_object is DBNull))
+                        {
+                            temp_sbyte_list[index].Add(Convert.ToSByte(temp_object));
+                        }
+                        else { temp_sbyte_list[index].Add(0); }
                     }
                 }
             }

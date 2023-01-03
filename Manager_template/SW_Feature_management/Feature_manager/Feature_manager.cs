@@ -19,6 +19,10 @@ namespace SW_Character_creation
         private List<string> Feature_description;
         private List<string> Feature_general_info_coloumn_name;
         private List<string> Feature_type_coloumn_name;
+        private List<string> Feature_cost_coloumn_name;
+
+        private List<List<byte>> Feature_types;
+        private List<List<sbyte>> Feature_cost;
 
         private List<List<string>> Feature_general_info;
 
@@ -41,6 +45,12 @@ namespace SW_Character_creation
                                              SQLite_connection,
                                              Feature_general_info_coloumn_name,
                                              Feature_general_info);
+
+            Run_download_from_SQLite_v2("SELECT * FROM Features_costs ORDER BY ID",
+                                        SQLite_connection,
+                                        Feature_cost_coloumn_name,
+                                        Feature_cost,
+                                        (int)Type_of_var.byte_type);
             SQLite_connection.Close();
 
             int index = 0;
