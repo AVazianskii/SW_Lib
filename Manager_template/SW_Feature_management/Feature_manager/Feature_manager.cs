@@ -10,6 +10,9 @@ namespace SW_Character_creation
         private static Feature_manager feature_instance;
 
         private List<All_feature_template> _Features;
+        private List<All_feature_template> _Positive_feature;
+        private List<All_feature_template> _Negative_feature;
+        private List<All_feature_template> _Common_feature;
 
         private string SQLite_connection_string;
         private SQLiteConnection SQLite_connection;
@@ -80,6 +83,24 @@ namespace SW_Character_creation
                 _Features[index].ID             = Convert.ToByte(Feature_general_info[0][index]);
                 _Features[index].Name           =                Feature_general_info[1][index];
                 _Features[index].Description    =                Feature_general_info[2][index];
+
+                _Features[index].Type = Feature_type[0][index];
+
+                if (_Features[index].Type < 61)
+                {
+                    if ((_Features[index].Type % 20) < 10)
+                    {
+                        _Positive_feature.Add(_Features[index]);
+                    }
+                    else 
+                    {
+                        _Negative_feature.Add(_Features[index]);
+                    }
+                }
+                else
+                {
+                    _Common_feature.Add(_Features[index]);
+                }
             }
 
             ClearList(Feature_general_info_coloumn_name);
@@ -97,13 +118,17 @@ namespace SW_Character_creation
 
         private Feature_manager()
         {
-            _Features = new List<All_feature_template>();
+            _Features           = new List<All_feature_template>();
+            _Positive_feature   = new List<All_feature_template>();
+            _Negative_feature   = new List<All_feature_template>();
+            _Common_feature     = new List<All_feature_template>();
 
             Feature_ID          = new List<string>();
             Feature_name        = new List<string>();
             Feature_description = new List<string>();
 
             Feature_general_info = new List<List<string>>();
+
             Feature_general_info.Add(Feature_ID);
             Feature_general_info.Add(Feature_name);
             Feature_general_info.Add(Feature_description);
