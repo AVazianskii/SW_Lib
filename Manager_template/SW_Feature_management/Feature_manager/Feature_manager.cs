@@ -34,7 +34,7 @@ namespace SW_Character_creation
 
 
         public List<All_feature_template> Get_features() { return _Features; }
-        public List<All_feature_template> Get_positivr_features() { return _Positive_feature; }
+        public List<All_feature_template> Get_positive_features() { return _Positive_feature; }
         public List<All_feature_template> Get_negative_features() { return _Negative_feature; }
         public List<All_feature_template> Get_common_features() { return _Common_feature; }
         public static Feature_manager GetInstance()
