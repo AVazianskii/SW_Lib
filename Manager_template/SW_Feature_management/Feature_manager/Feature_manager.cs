@@ -12,8 +12,7 @@ namespace SW_Character_creation
         private List<All_feature_template> _Features;
         private List<All_feature_template> _Positive_feature;
         private List<All_feature_template> _Negative_feature;
-        private List<All_feature_template> _Common_feature;
-
+        
         private string SQLite_connection_string;
         private SQLiteConnection SQLite_connection;
 
@@ -36,7 +35,6 @@ namespace SW_Character_creation
         public List<All_feature_template> Get_features() { return _Features; }
         public List<All_feature_template> Get_positive_features() { return _Positive_feature; }
         public List<All_feature_template> Get_negative_features() { return _Negative_feature; }
-        public List<All_feature_template> Get_common_features() { return _Common_feature; }
         public static Feature_manager GetInstance()
         {
             if (feature_instance == null)
@@ -89,20 +87,14 @@ namespace SW_Character_creation
 
                 _Features[index].Type = Feature_type[0][index];
 
-                if (_Features[index].Type < 61)
+                
+                if ((_Features[index].Type % 20) < 10)
                 {
-                    if ((_Features[index].Type % 20) < 10)
-                    {
-                        _Positive_feature.Add(_Features[index]);
-                    }
-                    else 
-                    {
-                        _Negative_feature.Add(_Features[index]);
-                    }
+                    _Positive_feature.Add(_Features[index]);
                 }
-                else
+                else 
                 {
-                    _Common_feature.Add(_Features[index]);
+                    _Negative_feature.Add(_Features[index]);
                 }
             }
 
@@ -124,8 +116,7 @@ namespace SW_Character_creation
             _Features           = new List<All_feature_template>();
             _Positive_feature   = new List<All_feature_template>();
             _Negative_feature   = new List<All_feature_template>();
-            _Common_feature     = new List<All_feature_template>();
-
+            
             Feature_ID          = new List<string>();
             Feature_name        = new List<string>();
             Feature_description = new List<string>();
