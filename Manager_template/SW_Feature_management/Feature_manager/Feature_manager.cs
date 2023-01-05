@@ -96,6 +96,24 @@ namespace SW_Character_creation
                 {
                     _Negative_feature.Add(_Features[index]);
                 }
+
+                if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Features\\Images\\" + _Features[index].Name + ".jpg"))
+                {
+                    _Features[index].Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Features\Images\{_Features[index].Name}.jpg";
+                }
+                else
+                {
+                    _Features[index].Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+                }
+
+                if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Features\\Icons\\" + _Features[index].Name + ".jpg"))
+                {
+                    _Features[index].Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Features\Icons\{_Features[index].Name}";
+                }
+                else
+                {
+                    _Features[index].Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
+                }
             }
 
             ClearList(Feature_general_info_coloumn_name);
