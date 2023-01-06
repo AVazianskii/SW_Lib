@@ -134,7 +134,7 @@ namespace SW_Character_creation
 
         public All_feature_template()
         {
-            
+            cost = new List<sbyte>();
         }
 
     }
