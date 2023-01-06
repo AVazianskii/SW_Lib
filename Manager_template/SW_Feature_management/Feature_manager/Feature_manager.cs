@@ -124,6 +124,14 @@ namespace SW_Character_creation
                 _Features[index].Willpower_bonus    = Feature_common_bonuses[7][index];
                 _Features[index].Karma_bonus        = Feature_common_bonuses[8][index];
                 _Features[index].Exp_bonus          = Feature_common_bonuses[9][index];
+
+                for(byte k = 0; k < 10; k++)
+                {
+                    if(Feature_cost[k][index] != 0)
+                    {
+                        _Features[index].Cost.Add(Feature_cost[k][index]);
+                    }
+                }
             }
 
             ClearList(Feature_general_info_coloumn_name);

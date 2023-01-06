@@ -21,7 +21,7 @@ namespace SW_Character_creation
                         karma_bonus,
                         exp_bonus;
 
-        private sbyte[] cost;
+        private List<sbyte> cost;
 
         private string name,
                        description,
@@ -42,7 +42,7 @@ namespace SW_Character_creation
             get { return type; }
             set { type = value; }
         }
-        public sbyte[] Cost
+        public List<sbyte> Cost
         {
             get { return cost; }
             set { cost = value; }
@@ -134,7 +134,7 @@ namespace SW_Character_creation
 
         public All_feature_template()
         {
-            cost = new sbyte [10];
+            
         }
 
     }
