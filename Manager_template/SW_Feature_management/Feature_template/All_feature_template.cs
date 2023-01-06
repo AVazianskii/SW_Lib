@@ -10,8 +10,7 @@ namespace SW_Character_creation
     {
         private byte id,
                      type;
-        private sbyte   cost,
-                        strength_bonus,
+        private sbyte   strength_bonus,
                         agility_bonus,
                         stamina_bonus,
                         quickness_bonus,
@@ -21,6 +20,8 @@ namespace SW_Character_creation
                         willpower_bonus,
                         karma_bonus,
                         exp_bonus;
+
+        private sbyte[] cost;
 
         private string name,
                        description,
@@ -41,7 +42,7 @@ namespace SW_Character_creation
             get { return type; }
             set { type = value; }
         }
-        public sbyte Cost
+        public sbyte[] Cost
         {
             get { return cost; }
             set { cost = value; }
@@ -133,7 +134,7 @@ namespace SW_Character_creation
 
         public All_feature_template()
         {
-
+            cost = new sbyte [10];
         }
 
     }
