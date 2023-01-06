@@ -87,7 +87,6 @@ namespace SW_Character_creation
 
                 _Features[index].Type = Feature_type[0][index];
 
-                
                 if ((_Features[index].Type % 20) < 10)
                 {
                     _Positive_feature.Add(_Features[index]);
@@ -114,6 +113,17 @@ namespace SW_Character_creation
                 {
                     _Features[index].Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
                 }
+
+                _Features[index].Strength_bonus     = Feature_common_bonuses[0][index];
+                _Features[index].Stamina_bonus      = Feature_common_bonuses[1][index];
+                _Features[index].Agility_bonus      = Feature_common_bonuses[2][index];
+                _Features[index].Quickness_bonus    = Feature_common_bonuses[3][index];
+                _Features[index].Intelligence_bonus = Feature_common_bonuses[4][index];
+                _Features[index].Perception_bonus   = Feature_common_bonuses[5][index];
+                _Features[index].Charm_bonus        = Feature_common_bonuses[6][index];
+                _Features[index].Willpower_bonus    = Feature_common_bonuses[7][index];
+                _Features[index].Karma_bonus        = Feature_common_bonuses[8][index];
+                _Features[index].Exp_bonus          = Feature_common_bonuses[9][index];
             }
 
             ClearList(Feature_general_info_coloumn_name);

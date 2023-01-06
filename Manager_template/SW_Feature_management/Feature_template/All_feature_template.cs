@@ -18,7 +18,9 @@ namespace SW_Character_creation
                         perception_bonus,
                         intelligence_bonus,
                         charm_bonus,
-                        willpower_bonus;
+                        willpower_bonus,
+                        karma_bonus,
+                        exp_bonus;
 
         private string name,
                        description,
@@ -49,7 +51,7 @@ namespace SW_Character_creation
             get { return strength_bonus; }
             set { strength_bonus = value; }
         }
-        public sbyte Agility_binus
+        public sbyte Agility_bonus
         {
             get { return agility_bonus; }
             set { agility_bonus = value; }
@@ -83,6 +85,16 @@ namespace SW_Character_creation
         {
             get { return willpower_bonus; }
             set { willpower_bonus = value; }
+        }
+        public sbyte Karma_bonus
+        {
+            get { return karma_bonus; }
+            set { karma_bonus = value; }
+        }
+        public sbyte Exp_bonus
+        {
+            get { return exp_bonus; }
+            set { exp_bonus = value; }
         }
         public string Name
         {
