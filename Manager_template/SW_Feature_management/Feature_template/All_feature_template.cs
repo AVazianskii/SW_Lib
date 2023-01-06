@@ -10,7 +10,15 @@ namespace SW_Character_creation
     {
         private byte id,
                      type;
-        private sbyte cost;
+        private sbyte   cost,
+                        strength_bonus,
+                        agility_bonus,
+                        stamina_bonus,
+                        quickness_bonus,
+                        perception_bonus,
+                        intelligence_bonus,
+                        charm_bonus,
+                        willpower_bonus;
 
         private string name,
                        description,
@@ -35,6 +43,46 @@ namespace SW_Character_creation
         {
             get { return cost; }
             set { cost = value; }
+        }
+        public sbyte Strength_bonus
+        {
+            get { return strength_bonus; }
+            set { strength_bonus = value; }
+        }
+        public sbyte Agility_binus
+        {
+            get { return agility_bonus; }
+            set { agility_bonus = value; }
+        }
+        public sbyte Stamina_bonus
+        {
+            get { return stamina_bonus; }
+            set { stamina_bonus = value; }
+        }
+        public sbyte Quickness_bonus
+        {
+            get { return quickness_bonus; }
+            set { quickness_bonus = value; }
+        }
+        public sbyte Perception_bonus
+        {
+            get { return perception_bonus; }
+            set { perception_bonus = value; }
+        }
+        public sbyte Intelligence_bonus
+        {
+            get { return intelligence_bonus; }
+            set { intelligence_bonus = value; }
+        }
+        public sbyte Charm_bonus
+        {
+            get { return charm_bonus; }
+            set { charm_bonus = value; }
+        }
+        public sbyte Willpower_bonus
+        {
+            get { return willpower_bonus; }
+            set { willpower_bonus = value; }
         }
         public string Name
         {
