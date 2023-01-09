@@ -19,7 +19,8 @@ namespace SW_Character_creation
                         charm_bonus,
                         willpower_bonus,
                         karma_bonus,
-                        exp_bonus;
+                        exp_bonus,
+                        chosen_cost;
 
         private List<sbyte> cost;
 
@@ -96,6 +97,11 @@ namespace SW_Character_creation
         {
             get { return exp_bonus; }
             set { exp_bonus = value; }
+        }
+        public sbyte Chosen_cost
+        {
+            get { return chosen_cost; }
+            set { chosen_cost = value; }
         }
         public string Name
         {
