@@ -96,7 +96,7 @@ namespace SW_Character_creation
                     _Negative_feature.Add(_Features[index]);
                 }
 
-                if((_Features[index].Type / 40) > 0)
+                if(_Features[index].Type > 41)
                 {
                     _Features[index].Is_force_usered_only = true;
                 }
