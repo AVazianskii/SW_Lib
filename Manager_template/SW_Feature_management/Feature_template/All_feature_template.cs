@@ -30,7 +30,9 @@ namespace SW_Character_creation
                        image_path;
 
         private bool is_chosen,
-                     is_enabled;
+                     is_enabled,
+                     is_force_usered,
+                     is_usual_usered;
 
 
 
@@ -133,6 +135,16 @@ namespace SW_Character_creation
         {
             get { return is_enabled; }
             set { is_enabled = value; }
+        }
+        public bool Is_force_usered
+        {
+            get { return is_force_usered; }
+            set { is_force_usered = value; }
+        }
+        public bool Is_usual_usered
+        { 
+            get { return is_usual_usered; }
+            set { is_usual_usered = value; }
         }
 
 
