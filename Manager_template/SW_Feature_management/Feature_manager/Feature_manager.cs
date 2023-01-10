@@ -96,6 +96,15 @@ namespace SW_Character_creation
                     _Negative_feature.Add(_Features[index]);
                 }
 
+                if((_Features[index].Type / 40) > 0)
+                {
+                    _Features[index].Is_force_usered_only = true;
+                }
+                else if((_Features[index].Type > 20) && (_Features[index].Type < 41))
+                {
+                    _Features[index].Is_usual_usered_only = true;
+                }
+
                 if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Features\\Images\\" + _Features[index].Name + ".jpg"))
                 {
                     _Features[index].Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Features\Images\{_Features[index].Name}.jpg";

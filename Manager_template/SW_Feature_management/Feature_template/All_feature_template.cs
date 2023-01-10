@@ -31,8 +31,8 @@ namespace SW_Character_creation
 
         private bool is_chosen,
                      is_enabled,
-                     is_force_usered,
-                     is_usual_usered;
+                     is_force_usered_only,
+                     is_usual_usered_only;
 
 
 
@@ -136,15 +136,15 @@ namespace SW_Character_creation
             get { return is_enabled; }
             set { is_enabled = value; }
         }
-        public bool Is_force_usered
+        public bool Is_force_usered_only
         {
-            get { return is_force_usered; }
-            set { is_force_usered = value; }
+            get { return is_force_usered_only; }
+            set { is_force_usered_only = value; }
         }
-        public bool Is_usual_usered
+        public bool Is_usual_usered_only
         { 
-            get { return is_usual_usered; }
-            set { is_usual_usered = value; }
+            get { return is_usual_usered_only; }
+            set { is_usual_usered_only = value; }
         }
 
 
