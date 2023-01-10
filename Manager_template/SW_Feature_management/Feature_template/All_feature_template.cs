@@ -29,7 +29,8 @@ namespace SW_Character_creation
                        icon_path,
                        image_path;
 
-        private bool is_chosen;
+        private bool is_chosen,
+                     is_enabled;
 
 
 
@@ -128,6 +129,11 @@ namespace SW_Character_creation
             get { return is_chosen; }
             set { is_chosen = value; }
         }
+        public bool Is_enabled
+        {
+            get { return is_enabled; }
+            set { is_enabled = value; }
+        }
 
 
 
@@ -141,6 +147,7 @@ namespace SW_Character_creation
         public All_feature_template()
         {
             cost = new List<sbyte>();
+            Is_enabled = true;
         }
 
     }
