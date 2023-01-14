@@ -16,17 +16,20 @@ namespace SW_Character_creation
         private string SQLite_connection_string;
         private SQLiteConnection SQLite_connection;
 
-        private List<string> Feature_ID;
-        private List<string> Feature_name;
-        private List<string> Feature_description;
-        private List<string> Feature_general_info_coloumn_name;
-        private List<string> Feature_type_coloumn_name;
-        private List<string> Feature_cost_coloumn_name;
-        private List<string> Feature_common_bonuses_coloumn_name;
+        private List<string>    Feature_ID,
+                                Feature_name,
+                                Feature_description,
+                                Feature_general_info_coloumn_name,
+                                Feature_type_coloumn_name,
+                                Feature_cost_coloumn_name,
+                                Feature_common_bonuses_coloumn_name,
+                                Feature_skill_bonuses_coloumn_name;
 
-        private List<List<byte>> Feature_type;
-        private List<List<sbyte>> Feature_cost;
-        private List<List<sbyte>> Feature_common_bonuses;
+        private List<List<byte>> Feature_type,
+                                 Feature_skill_bonuses;
+
+        private List<List<sbyte>>   Feature_cost,
+                                    Feature_common_bonuses;
 
         private List<List<string>> Feature_general_info;
 
@@ -64,11 +67,18 @@ namespace SW_Character_creation
                                         Feature_type,
                                         (int)Type_of_var.byte_type);
 
+            Run_download_from_SQLite_v2("SELECT * FROM Features_skill_bonuses ORDER BY ID",
+                                        SQLite_connection,
+                                        Feature_skill_bonuses_coloumn_name,
+                                        Feature_skill_bonuses,
+                                        (int)Type_of_var.byte_type);
+
             Run_download_from_SQLite_v2("SELECT * FROM Features_common_bonuses ORDER BY ID",
                                         SQLite_connection,
                                         Feature_common_bonuses_coloumn_name,
                                         Feature_common_bonuses,
                                         (int)Type_of_var.sbyte_type);
+
             SQLite_connection.Close();
 
             int index = 0;
@@ -134,7 +144,12 @@ namespace SW_Character_creation
                 _Features[index].Karma_bonus        = Feature_common_bonuses[8][index];
                 _Features[index].Exp_bonus          = Feature_common_bonuses[9][index];
 
-                for(byte k = 0; k < 10; k++)
+                foreach (List<byte> list in Feature_skill_bonuses)
+                {
+                    _Features[index].Skill_bonus.Add(list[_Features[index].ID - 1]);
+                }
+
+                for (byte k = 0; k < 10; k++)
                 {
                     if(Feature_cost[k][index] != 0)
                     {
@@ -176,8 +191,10 @@ namespace SW_Character_creation
             Feature_type_coloumn_name           = new List<string>();
             Feature_cost_coloumn_name           = new List<string>();
             Feature_common_bonuses_coloumn_name = new List<string>();
+            Feature_skill_bonuses_coloumn_name  = new List<string>();
 
             Feature_type            = new List<List<byte>>();
+            Feature_skill_bonuses   = new List<List<byte>>();
             Feature_cost            = new List<List<sbyte>>();
             Feature_common_bonuses  = new List<List<sbyte>>();
 

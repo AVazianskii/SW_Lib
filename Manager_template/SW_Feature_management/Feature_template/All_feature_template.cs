@@ -23,6 +23,7 @@ namespace SW_Character_creation
                         chosen_cost;
 
         private List<sbyte> cost;
+        private List<byte> skill_bonus;
 
         private string name,
                        description,
@@ -50,6 +51,11 @@ namespace SW_Character_creation
         {
             get { return cost; }
             set { cost = value; }
+        }
+        public List <byte> Skill_bonus
+        {
+            get { return skill_bonus; }
+            set { skill_bonus = value; }
         }
         public sbyte Strength_bonus
         {
@@ -159,6 +165,7 @@ namespace SW_Character_creation
         public All_feature_template()
         {
             cost = new List<sbyte>();
+            skill_bonus = new List<byte>();
             Is_enabled = true;
         }
 
