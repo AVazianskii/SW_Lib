@@ -20,7 +20,8 @@ namespace SW_Character_creation
         private string image_path;
         private string level;
 
-        private bool is_enabled;
+        private bool is_enabled,
+                     is_chosen;
 
 
 
@@ -78,6 +79,11 @@ namespace SW_Character_creation
         {
             get { return level; }
             set { level = value; }
+        }
+        public bool Is_chosen
+        {
+            get { return is_chosen; }
+            set { is_chosen = value; }
         }
 
 
