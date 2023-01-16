@@ -70,9 +70,7 @@ namespace Races_libs
                     force_resist_bonus,
                     stealthiness_combat_bonus,
                     watchfulness_combat_bonus,
-                    flow_control_bonus;
-
-        
+                    flow_control_bonus;               
 
         private bool is_choosen;            // Флаг выбранного состояния
 
