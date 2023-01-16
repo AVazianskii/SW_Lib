@@ -19,6 +19,7 @@ namespace SW_Character_creation
                     skill_max_score,
                     id;
 
+        private bool is_chosen;
 
 
         public string Skill_base_1
@@ -65,6 +66,11 @@ namespace SW_Character_creation
         {
             get { return id; }
             set { id = value; }
+        }
+        public bool Is_chosen
+        {
+            get { return is_chosen; }
+            set { is_chosen = value; }
         }
     }
 }
