@@ -20,7 +20,11 @@ namespace SW_Character_creation
                         willpower_bonus,
                         karma_bonus,
                         exp_bonus,
-                        chosen_cost;
+                        chosen_cost,
+                        scratch_penalty_bonus,
+                        light_wound_penalty_bonus,
+                        medium_wound_penalty_bonus,
+                        tough_wound_penalty_bonus;
 
         private List<sbyte> cost;
         private List<byte> skill_bonus;
@@ -151,6 +155,26 @@ namespace SW_Character_creation
         { 
             get { return is_usual_usered_only; }
             set { is_usual_usered_only = value; }
+        }
+        public sbyte Scratch_penalty_bonus
+        {
+            get { return scratch_penalty_bonus; }
+            set { scratch_penalty_bonus = value; }
+        }
+        public sbyte Light_wound_penalty_bonus
+        {
+            get { return light_wound_penalty_bonus; }
+            set { light_wound_penalty_bonus = value; }
+        }
+        public sbyte Medium_wound_penalty_bonus
+        {
+            get { return medium_wound_penalty_bonus; }
+            set { medium_wound_penalty_bonus = value; }
+        }
+        public sbyte Tough_wound_penalty_bonus
+        {
+            get { return tough_wound_penalty_bonus; }
+            set { tough_wound_penalty_bonus = value; }
         }
 
 

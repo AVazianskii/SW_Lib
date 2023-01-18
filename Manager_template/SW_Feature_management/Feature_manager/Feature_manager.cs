@@ -23,13 +23,15 @@ namespace SW_Character_creation
                                 Feature_type_coloumn_name,
                                 Feature_cost_coloumn_name,
                                 Feature_common_bonuses_coloumn_name,
-                                Feature_skill_bonuses_coloumn_name;
+                                Feature_skill_bonuses_coloumn_name,
+                                Feature_wounds_bonuses_coloumn_name;
 
         private List<List<byte>> Feature_type,
                                  Feature_skill_bonuses;
 
         private List<List<sbyte>>   Feature_cost,
-                                    Feature_common_bonuses;
+                                    Feature_common_bonuses,
+                                    Feature_wounds_bonuses;
 
         private List<List<string>> Feature_general_info;
 
@@ -79,6 +81,12 @@ namespace SW_Character_creation
                                         Feature_common_bonuses,
                                         (int)Type_of_var.sbyte_type);
 
+            Run_download_from_SQLite_v2("SELECT * FROM Feature_wounds_bonuses ORDER BY ID",
+                                        SQLite_connection,
+                                        Feature_wounds_bonuses_coloumn_name,
+                                        Feature_wounds_bonuses,
+                                        (int)Type_of_var.sbyte_type);
+
             SQLite_connection.Close();
 
             int index = 0;
@@ -91,12 +99,14 @@ namespace SW_Character_creation
                 // Определяем порядковый нмоер текущего инстанса
                 index = Feature_general_info[0].IndexOf(count);
 
+                // Пеоекладываем основную информацию по особенностям
                 _Features[index].ID             = Convert.ToByte(Feature_general_info[0][index]);
                 _Features[index].Name           =                Feature_general_info[1][index];
                 _Features[index].Description    =                Feature_general_info[2][index];
 
                 _Features[index].Type = Feature_type[0][index];
 
+                // Определяем принадлежность особенностей 
                 if ((_Features[index].Type % 20) < 10)
                 {
                     _Positive_feature.Add(_Features[index]);
@@ -115,6 +125,7 @@ namespace SW_Character_creation
                     _Features[index].Is_usual_usered_only = true;
                 }
 
+                // Указываем путь к картинке и иконке, если они есть
                 if (File.Exists(Directory.GetCurrentDirectory() + "\\Pictures\\Features\\Images\\" + _Features[index].Name + ".jpg"))
                 {
                     _Features[index].Image_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Features\Images\{_Features[index].Name}.jpg";
@@ -133,6 +144,7 @@ namespace SW_Character_creation
                     _Features[index].Icon_path = $@"{Directory.GetCurrentDirectory()}\Pictures\Common\picture_is_searching.jpg";
                 }
 
+                // Перекладываем модификаторы атрибутов
                 _Features[index].Strength_bonus     = Feature_common_bonuses[0][index];
                 _Features[index].Stamina_bonus      = Feature_common_bonuses[1][index];
                 _Features[index].Agility_bonus      = Feature_common_bonuses[2][index];
@@ -141,14 +153,20 @@ namespace SW_Character_creation
                 _Features[index].Perception_bonus   = Feature_common_bonuses[5][index];
                 _Features[index].Charm_bonus        = Feature_common_bonuses[6][index];
                 _Features[index].Willpower_bonus    = Feature_common_bonuses[7][index];
+
+                // Перекладываем модификатор кармы
                 _Features[index].Karma_bonus        = Feature_common_bonuses[8][index];
+
+                // Перекладываем модификатор опыта
                 _Features[index].Exp_bonus          = Feature_common_bonuses[9][index];
 
+                // Перекладываем модификаторы скилов
                 foreach (List<byte> list in Feature_skill_bonuses)
                 {
                     _Features[index].Skill_bonus.Add(list[_Features[index].ID - 1]);
                 }
 
+                // Перекладываем стоимость особенности
                 for (byte k = 0; k < 10; k++)
                 {
                     if(Feature_cost[k][index] != 0)
@@ -156,17 +174,25 @@ namespace SW_Character_creation
                         _Features[index].Cost.Add(Feature_cost[k][index]);
                     }
                 }
+
+                // Перекладываем модификаторы штрафов за ранения
+                _Features[index].Scratch_penalty_bonus      = Feature_wounds_bonuses[0][index];
+                _Features[index].Light_wound_penalty_bonus  = Feature_wounds_bonuses[1][index];
+                _Features[index].Medium_wound_penalty_bonus = Feature_wounds_bonuses[2][index];
+                _Features[index].Tough_wound_penalty_bonus  = Feature_wounds_bonuses[3][index];
             }
 
             ClearList(Feature_general_info_coloumn_name);
             ClearList(Feature_type_coloumn_name);
             ClearList(Feature_cost_coloumn_name);
             ClearList(Feature_common_bonuses_coloumn_name);
+            ClearList(Feature_wounds_bonuses_coloumn_name);
 
             ClearDoubleLists(Feature_general_info);
             ClearDoubleLists(Feature_type);
             ClearDoubleLists(Feature_cost);
             ClearDoubleLists(Feature_common_bonuses);
+            ClearDoubleLists(Feature_wounds_bonuses);
         }
 
 
@@ -192,11 +218,13 @@ namespace SW_Character_creation
             Feature_cost_coloumn_name           = new List<string>();
             Feature_common_bonuses_coloumn_name = new List<string>();
             Feature_skill_bonuses_coloumn_name  = new List<string>();
+            Feature_wounds_bonuses_coloumn_name = new List<string>();
 
             Feature_type            = new List<List<byte>>();
             Feature_skill_bonuses   = new List<List<byte>>();
             Feature_cost            = new List<List<sbyte>>();
             Feature_common_bonuses  = new List<List<sbyte>>();
+            Feature_wounds_bonuses  = new List<List<sbyte>>();
 
             SQLite_connection_string = $@"Data Source={Directory.GetCurrentDirectory()}\Database\Features.db;Version=3;";
 
