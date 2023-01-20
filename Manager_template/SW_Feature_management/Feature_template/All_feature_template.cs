@@ -222,6 +222,8 @@ namespace SW_Character_creation
             cost = new List<sbyte>();
             skill_bonus = new List<byte>();
             Is_enabled = true;
+            Is_bought_for_exp = false;
+            Is_bought_for_ftr = false;
         }
 
     }

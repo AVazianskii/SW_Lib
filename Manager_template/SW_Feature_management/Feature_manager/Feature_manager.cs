@@ -22,11 +22,13 @@ namespace SW_Character_creation
                                 Feature_general_info_coloumn_name,
                                 Feature_type_coloumn_name,
                                 Feature_cost_coloumn_name,
+                                Feature_exp_cost_coloumn_name,
                                 Feature_common_bonuses_coloumn_name,
                                 Feature_skill_bonuses_coloumn_name,
                                 Feature_wounds_bonuses_coloumn_name;
 
         private List<List<byte>> Feature_type,
+                                 Feature_exp_cost,
                                  Feature_skill_bonuses;
 
         private List<List<sbyte>>   Feature_cost,
@@ -87,6 +89,12 @@ namespace SW_Character_creation
                                         Feature_wounds_bonuses,
                                         (int)Type_of_var.sbyte_type);
 
+            Run_download_from_SQLite_v2("SELECT * FROM Features_exp_costs ORDER BY ID",
+                                        SQLite_connection,
+                                        Feature_exp_cost_coloumn_name,
+                                        Feature_exp_cost,
+                                        (int)Type_of_var.byte_type);
+
             SQLite_connection.Close();
 
             int index = 0;
@@ -120,7 +128,7 @@ namespace SW_Character_creation
                 {
                     _Features[index].Is_force_usered_only = true;
                 }
-                else if((_Features[index].Type > 20) && (_Features[index].Type < 41))
+                else if((_Features[index].Type > 20) && (_Features[index].Type < 40))
                 {
                     _Features[index].Is_usual_usered_only = true;
                 }
@@ -167,12 +175,29 @@ namespace SW_Character_creation
                 }
 
                 // Перекладываем стоимость особенности
+                bool flag = false;
                 for (byte k = 0; k < 10; k++)
                 {
                     if(Feature_cost[k][index] != 0)
                     {
+                        flag = true;
                         _Features[index].Cost.Add(Feature_cost[k][index]);
+                        _Features[index].Is_able_to_buy_for_ftr = true;
                     }
+                }
+                if (flag == false)
+                {
+                    _Features[index].Is_able_to_buy_for_ftr = false;
+                }
+
+                if (Feature_exp_cost[0][index] > 0)
+                {
+                    _Features[index].Is_able_to_buy_for_exp = true;
+                    _Features[index].Exp_cost = Feature_exp_cost[0][index];
+                }
+                else
+                {
+                    _Features[index].Is_able_to_buy_for_exp = false;
                 }
 
                 // Перекладываем модификаторы штрафов за ранения
@@ -185,12 +210,14 @@ namespace SW_Character_creation
             ClearList(Feature_general_info_coloumn_name);
             ClearList(Feature_type_coloumn_name);
             ClearList(Feature_cost_coloumn_name);
+            ClearList(Feature_exp_cost_coloumn_name);
             ClearList(Feature_common_bonuses_coloumn_name);
             ClearList(Feature_wounds_bonuses_coloumn_name);
 
             ClearDoubleLists(Feature_general_info);
             ClearDoubleLists(Feature_type);
             ClearDoubleLists(Feature_cost);
+            ClearDoubleLists(Feature_exp_cost);
             ClearDoubleLists(Feature_common_bonuses);
             ClearDoubleLists(Feature_wounds_bonuses);
         }
@@ -219,9 +246,11 @@ namespace SW_Character_creation
             Feature_common_bonuses_coloumn_name = new List<string>();
             Feature_skill_bonuses_coloumn_name  = new List<string>();
             Feature_wounds_bonuses_coloumn_name = new List<string>();
+            Feature_exp_cost_coloumn_name       = new List<string>();
 
             Feature_type            = new List<List<byte>>();
             Feature_skill_bonuses   = new List<List<byte>>();
+            Feature_exp_cost        = new List<List<byte>>();
             Feature_cost            = new List<List<sbyte>>();
             Feature_common_bonuses  = new List<List<sbyte>>();
             Feature_wounds_bonuses  = new List<List<sbyte>>();
