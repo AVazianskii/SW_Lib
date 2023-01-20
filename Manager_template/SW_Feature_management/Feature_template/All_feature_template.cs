@@ -9,7 +9,9 @@ namespace SW_Character_creation
     public class All_feature_template
     {
         private byte id,
-                     type;
+                     type,
+                     exp_cost;
+
         private sbyte   strength_bonus,
                         agility_bonus,
                         stamina_bonus,
@@ -37,7 +39,9 @@ namespace SW_Character_creation
         private bool is_chosen,
                      is_enabled,
                      is_force_usered_only,
-                     is_usual_usered_only;
+                     is_usual_usered_only,
+                     is_able_to_by_for_exp,
+                     is_bought_for_exp;
 
 
 
@@ -175,6 +179,21 @@ namespace SW_Character_creation
         {
             get { return tough_wound_penalty_bonus; }
             set { tough_wound_penalty_bonus = value; }
+        }
+        public byte Exp_cost
+        {
+            get { return exp_cost; }
+            set { exp_cost = value; }
+        }
+        public bool Is_able_to_by_for_exp
+        {
+            get { return is_able_to_by_for_exp; }
+            set { is_able_to_by_for_exp = value; }
+        }
+        public bool Is_bought_for_exp
+        {
+            get { return is_bought_for_exp; }
+            set { is_bought_for_exp = value; }
         }
 
 
