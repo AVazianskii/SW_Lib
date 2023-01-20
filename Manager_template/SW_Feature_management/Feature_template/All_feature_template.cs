@@ -40,8 +40,10 @@ namespace SW_Character_creation
                      is_enabled,
                      is_force_usered_only,
                      is_usual_usered_only,
-                     is_able_to_by_for_exp,
-                     is_bought_for_exp;
+                     is_able_to_buy_for_exp,
+                     is_bought_for_exp,
+                     is_able_to_buy_for_ftr,
+                     is_bought_for_ftr;
 
 
 
@@ -185,15 +187,25 @@ namespace SW_Character_creation
             get { return exp_cost; }
             set { exp_cost = value; }
         }
-        public bool Is_able_to_by_for_exp
+        public bool Is_able_to_buy_for_exp
         {
-            get { return is_able_to_by_for_exp; }
-            set { is_able_to_by_for_exp = value; }
+            get { return is_able_to_buy_for_exp; }
+            set { is_able_to_buy_for_exp = value; }
         }
         public bool Is_bought_for_exp
         {
             get { return is_bought_for_exp; }
             set { is_bought_for_exp = value; }
+        }
+        public bool Is_able_to_buy_for_ftr
+        {
+            get { return is_able_to_buy_for_ftr; }
+            set { is_able_to_buy_for_ftr = value; }
+        }
+        public bool Is_bought_for_ftr
+        {
+            get { return is_bought_for_ftr; }
+            set { is_bought_for_ftr = value; }
         }
 
 
