@@ -188,6 +188,7 @@ namespace SW_Character_creation
                 if (flag == false)
                 {
                     _Features[index].Is_able_to_buy_for_ftr = false;
+                    _Features[index].Cost.Add(0);
                 }
 
                 if (Feature_exp_cost[0][index] > 0)
