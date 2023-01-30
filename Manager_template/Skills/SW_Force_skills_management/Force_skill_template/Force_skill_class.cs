@@ -13,12 +13,12 @@ namespace SW_Character_creation
                     type;
 
 
-        /*
+        
         public int Score
         {
             get { return score; }
             set { score = value; }
-        }*/
+        }
         public int Cost
         {
             get { return cost; }

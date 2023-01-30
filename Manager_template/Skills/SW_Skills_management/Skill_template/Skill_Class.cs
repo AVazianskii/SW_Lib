@@ -33,12 +33,12 @@ namespace SW_Character_creation
                     Forceuser_cost;
 
 
-        /*
+        
         public int Score
         {
             get { return score; }
             set { score = value; }
-        }*/
+        }
 
         #endregion
 

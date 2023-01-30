@@ -17,8 +17,7 @@ namespace SW_Character_creation
 
         private int skill_type,
                     skill_max_score,
-                    id,
-                    score;
+                    id;
 
         private bool is_chosen;
 
@@ -72,11 +71,6 @@ namespace SW_Character_creation
         {
             get { return is_chosen; }
             set { is_chosen = value; }
-        }
-        public int Score
-        {
-            get { return score; }
-            set { score = value; }
         }
     }
 }
