@@ -50,11 +50,12 @@ namespace SW_Character_creation
             }
             return feature_instance;
         }
-        public static void DeleteInstance()
+        public static void OverWriteInstance()
         {
             if (feature_instance != null)
             {
-                feature_instance = null;
+                feature_instance.SQLite_connection = null;
+                feature_instance = new Feature_manager();
             }
         }
         public override void Run_download_and_upload_process()

@@ -12,11 +12,12 @@ namespace SW_Character_creation
             }
             return Attribute_manager_instance;
         }
-        public static void DeleteInstance()
+        public static void OverWriteInstance()
         {
             if (Attribute_manager_instance != null)
             {
-                Attribute_manager_instance = null;
+                Attribute_manager_instance.SQLite_connection = null;
+                Attribute_manager_instance = new Attribute_manager();
             }
         }
     }

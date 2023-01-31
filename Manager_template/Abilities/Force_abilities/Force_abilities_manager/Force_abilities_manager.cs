@@ -110,11 +110,12 @@ namespace SW_Character_creation
             }
             return Force_ability_manager_instance;
         }
-        public static void DeleteInstance()
+        public static void OverWriteInstance()
         {
             if (Force_ability_manager_instance != null)
             {
-                Force_ability_manager_instance = null;
+                Force_ability_manager_instance.SQLite_connection = null;
+                Force_ability_manager_instance = new Force_ability_manager();
             }
         }
         public List<Force_abilities_template> Get_abilities() { return _Force_abilities; }

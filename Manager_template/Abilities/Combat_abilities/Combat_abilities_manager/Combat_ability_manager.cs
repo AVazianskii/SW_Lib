@@ -47,11 +47,12 @@ namespace SW_Character_creation
             }
             return Combat_ability_manager_instance;
         }
-        public static void DeleteInstance()
+        public static void OverWriteInstance()
         {
             if (Combat_ability_manager_instance != null)
             {
-                Combat_ability_manager_instance = null;
+                Combat_ability_manager_instance.SQLite_connection = null;
+                Combat_ability_manager_instance = new Combat_ability_manager();
             }
         }
 
