@@ -12,5 +12,12 @@ namespace SW_Character_creation
             }
             return Attribute_manager_instance;
         }
+        public static void DeleteInstance()
+        {
+            if (Attribute_manager_instance != null)
+            {
+                Attribute_manager_instance = null;
+            }
+        }
     }
 }

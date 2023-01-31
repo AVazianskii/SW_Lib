@@ -50,6 +50,13 @@ namespace SW_Character_creation
             }
             return feature_instance;
         }
+        public static void DeleteInstance()
+        {
+            if (feature_instance != null)
+            {
+                feature_instance = null;
+            }
+        }
         public override void Run_download_and_upload_process()
         {
             SQLite_connection.Open();

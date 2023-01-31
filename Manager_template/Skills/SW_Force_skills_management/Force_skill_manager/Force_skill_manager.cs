@@ -44,6 +44,13 @@ namespace SW_Character_creation
             }
             return Race_manager_instance;
         }
+        public static void DeleteInstance()
+        {
+            if (Race_manager_instance != null)
+            {
+                Race_manager_instance = null;
+            }
+        }
         public override void Run_download_and_upload_process()
         {
             SQLite_connection.Open();

@@ -16,5 +16,12 @@ namespace SW_Character_creation
             }
             return Age_status_manager_instance;
         }
+        public static void DeleteInstance()
+        {
+            if (Age_status_manager_instance != null)
+            {
+                Age_status_manager_instance = null;
+            }
+        }
     }
 }

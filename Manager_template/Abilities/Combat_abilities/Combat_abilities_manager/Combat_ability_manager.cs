@@ -47,6 +47,13 @@ namespace SW_Character_creation
             }
             return Combat_ability_manager_instance;
         }
+        public static void DeleteInstance()
+        {
+            if (Combat_ability_manager_instance != null)
+            {
+                Combat_ability_manager_instance = null;
+            }
+        }
 
 
 

@@ -10,5 +10,12 @@
             }
             return Skill_manager_instance;
         }
+        public static void DeleteInstance()
+        {
+            if (Skill_manager_instance != null)
+            {
+                Skill_manager_instance = null;
+            }
+        }
     }
 }

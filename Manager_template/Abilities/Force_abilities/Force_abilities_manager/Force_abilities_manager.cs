@@ -110,6 +110,13 @@ namespace SW_Character_creation
             }
             return Force_ability_manager_instance;
         }
+        public static void DeleteInstance()
+        {
+            if (Force_ability_manager_instance != null)
+            {
+                Force_ability_manager_instance = null;
+            }
+        }
         public List<Force_abilities_template> Get_abilities() { return _Force_abilities; }
         public List<Abilities_sequence_template> Get_sequences() { return _Force_sequences; }
 

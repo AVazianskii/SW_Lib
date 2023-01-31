@@ -41,6 +41,13 @@ namespace SW_Character_creation
             }
             return Range_manager_instance;
         }
+        public static void DeleteInstance()
+        {
+            if (Range_manager_instance != null)
+            {
+                Range_manager_instance = null;
+            }
+        }
         public override void Run_download_and_upload_process()
         {
             SQLite_connection.Open();
