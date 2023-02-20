@@ -74,12 +74,19 @@ namespace Races_libs
 
         private bool is_choosen;            // Флаг выбранного состояния
 
+        private byte[] bonus_feature;
+
         private List<int> race_skill_bonus;
 
         public List<int> Race_skill_bonus
         {
             get { return race_skill_bonus; }
             set { race_skill_bonus = value; }
+        }
+        public byte [] Bonus_feature
+        {
+            get { return bonus_feature; }
+            set { bonus_feature = value; }
         }
         #endregion
 
@@ -88,6 +95,7 @@ namespace Races_libs
         {
             Set_Error_Code(0);
             Race_skill_bonus = new List<int>();
+            Bonus_feature = new byte[3];
         }
         #endregion
 

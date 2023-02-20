@@ -27,6 +27,8 @@ namespace SW_Character_creation
         private List<List<int>> Race_age_statuses;
         private List<string> Race_combat_parameters_coloumn_name;
         private List<List<int>> Race_combat_parameters;
+        private List<string> Race_feature_bonus_coloumn_name;
+        private List<List<byte>> Race_feature_bonus;
 
         private List<string> ID_Race;
         private List<string> Race_name;
@@ -67,44 +69,53 @@ namespace SW_Character_creation
         }
         public override void Run_download_and_upload_process()
         {
-            SQLite_connection.Open();
+            using (SQLite_connection = new SQLiteConnection(SQLite_connection_string))
+            {
+                SQLite_connection.Open();
 
-            Run_download_general_from_SQLite("SELECT * FROM Race_general ORDER BY ID",
-                                             SQLite_connection,
-                                             Race_general_info_coloumn_name,
-                                             Race_description);
+                Run_download_general_from_SQLite("SELECT * FROM Race_general ORDER BY ID",
+                                                 SQLite_connection,
+                                                 Race_general_info_coloumn_name,
+                                                 Race_description);
 
-            Run_download_from_SQLite_v2("SELECT * FROM Race_languages ORDER BY ID",
-                                     SQLite_connection,
-                                     Race_languages_coloumn_name,
-                                     Languages,
-                                     (int)Type_of_var.int_type);
+                Run_download_from_SQLite_v2("SELECT * FROM Race_languages ORDER BY ID",
+                                         SQLite_connection,
+                                         Race_languages_coloumn_name,
+                                         Languages,
+                                         (int)Type_of_var.int_type);
 
-            Run_download_from_SQLite_v2("SELECT * FROM Race_skills_bonus ORDER BY ID",
-                                     SQLite_connection,
-                                     Race_skill_bonus_coloumn_name,
-                                     Race_skills_bonus,
-                                     (int)Type_of_var.int_type);
+                Run_download_from_SQLite_v2("SELECT * FROM Race_skills_bonus ORDER BY ID",
+                                         SQLite_connection,
+                                         Race_skill_bonus_coloumn_name,
+                                         Race_skills_bonus,
+                                         (int)Type_of_var.int_type);
 
-            Run_download_from_SQLite_v2("SELECT * FROM Race_attributes_bonus ORDER BY ID",
-                                     SQLite_connection,
-                                     Race_attributes_bonus_coloumn_name,
-                                     Race_attributes_bonus,
-                                     (int)Type_of_var.int_type);
+                Run_download_from_SQLite_v2("SELECT * FROM Race_attributes_bonus ORDER BY ID",
+                                         SQLite_connection,
+                                         Race_attributes_bonus_coloumn_name,
+                                         Race_attributes_bonus,
+                                         (int)Type_of_var.int_type);
 
-            Run_download_from_SQLite_v2("SELECT * FROM Race_age_statuses ORDER BY ID",
-                                     SQLite_connection,
-                                     Race_age_statuses_coloumn_name,
-                                     Race_age_statuses,
-                                     (int)Type_of_var.int_type);
+                Run_download_from_SQLite_v2("SELECT * FROM Race_age_statuses ORDER BY ID",
+                                         SQLite_connection,
+                                         Race_age_statuses_coloumn_name,
+                                         Race_age_statuses,
+                                         (int)Type_of_var.int_type);
 
-            Run_download_from_SQLite_v2("SELECT * FROM Race_combat_parameters ORDER BY ID",
-                                     SQLite_connection,
-                                     Race_combat_parameters_coloumn_name,
-                                     Race_combat_parameters,
-                                     (int)Type_of_var.int_type);
+                Run_download_from_SQLite_v2("SELECT * FROM Race_combat_parameters ORDER BY ID",
+                                         SQLite_connection,
+                                         Race_combat_parameters_coloumn_name,
+                                         Race_combat_parameters,
+                                         (int)Type_of_var.int_type);
 
-            SQLite_connection.Close();
+                Run_download_from_SQLite_v2("SELECT * FROM Race_features_bonus ORDER BY ID",
+                                            SQLite_connection,
+                                            Race_feature_bonus_coloumn_name,
+                                            Race_feature_bonus,
+                                            (int)Type_of_var.byte_type);
+
+                SQLite_connection.Close();
+            }
 
             int index = 0;
 
@@ -202,7 +213,11 @@ namespace SW_Character_creation
                 _Races[index].Set_race_stealthiness_combat_bonus(Race_combat_parameters[3][index]);
                 _Races[index].Set_race_watchfulness_combat_bonus(Race_combat_parameters[4][index]);
                 _Races[index].Set_race_flow_control_bonus       (Race_combat_parameters[5][index]);
-                
+
+                // Заполняем массив с номерами бонусных особенностей
+                _Races[index].Bonus_feature[0] = Race_feature_bonus[0][index];
+                _Races[index].Bonus_feature[1] = Race_feature_bonus[1][index];
+                _Races[index].Bonus_feature[2] = Race_feature_bonus[2][index];
             }
 
 
@@ -271,6 +286,7 @@ namespace SW_Character_creation
             Race_age_statuses       = new List<List<int>>();
             Race_combat_parameters  = new List<List<int>>();
             Race_skills_bonus       = new List<List<int>>();
+            Race_feature_bonus      = new List<List<byte>>();
 
             Race_general_info_coloumn_name      = new List<string>();
             Race_languages_coloumn_name         = new List<string>();
@@ -278,11 +294,11 @@ namespace SW_Character_creation
             Race_attributes_bonus_coloumn_name  = new List<string>();
             Race_age_statuses_coloumn_name      = new List<string>();
             Race_combat_parameters_coloumn_name = new List<string>();
+            Race_feature_bonus_coloumn_name     = new List<string>();
 
             SQLite_connection_string = $@"Data Source={Directory.GetCurrentDirectory()}\Database\Races.db;Version=3;";
 
-            SQLite_connection = new SQLiteConnection(SQLite_connection_string);
-
+            //SQLite_connection = new SQLiteConnection(SQLite_connection_string);
         }
     }
 }
