@@ -43,7 +43,8 @@ namespace SW_Character_creation
                      is_able_to_buy_for_exp,
                      is_bought_for_exp,
                      is_able_to_buy_for_ftr,
-                     is_bought_for_ftr;
+                     is_bought_for_ftr,
+                     is_chosen_for_race;
 
 
 
@@ -207,6 +208,11 @@ namespace SW_Character_creation
             get { return is_bought_for_ftr; }
             set { is_bought_for_ftr = value; }
         }
+        public bool Is_chosen_for_race
+        {
+            get { return is_chosen_for_race; }
+            set { is_chosen_for_race = value; }
+        }
 
 
 
@@ -224,6 +230,7 @@ namespace SW_Character_creation
             Is_enabled = true;
             Is_bought_for_exp = false;
             Is_bought_for_ftr = false;
+            Is_chosen_for_race = false;
         }
 
     }
