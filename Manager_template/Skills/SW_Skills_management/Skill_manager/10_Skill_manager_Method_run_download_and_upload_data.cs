@@ -1,4 +1,4 @@
-﻿using Skills_libs;
+﻿using System.Data.SQLite;
 
 namespace SW_Character_creation
 {
@@ -6,41 +6,44 @@ namespace SW_Character_creation
     {
         public override void Run_download_and_upload_process()
         {
-            SQLite_connection.Open();
+            using (SQLite_connection = new SQLiteConnection(SQLite_connection_string))
+            {
+                SQLite_connection.Open();
 
-            Run_download_general_from_SQLite("SELECT * FROM Skills_general ORDER BY ID",
-                                             SQLite_connection,
-                                             Skill_general_info_coloumn_name,
-                                             Skill_desription);
+                Run_download_general_from_SQLite("SELECT * FROM Skills_general ORDER BY ID",
+                                                 SQLite_connection,
+                                                 Skill_general_info_coloumn_name,
+                                                 Skill_desription);
 
-            
-            Run_download_from_SQLite("SELECT * FROM Skills_limits_due_age_status ORDER BY ID",
-                                     SQLite_connection,
-                                     Skill_limits_due_age_coloumn_name,
-                                     Skill_limits_due_age,
-                                     (int)Type_of_var.int_type);
 
-            Run_download_from_SQLite("SELECT * FROM Skills_limits_due_range ORDER BY ID",
-                                     SQLite_connection,
-                                     Skill_limits_due_range_coloumn_name,
-                                     Skill_limits_due_range,
-                                     (int)Type_of_var.int_type);
+                Run_download_from_SQLite("SELECT * FROM Skills_limits_due_age_status ORDER BY ID",
+                                         SQLite_connection,
+                                         Skill_limits_due_age_coloumn_name,
+                                         Skill_limits_due_age,
+                                         (int)Type_of_var.int_type);
 
-            Run_download_from_SQLite("SELECT * FROM Skills_costs ORDER BY ID",
-                                     SQLite_connection,
-                                     Skill_costs_coloumn_name,
-                                     Skill_costs,
-                                     (int)Type_of_var.int_type);
-            
+                Run_download_from_SQLite("SELECT * FROM Skills_limits_due_range ORDER BY ID",
+                                         SQLite_connection,
+                                         Skill_limits_due_range_coloumn_name,
+                                         Skill_limits_due_range,
+                                         (int)Type_of_var.int_type);
 
-            Run_download_from_SQLite("SELECT * FROM Skills_type ORDER BY ID",
-                                     SQLite_connection,
-                                     Skill_type_coloumn_name,
-                                     Skill_type,
-                                     (int)Type_of_var.int_type);
+                Run_download_from_SQLite("SELECT * FROM Skills_costs ORDER BY ID",
+                                         SQLite_connection,
+                                         Skill_costs_coloumn_name,
+                                         Skill_costs,
+                                         (int)Type_of_var.int_type);
 
-            
-            SQLite_connection.Close();
+
+                Run_download_from_SQLite("SELECT * FROM Skills_type ORDER BY ID",
+                                         SQLite_connection,
+                                         Skill_type_coloumn_name,
+                                         Skill_type,
+                                         (int)Type_of_var.int_type);
+
+
+                SQLite_connection.Close();
+            }
 
             // создаем итоговую коллекцию, количество элементов в которой определяется количеством строк в таблице 
             // ориентируемся на столбец ID в таблице основного описания навыка. 

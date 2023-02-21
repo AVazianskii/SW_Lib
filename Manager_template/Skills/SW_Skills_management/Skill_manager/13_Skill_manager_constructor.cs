@@ -12,7 +12,7 @@ namespace SW_Character_creation
         { 
             
             SQLite_connection_string = $@"Data Source={Directory.GetCurrentDirectory()}\Database\Skills.db;Version=3;";
-            SQLite_connection = new SQLiteConnection(SQLite_connection_string);
+            //SQLite_connection = new SQLiteConnection(SQLite_connection_string);
 
             Skill_desription = new List<List<string>>();
             Skill_ID = new List<string>();

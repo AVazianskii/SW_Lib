@@ -11,7 +11,7 @@ namespace SW_Character_creation
         private Attribute_manager()
         {
             SQLite_connection_string = $@"Data Source={Directory.GetCurrentDirectory()}\Database\Attributes.db;Version=3;";
-            SQLite_connection = new SQLiteConnection(SQLite_connection_string);
+            //SQLite_connection = new SQLiteConnection(SQLite_connection_string);
 
             #region инициализация переменных обхектов атрибутов и коллекции этих атрибутов
             Strength = new Strength_atr();

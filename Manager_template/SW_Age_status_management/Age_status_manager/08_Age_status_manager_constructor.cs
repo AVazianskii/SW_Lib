@@ -26,7 +26,7 @@ namespace SW_Character_creation
             Age_statuses.Add(Eldery);
 
             SQLite_connection_string = $@"Data Source={Directory.GetCurrentDirectory()}\Database\Age_statuses.db;Version=3;";
-            SQLite_connection = new SQLiteConnection(SQLite_connection_string);
+            //SQLite_connection = new SQLiteConnection(SQLite_connection_string);
 
             Age_status_general_coloumn_name = new List<string>();
             Age_status_bonus_coloumn_name = new List<string>();

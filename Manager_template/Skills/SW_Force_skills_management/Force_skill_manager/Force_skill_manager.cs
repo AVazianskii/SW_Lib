@@ -54,27 +54,30 @@ namespace SW_Character_creation
         }
         public override void Run_download_and_upload_process()
         {
-            SQLite_connection.Open();
+            using (SQLite_connection = new SQLiteConnection(SQLite_connection_string))
+            {
+                SQLite_connection.Open();
 
-            Run_download_general_from_SQLite("SELECT * FROM Force_skills_general_info ORDER BY ID",
-                                             SQLite_connection,
-                                             Force_skill_general_info_coloumn_name,
-                                             Force_skill_general_info);
+                Run_download_general_from_SQLite("SELECT * FROM Force_skills_general_info ORDER BY ID",
+                                                 SQLite_connection,
+                                                 Force_skill_general_info_coloumn_name,
+                                                 Force_skill_general_info);
 
-            Run_download_from_SQLite_v2("SELECT * FROM Force_skills_costs ORDER BY ID",
-                                        SQLite_connection,
-                                        Force_skill_costs_coloumn_name,
-                                        Force_skill_costs,
-                                        (int)Type_of_var.int_type);
+                Run_download_from_SQLite_v2("SELECT * FROM Force_skills_costs ORDER BY ID",
+                                            SQLite_connection,
+                                            Force_skill_costs_coloumn_name,
+                                            Force_skill_costs,
+                                            (int)Type_of_var.int_type);
 
-            Run_download_from_SQLite_v2("SELECT * FROM Force_skills_types ORDER BY ID",
-                                        SQLite_connection,
-                                        Force_skill_types_coloumn_name,
-                                        Force_skill_types,
-                                        (int)Type_of_var.int_type);
+                Run_download_from_SQLite_v2("SELECT * FROM Force_skills_types ORDER BY ID",
+                                            SQLite_connection,
+                                            Force_skill_types_coloumn_name,
+                                            Force_skill_types,
+                                            (int)Type_of_var.int_type);
 
 
-            SQLite_connection.Close();
+                SQLite_connection.Close();
+            }
 
             int index = 0;
 
@@ -161,7 +164,7 @@ namespace SW_Character_creation
 
             SQLite_connection_string = $@"Data Source={Directory.GetCurrentDirectory()}\Database\Force_skills.db;Version=3;";
 
-            SQLite_connection = new SQLiteConnection(SQLite_connection_string);
+            //SQLite_connection = new SQLiteConnection(SQLite_connection_string);
         }
     }
 }

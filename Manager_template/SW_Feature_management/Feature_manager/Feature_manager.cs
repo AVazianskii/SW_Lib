@@ -60,50 +60,53 @@ namespace SW_Character_creation
         }
         public override void Run_download_and_upload_process()
         {
-            SQLite_connection.Open();
+            using (SQLite_connection = new SQLiteConnection(SQLite_connection_string))
+            {
+                SQLite_connection.Open();
 
-            Run_download_general_from_SQLite("SELECT * FROM Features_general_info ORDER BY ID",
-                                             SQLite_connection,
-                                             Feature_general_info_coloumn_name,
-                                             Feature_general_info);
+                Run_download_general_from_SQLite("SELECT * FROM Features_general_info ORDER BY ID",
+                                                 SQLite_connection,
+                                                 Feature_general_info_coloumn_name,
+                                                 Feature_general_info);
 
-            Run_download_from_SQLite_v2("SELECT * FROM Features_costs ORDER BY ID",
-                                        SQLite_connection,
-                                        Feature_cost_coloumn_name,
-                                        Feature_cost,
-                                        (int)Type_of_var.sbyte_type);
+                Run_download_from_SQLite_v2("SELECT * FROM Features_costs ORDER BY ID",
+                                            SQLite_connection,
+                                            Feature_cost_coloumn_name,
+                                            Feature_cost,
+                                            (int)Type_of_var.sbyte_type);
 
-            Run_download_from_SQLite_v2("SELECT * FROM Features_type ORDER BY ID",
-                                        SQLite_connection,
-                                        Feature_type_coloumn_name,
-                                        Feature_type,
-                                        (int)Type_of_var.byte_type);
+                Run_download_from_SQLite_v2("SELECT * FROM Features_type ORDER BY ID",
+                                            SQLite_connection,
+                                            Feature_type_coloumn_name,
+                                            Feature_type,
+                                            (int)Type_of_var.byte_type);
 
-            Run_download_from_SQLite_v2("SELECT * FROM Features_skill_bonuses ORDER BY ID",
-                                        SQLite_connection,
-                                        Feature_skill_bonuses_coloumn_name,
-                                        Feature_skill_bonuses,
-                                        (int)Type_of_var.byte_type);
+                Run_download_from_SQLite_v2("SELECT * FROM Features_skill_bonuses ORDER BY ID",
+                                            SQLite_connection,
+                                            Feature_skill_bonuses_coloumn_name,
+                                            Feature_skill_bonuses,
+                                            (int)Type_of_var.byte_type);
 
-            Run_download_from_SQLite_v2("SELECT * FROM Features_common_bonuses ORDER BY ID",
-                                        SQLite_connection,
-                                        Feature_common_bonuses_coloumn_name,
-                                        Feature_common_bonuses,
-                                        (int)Type_of_var.sbyte_type);
+                Run_download_from_SQLite_v2("SELECT * FROM Features_common_bonuses ORDER BY ID",
+                                            SQLite_connection,
+                                            Feature_common_bonuses_coloumn_name,
+                                            Feature_common_bonuses,
+                                            (int)Type_of_var.sbyte_type);
 
-            Run_download_from_SQLite_v2("SELECT * FROM Feature_wounds_bonuses ORDER BY ID",
-                                        SQLite_connection,
-                                        Feature_wounds_bonuses_coloumn_name,
-                                        Feature_wounds_bonuses,
-                                        (int)Type_of_var.sbyte_type);
+                Run_download_from_SQLite_v2("SELECT * FROM Feature_wounds_bonuses ORDER BY ID",
+                                            SQLite_connection,
+                                            Feature_wounds_bonuses_coloumn_name,
+                                            Feature_wounds_bonuses,
+                                            (int)Type_of_var.sbyte_type);
 
-            Run_download_from_SQLite_v2("SELECT * FROM Features_exp_costs ORDER BY ID",
-                                        SQLite_connection,
-                                        Feature_exp_cost_coloumn_name,
-                                        Feature_exp_cost,
-                                        (int)Type_of_var.byte_type);
+                Run_download_from_SQLite_v2("SELECT * FROM Features_exp_costs ORDER BY ID",
+                                            SQLite_connection,
+                                            Feature_exp_cost_coloumn_name,
+                                            Feature_exp_cost,
+                                            (int)Type_of_var.byte_type);
 
-            SQLite_connection.Close();
+                SQLite_connection.Close();
+            }
 
             int index = 0;
 
@@ -266,7 +269,7 @@ namespace SW_Character_creation
 
             SQLite_connection_string = $@"Data Source={Directory.GetCurrentDirectory()}\Database\Features.db;Version=3;";
 
-            SQLite_connection = new SQLiteConnection(SQLite_connection_string);
+            //SQLite_connection = new SQLiteConnection(SQLite_connection_string);
         }
     }
 }

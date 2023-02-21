@@ -51,26 +51,29 @@ namespace SW_Character_creation
         }
         public override void Run_download_and_upload_process()
         {
-            SQLite_connection.Open();
+            using (SQLite_connection = new SQLiteConnection(SQLite_connection_string))
+            {
+                SQLite_connection.Open();
 
-            Run_download_general_from_SQLite("SELECT * FROM Ranges_general_info ORDER BY ID",
-                                             SQLite_connection,
-                                             Range_general_info_coloumn_name,
-                                             Range_general_info);
+                Run_download_general_from_SQLite("SELECT * FROM Ranges_general_info ORDER BY ID",
+                                                 SQLite_connection,
+                                                 Range_general_info_coloumn_name,
+                                                 Range_general_info);
 
-            Run_download_from_SQLite_v2("SELECT * FROM Ranges_attributes_limits ORDER BY ID",
-                                        SQLite_connection,
-                                        Ranges_attributes_limits_coloumn_name,
-                                        Ranges_attributes_limits,
-                                        (int)Type_of_var.int_type);
+                Run_download_from_SQLite_v2("SELECT * FROM Ranges_attributes_limits ORDER BY ID",
+                                            SQLite_connection,
+                                            Ranges_attributes_limits_coloumn_name,
+                                            Ranges_attributes_limits,
+                                            (int)Type_of_var.int_type);
 
-            Run_download_from_SQLite_v2("SELECT * FROM Ranges_skills_limits ORDER BY ID",
-                                        SQLite_connection,
-                                        Ranges_skills_limits_coloumn_name,
-                                        Ranges_skills_limits,
-                                        (int)Type_of_var.int_type);
+                Run_download_from_SQLite_v2("SELECT * FROM Ranges_skills_limits ORDER BY ID",
+                                            SQLite_connection,
+                                            Ranges_skills_limits_coloumn_name,
+                                            Ranges_skills_limits,
+                                            (int)Type_of_var.int_type);
 
-            SQLite_connection.Close();
+                SQLite_connection.Close();
+            }
 
             int index = 0;
 
@@ -116,7 +119,7 @@ namespace SW_Character_creation
         private Range_manager()
         {
             SQLite_connection_string = $@"Data Source={Directory.GetCurrentDirectory()}\Database\Ranges.db;Version=3;";
-            SQLite_connection = new SQLiteConnection(SQLite_connection_string);
+            //SQLite_connection = new SQLiteConnection(SQLite_connection_string);
 
             _Ranges = new List<Range_Class>();
 
