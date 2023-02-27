@@ -7,7 +7,7 @@ namespace SW_Character_creation
 {
     public class Force_ability_manager : Abstract_manager
     {
-        private static Force_ability_manager Force_ability_manager_instance;
+        //private static Force_ability_manager Force_ability_manager_instance;
 
         private string SQLite_connection_string;
         private SQLiteConnection SQLite_connection;
@@ -102,6 +102,7 @@ namespace SW_Character_creation
 
 
 
+        /*
         public static Force_ability_manager GetInstance()
         {
             if (Force_ability_manager_instance == null)
@@ -117,7 +118,7 @@ namespace SW_Character_creation
                 Force_ability_manager_instance.SQLite_connection = null;
                 Force_ability_manager_instance = new Force_ability_manager();
             }
-        }
+        }*/
         public List<Force_abilities_template> Get_abilities() { return _Force_abilities; }
         public List<Abilities_sequence_template> Get_sequences() { return _Force_sequences; }
 
@@ -474,7 +475,7 @@ namespace SW_Character_creation
 
 
 
-        private Force_ability_manager()
+        public Force_ability_manager()
         {
             Force_abilities_general_coloumn_name        = new List<string>();
             Force_abilities_costs_coloumn_name          = new List<string>();

@@ -8,7 +8,7 @@ namespace SW_Character_creation
 {
     public partial class Skill_manager
     {
-        private Skill_manager()
+        public Skill_manager()
         { 
             
             SQLite_connection_string = $@"Data Source={Directory.GetCurrentDirectory()}\Database\Skills.db;Version=3;";

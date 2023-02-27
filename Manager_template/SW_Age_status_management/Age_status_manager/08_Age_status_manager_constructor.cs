@@ -7,7 +7,7 @@ namespace SW_Character_creation
 {
     public partial class Age_status_manager
     {
-        private Age_status_manager()
+        public Age_status_manager()
         {
             Unknown_age = new Unknown_age_status();
             Child = new Child_age();

@@ -8,6 +8,7 @@ namespace SW_Character_creation
 {
     public partial class Age_status_manager
     {
+        /*
         public static Age_status_manager GetInstance()
         {
             if (Age_status_manager_instance == null)
@@ -23,6 +24,6 @@ namespace SW_Character_creation
                 Age_status_manager_instance.SQLite_connection = null;
                 Age_status_manager_instance = new Age_status_manager();
             }
-        }
+        }*/
     }
 }

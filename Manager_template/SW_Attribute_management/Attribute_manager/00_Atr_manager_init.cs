@@ -7,7 +7,7 @@ namespace SW_Character_creation
 {
     public partial class Attribute_manager : Abstract_manager
     {
-        private static Attribute_manager Attribute_manager_instance;
+        //private static Attribute_manager Attribute_manager_instance;
 
         private Strength_atr Strength;
         private Agility_atr Agility;

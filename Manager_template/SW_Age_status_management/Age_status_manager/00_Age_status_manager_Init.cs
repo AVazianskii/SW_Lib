@@ -6,7 +6,7 @@ namespace SW_Character_creation
 {
     public partial class Age_status_manager : Abstract_manager
     {
-        private static Age_status_manager Age_status_manager_instance;
+        //private static Age_status_manager Age_status_manager_instance;
         private Unknown_age_status Unknown_age;
         private Child_age Child;
         private Teen_age Teen;

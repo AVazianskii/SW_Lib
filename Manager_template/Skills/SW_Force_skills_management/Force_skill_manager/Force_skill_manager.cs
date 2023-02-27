@@ -7,7 +7,7 @@ namespace SW_Character_creation
 {
     public class Force_skill_manager : Abstract_manager
     {
-        private static Force_skill_manager Race_manager_instance;
+        //private static Force_skill_manager Race_manager_instance;
 
         private List<Force_skill_class> _Force_skills;
         private List<Force_skill_class> _Neutral_force_skills;
@@ -36,6 +36,7 @@ namespace SW_Character_creation
         public List<Force_skill_class> Get_Neutral_force_skills() { return _Neutral_force_skills; }
         public List<Force_skill_class> Get_Jedi_force_skills() { return _Jedi_force_skills; }
         public List<Force_skill_class> Get_Sith_force_skills() { return _Sith_force_skills; }
+        /*
         public static Force_skill_manager GetInstance()
         {
             if (Race_manager_instance == null)
@@ -51,7 +52,7 @@ namespace SW_Character_creation
                 Race_manager_instance.SQLite_connection = null;
                 Race_manager_instance = new Force_skill_manager();
             }
-        }
+        }*/
         public override void Run_download_and_upload_process()
         {
             using (SQLite_connection = new SQLiteConnection(SQLite_connection_string))
@@ -136,7 +137,7 @@ namespace SW_Character_creation
 
 
 
-        private Force_skill_manager()
+        public Force_skill_manager()
         {
             _Force_skills = new List<Force_skill_class>();
 

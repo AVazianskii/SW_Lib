@@ -88,6 +88,11 @@ namespace Races_libs
             get { return bonus_feature; }
             set { bonus_feature = value; }
         }
+        public bool Is_chosen
+        {
+            get { return is_choosen; }
+            set { is_choosen = value; }
+        }
         #endregion
 
         #region // конструктор класса
@@ -136,12 +141,6 @@ namespace Races_libs
         public void Set_img_path(string insert_text) { img_path = insert_text; }
         // Устанавливаем метод для вывода пути картинки каждой расы по запросу
         public string Get_img_path() { return img_path; }
-        // Устанавливаем флаг выбранной расы персонажа
-        //public void Set_choosen() { is_choosen = true; Set_race_bonus(); }
-        // Снимаем флаг выбранной расы персонажа
-        //public void Set_unchoosen() { is_choosen = false; Reset_race_bonus(); }
-        // Предоставляем состояние флага выбранной расы по запросу
-        public bool Get_is_choosen() { return is_choosen; }
         // Устанавливаем имя расы
         public void Set_race_name (string insert_text) { race_name = insert_text; Race_name = insert_text; }
         // Предоставляем значение выбранной расы по запросу

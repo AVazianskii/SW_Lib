@@ -7,7 +7,7 @@ namespace SW_Character_creation
 {
     public class Combat_ability_manager : Abstract_manager
     {
-        private static Combat_ability_manager Combat_ability_manager_instance;
+        //private static Combat_ability_manager Combat_ability_manager_instance;
 
         private string SQLite_connection_string;
         private SQLiteConnection SQLite_connection;
@@ -39,6 +39,7 @@ namespace SW_Character_creation
 
 
 
+        /*
         public static Combat_ability_manager GetInstance()
         {
             if (Combat_ability_manager_instance == null)
@@ -54,7 +55,7 @@ namespace SW_Character_creation
                 Combat_ability_manager_instance.SQLite_connection = null;
                 Combat_ability_manager_instance = new Combat_ability_manager();
             }
-        }
+        }*/
 
 
 
@@ -303,7 +304,7 @@ namespace SW_Character_creation
 
 
 
-        private Combat_ability_manager()
+        public Combat_ability_manager()
         {
             Combat_abilities_general_coloumn_name           = new List<string>();
             Combat_abilities_costs_coloumn_name             = new List<string>();

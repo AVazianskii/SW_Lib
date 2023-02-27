@@ -7,7 +7,7 @@ namespace SW_Character_creation
 {
     public class Feature_manager : Abstract_manager
     {
-        private static Feature_manager feature_instance;
+        //private static Feature_manager feature_instance;
 
         private List<All_feature_template> _Features;
         private List<All_feature_template> _Positive_feature;
@@ -42,6 +42,7 @@ namespace SW_Character_creation
         public List<All_feature_template> Get_features() { return _Features; }
         public List<All_feature_template> Get_positive_features() { return _Positive_feature; }
         public List<All_feature_template> Get_negative_features() { return _Negative_feature; }
+        /*
         public static Feature_manager GetInstance()
         {
             if (feature_instance == null)
@@ -57,7 +58,7 @@ namespace SW_Character_creation
                 feature_instance.SQLite_connection = null;
                 feature_instance = new Feature_manager();
             }
-        }
+        }*/
         public override void Run_download_and_upload_process()
         {
             using (SQLite_connection = new SQLiteConnection(SQLite_connection_string))
@@ -236,7 +237,7 @@ namespace SW_Character_creation
 
 
 
-        private Feature_manager()
+        public Feature_manager()
         {
             _Features           = new List<All_feature_template>();
             _Positive_feature   = new List<All_feature_template>();

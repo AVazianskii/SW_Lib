@@ -8,7 +8,7 @@ namespace SW_Character_creation
 {
     public class Race__manager : Abstract_manager
     {
-        private static Race__manager Race_manager_instance;
+        //private static Race__manager Race_manager_instance;
 
         public List<Race_class> _Races;
 
@@ -51,6 +51,7 @@ namespace SW_Character_creation
 
 
         public List<Race_class> Get_Race_list() { return _Races; }
+        /*
         public static Race__manager GetInstance()
         {
             if (Race_manager_instance == null)
@@ -67,6 +68,7 @@ namespace SW_Character_creation
                 Race_manager_instance = new Race__manager();
             }
         }
+        */
         public override void Run_download_and_upload_process()
         {
             using (SQLite_connection = new SQLiteConnection(SQLite_connection_string))
@@ -239,7 +241,7 @@ namespace SW_Character_creation
 
 
 
-        private Race__manager()
+        public Race__manager()
         {
             _Races = new List<Race_class>();
 

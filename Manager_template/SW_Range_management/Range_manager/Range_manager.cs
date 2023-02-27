@@ -11,7 +11,7 @@ namespace SW_Character_creation
         private string SQLite_connection_string;
         private SQLiteConnection SQLite_connection;
 
-        private static Range_manager Range_manager_instance;
+        //private static Range_manager Range_manager_instance;
 
         private List<string> Range_general_info_coloumn_name;
         private List<string> Ranges_attributes_limits_coloumn_name;
@@ -33,6 +33,7 @@ namespace SW_Character_creation
         {
             return _Ranges;
         }
+        /*
         public static Range_manager GetInstance()
         {
             if (Range_manager_instance == null)
@@ -48,7 +49,7 @@ namespace SW_Character_creation
                 Range_manager_instance.SQLite_connection = null;
                 Range_manager_instance = new Range_manager();
             }
-        }
+        }*/
         public override void Run_download_and_upload_process()
         {
             using (SQLite_connection = new SQLiteConnection(SQLite_connection_string))
@@ -116,7 +117,7 @@ namespace SW_Character_creation
 
 
 
-        private Range_manager()
+        public Range_manager()
         {
             SQLite_connection_string = $@"Data Source={Directory.GetCurrentDirectory()}\Database\Ranges.db;Version=3;";
             //SQLite_connection = new SQLiteConnection(SQLite_connection_string);

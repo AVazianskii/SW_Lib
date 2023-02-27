@@ -8,7 +8,7 @@ namespace SW_Character_creation
 {
     public partial class Attribute_manager
     {
-        private Attribute_manager()
+        public Attribute_manager()
         {
             SQLite_connection_string = $@"Data Source={Directory.GetCurrentDirectory()}\Database\Attributes.db;Version=3;";
             //SQLite_connection = new SQLiteConnection(SQLite_connection_string);
