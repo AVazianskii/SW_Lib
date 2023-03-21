@@ -7,13 +7,13 @@ namespace SW_Character_creation
     public partial class Age_status_manager : Abstract_manager
     {
         //private static Age_status_manager Age_status_manager_instance;
-        private Unknown_age_status Unknown_age;
-        private Child_age Child;
-        private Teen_age Teen;
-        private Adult_age Adult;
-        private Middle_age Middle;
-        private Old_age Old;
-        private Eldery_age Eldery;
+        public Age_status_class Unknown_age; //private Unknown_age_status
+        public Age_status_class Child;//private Child_age
+        public Age_status_class Teen;//private Teen_age
+        public Age_status_class Adult;//private Adult_age
+        public Age_status_class Middle;//private Middle_age
+        public Age_status_class Old;//private Old_age
+        public Age_status_class Eldery;//private Eldery_age
 
         private List<Age_status_class> Age_statuses;
 

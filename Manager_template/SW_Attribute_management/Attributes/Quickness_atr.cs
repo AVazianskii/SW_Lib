@@ -2,7 +2,7 @@
 
 namespace Attribute_libs
 {
-    internal sealed class Quickness_atr : Atribute_class
+    public sealed class Quickness_atr : Atribute_class
     {
         #region // конструктор класса
         internal Quickness_atr() // определяем конструктор класса, используя конструктор базового класса

@@ -7,12 +7,10 @@ namespace SW_Character_creation
 {
     public class Force_ability_manager : Abstract_manager
     {
-        //private static Force_ability_manager Force_ability_manager_instance;
-
         private string SQLite_connection_string;
         private SQLiteConnection SQLite_connection;
 
-        private List<Force_abilities_template> _Force_abilities;
+        private List<All_abilities_template> _Force_abilities;
 
         private List<string> Force_abilities_general_coloumn_name;
         private List<string> Force_abilities_costs_coloumn_name;
@@ -38,7 +36,7 @@ namespace SW_Character_creation
                                             old_niman,
                                             sokan,
                                             shien;
-        private Force_abilities_template juyo_special_condition;
+        private All_abilities_template juyo_special_condition;
 
         private List<Abilities_sequence_template> _Force_sequences;
 
@@ -102,24 +100,7 @@ namespace SW_Character_creation
 
 
 
-        /*
-        public static Force_ability_manager GetInstance()
-        {
-            if (Force_ability_manager_instance == null)
-            {
-                Force_ability_manager_instance = new Force_ability_manager();
-            }
-            return Force_ability_manager_instance;
-        }
-        public static void OverWriteInstance()
-        {
-            if (Force_ability_manager_instance != null)
-            {
-                Force_ability_manager_instance.SQLite_connection = null;
-                Force_ability_manager_instance = new Force_ability_manager();
-            }
-        }*/
-        public List<Force_abilities_template> Get_abilities() { return _Force_abilities; }
+        public List<All_abilities_template> Get_abilities() { return _Force_abilities; }
         public List<Abilities_sequence_template> Get_sequences() { return _Force_sequences; }
 
 
@@ -155,7 +136,7 @@ namespace SW_Character_creation
             foreach (var count in Force_abilities_general_info[0])
             {
                 // На каждую новую строку создаем новый инстанс
-                _Force_abilities.Add(new Force_abilities_template());
+                _Force_abilities.Add(new All_abilities_template());
 
                 // Определяем порядковый нмоер текущего инстанса
                 index = Force_abilities_general_info[0].IndexOf(count);
@@ -524,11 +505,9 @@ namespace SW_Character_creation
             _Force_sequences.Add(Sokan);
             _Force_sequences.Add(Shien);
             
-            _Force_abilities = new List<Force_abilities_template>();
+            _Force_abilities = new List<All_abilities_template>();
 
             SQLite_connection_string = $@"Data Source={Directory.GetCurrentDirectory()}\Database\Force_abilities.db;Version=3;";
-
-            //SQLite_connection = new SQLiteConnection(SQLite_connection_string);
         }
     }
 }

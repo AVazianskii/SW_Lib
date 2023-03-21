@@ -9,13 +9,13 @@ namespace SW_Character_creation
     {
         public Age_status_manager()
         {
-            Unknown_age = new Unknown_age_status();
-            Child = new Child_age();
-            Teen = new Teen_age(); 
-            Adult = new Adult_age(); 
-            Middle = new Middle_age();
-            Old = new Old_age();
-            Eldery = new Eldery_age();
+            Unknown_age = new Age_status_class(); //Unknown_age_status
+            Child = new Age_status_class();//Child_age
+            Teen = new Age_status_class(); //Teen_age
+            Adult = new Age_status_class(); //Adult_age
+            Middle = new Age_status_class();//Middle_age
+            Old = new Age_status_class();//Old_age
+            Eldery = new Age_status_class();//Eldery_age
             Age_statuses = new List<Age_status_class>();
             Age_statuses.Add(Unknown_age);
             Age_statuses.Add(Child);

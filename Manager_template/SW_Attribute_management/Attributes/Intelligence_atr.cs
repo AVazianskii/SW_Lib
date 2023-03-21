@@ -2,7 +2,7 @@
 
 namespace Attribute_libs
 {
-    internal sealed class Intelligence_atr : Atribute_class
+    public sealed class Intelligence_atr : Atribute_class
     {
         #region // конструктор класса
         internal Intelligence_atr()  // определяем конструктор класса, используя конструктор базового класса

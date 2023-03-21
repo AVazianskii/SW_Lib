@@ -2,7 +2,7 @@
 
 namespace Attribute_libs
 {
-    internal sealed class Charm_atr : Atribute_class
+    public sealed class Charm_atr : Atribute_class
     {
         #region // конструктор класса
         internal Charm_atr() // определяем конструктор класса, используя конструктор базового класса

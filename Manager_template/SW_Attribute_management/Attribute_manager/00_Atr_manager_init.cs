@@ -9,14 +9,14 @@ namespace SW_Character_creation
     {
         //private static Attribute_manager Attribute_manager_instance;
 
-        private Strength_atr Strength;
-        private Agility_atr Agility;
-        private Stamina_atr Stamina;
-        private Perception_atr Perception;
-        private Quickness_atr Quickness;
-        private Intelligence_atr Intelligence;
-        private Charm_atr Charm;
-        private Willpower_atr Willpower;
+        public Atribute_class Strength; //private Strength_atr
+        public Atribute_class Agility; //private Agility_atr
+        public Atribute_class Stamina; //private Stamina_atr
+        public Atribute_class Perception;//private Perception_atr
+        public Atribute_class Quickness;//private Quickness_atr
+        public Atribute_class Intelligence;//private Intelligence_atr
+        public Atribute_class Charm;//private Charm_atr
+        public Atribute_class Willpower;//private Willpower_atr
 
         private List<Atribute_class> _Attributes;
 

@@ -14,14 +14,14 @@ namespace SW_Character_creation
             //SQLite_connection = new SQLiteConnection(SQLite_connection_string);
 
             #region инициализация переменных обхектов атрибутов и коллекции этих атрибутов
-            Strength = new Strength_atr();
-            Agility = new Agility_atr();
-            Stamina = new Stamina_atr();
-            Perception = new Perception_atr();
-            Quickness = new Quickness_atr();
-            Intelligence = new Intelligence_atr();
-            Charm = new Charm_atr();
-            Willpower = new Willpower_atr();
+            Strength = new Atribute_class(); //Strength_atr
+            Agility = new Atribute_class(); //Agility_atr
+            Stamina = new Atribute_class(); //Stamina_atr
+            Perception = new Atribute_class(); //Perception_atr
+            Quickness = new Atribute_class(); //Quickness_atr
+            Intelligence = new Atribute_class(); //Intelligence_atr
+            Charm = new Atribute_class(); //Charm_atr
+            Willpower = new Atribute_class(); //Willpower_atr
 
             _Attributes = new List<Atribute_class>();
             _Attributes.Add(Strength);

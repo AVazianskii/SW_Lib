@@ -7,12 +7,10 @@ namespace SW_Character_creation
 {
     public class Combat_ability_manager : Abstract_manager
     {
-        //private static Combat_ability_manager Combat_ability_manager_instance;
-
         private string SQLite_connection_string;
         private SQLiteConnection SQLite_connection;
 
-        private List<Combat_abilities_template> _Combat_abilities;
+        private List<All_abilities_template> _Combat_abilities; // Combat_abilities_template
 
         private Abilities_sequence_template echany,
                                             mandolor_style,
@@ -36,26 +34,6 @@ namespace SW_Character_creation
         private List<string> Combat_description;
 
         private List<Abilities_sequence_template> _Combat_sequences;
-
-
-
-        /*
-        public static Combat_ability_manager GetInstance()
-        {
-            if (Combat_ability_manager_instance == null)
-            {
-                Combat_ability_manager_instance = new Combat_ability_manager();
-            }
-            return Combat_ability_manager_instance;
-        }
-        public static void OverWriteInstance()
-        {
-            if (Combat_ability_manager_instance != null)
-            {
-                Combat_ability_manager_instance.SQLite_connection = null;
-                Combat_ability_manager_instance = new Combat_ability_manager();
-            }
-        }*/
 
 
 
@@ -87,7 +65,7 @@ namespace SW_Character_creation
 
 
 
-        public List<Combat_abilities_template> Get_abilities() { return _Combat_abilities; }
+        public List<All_abilities_template> Get_abilities() { return _Combat_abilities; }
         public List<Abilities_sequence_template> Get_sequences() { return _Combat_sequences; }
 
 
@@ -129,7 +107,7 @@ namespace SW_Character_creation
             foreach (var count in Combat_abilities_general_info[0])
             {
                 // На каждую новую строку создаем новый инстанс
-                _Combat_abilities.Add(new Combat_abilities_template());
+                _Combat_abilities.Add(new All_abilities_template());
 
                 // Определяем порядковый нмоер текущего инстанса
                 index = Combat_abilities_general_info[0].IndexOf(count);
@@ -340,11 +318,9 @@ namespace SW_Character_creation
             _Combat_sequences.Add(Matukai);
             _Combat_sequences.Add(Terras_kasi);
             
-            _Combat_abilities = new List<Combat_abilities_template>();
+            _Combat_abilities = new List<All_abilities_template>();
 
             SQLite_connection_string = $@"Data Source={Directory.GetCurrentDirectory()}\Database\Combat_abilities.db;Version=3;";
-
-            //SQLite_connection = new SQLiteConnection(SQLite_connection_string);
         }
     }
 }

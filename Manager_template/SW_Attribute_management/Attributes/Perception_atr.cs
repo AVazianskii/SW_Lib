@@ -2,7 +2,7 @@
 
 namespace Attribute_libs
 {
-    internal sealed class Perception_atr : Atribute_class
+    public sealed class Perception_atr : Atribute_class
     {
         #region // конструктор класса
         internal Perception_atr() // определяем конструктор класса, используя конструктор базового класса
