@@ -71,13 +71,6 @@
     <Compile Include="Manager_template\IManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Skills\All_skill_template.cs" />
-    <Compile Include="SW_Age_status_management\Age_statuses\Adult_age.cs" />
-    <Compile Include="SW_Age_status_management\Age_statuses\Child_age.cs" />
-    <Compile Include="SW_Age_status_management\Age_statuses\Eldery_age.cs" />
-    <Compile Include="SW_Age_status_management\Age_statuses\Middle_age.cs" />
-    <Compile Include="SW_Age_status_management\Age_statuses\Old_age.cs" />
-    <Compile Include="SW_Age_status_management\Age_statuses\Teen_age.cs" />
-    <Compile Include="SW_Age_status_management\Age_statuses\Unknown_age_status.cs" />
     <Compile Include="SW_Age_status_management\Age_status_manager\00_Age_status_manager_Init.cs" />
     <Compile Include="SW_Age_status_management\Age_status_manager\01_Age_status_manager_Method_upload_general_info.cs" />
     <Compile Include="SW_Age_status_management\Age_status_manager\02_Age_status_manager_Method_attributes_bonus.cs" />
@@ -87,14 +80,6 @@
     <Compile Include="SW_Age_status_management\Age_status_manager\07_Age_status_manager_Return_age_statuses.cs" />
     <Compile Include="SW_Age_status_management\Age_status_manager\08_Age_status_manager_constructor.cs" />
     <Compile Include="SW_Age_status_management\Age_status_template\Age_status_class.cs" />
-    <Compile Include="SW_Attribute_management\Attributes\Agility_atr.cs" />
-    <Compile Include="SW_Attribute_management\Attributes\Charm_atr.cs" />
-    <Compile Include="SW_Attribute_management\Attributes\Intelligence_atr.cs" />
-    <Compile Include="SW_Attribute_management\Attributes\Perception_atr.cs" />
-    <Compile Include="SW_Attribute_management\Attributes\Quickness_atr.cs" />
-    <Compile Include="SW_Attribute_management\Attributes\Stamina_atr.cs" />
-    <Compile Include="SW_Attribute_management\Attributes\Strength_atr.cs" />
-    <Compile Include="SW_Attribute_management\Attributes\Willpower_atr.cs" />
     <Compile Include="SW_Attribute_management\Attribute_manager\00_Atr_manager_init.cs" />
     <Compile Include="SW_Attribute_management\Attribute_manager\01_Atr_manager_Method_Upload_general_attribute_info.cs" />
     <Compile Include="SW_Attribute_management\Attribute_manager\02_Atr_manager_Method_Upload_attribute_costs_info.cs" />
@@ -108,78 +93,10 @@
     <Compile Include="Skills\SW_Force_skills_management\Force_skill_template\Force_skill_class.cs" />
     <Compile Include="SW_Feature_management\Feature_manager\Feature_manager.cs" />
     <Compile Include="SW_Feature_management\Feature_template\All_feature_template.cs" />
-    <Compile Include="SW_Race_management\Races\Botan_race.cs" />
-    <Compile Include="SW_Race_management\Races\Cereanin_race.cs" />
-    <Compile Include="SW_Race_management\Races\Duro_race.cs" />
-    <Compile Include="SW_Race_management\Races\Empty_race.cs" />
-    <Compile Include="SW_Race_management\Races\Evok_race.cs" />
-    <Compile Include="SW_Race_management\Races\Gamor_race.cs" />
-    <Compile Include="SW_Race_management\Races\Gungan_race.cs" />
-    <Compile Include="SW_Race_management\Races\Human_race.cs" />
-    <Compile Include="SW_Race_management\Races\Kel_Dor_race.cs" />
-    <Compile Include="SW_Race_management\Races\Mon_Kalamari_race.cs" />
-    <Compile Include="SW_Race_management\Races\Rodian_race.cs" />
-    <Compile Include="SW_Race_management\Races\Sullu_race.cs" />
-    <Compile Include="SW_Race_management\Races\Trando_race.cs" />
-    <Compile Include="SW_Race_management\Races\Tvi_lek_race.cs" />
-    <Compile Include="SW_Race_management\Races\Wooki_race.cs" />
-    <Compile Include="SW_Race_management\Races\Zabrak_race.cs" />
     <Compile Include="SW_Race_management\Race_manager\Race__manager.cs" />
     <Compile Include="SW_Race_management\Race_template\Race_class.cs" />
-    <Compile Include="SW_Range_management\Ranges\Epic_range.cs" />
-    <Compile Include="SW_Range_management\Ranges\Hero_range.cs" />
-    <Compile Include="SW_Range_management\Ranges\Immortal_range.cs" />
-    <Compile Include="SW_Range_management\Ranges\Private_range.cs" />
-    <Compile Include="SW_Range_management\Ranges\Veteran_range.cs" />
     <Compile Include="SW_Range_management\Range_manager\Range_manager.cs" />
     <Compile Include="SW_Range_management\Range_template\Range_Class.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Acrobatic_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Astronavigation_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Bombing_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Change_looking.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Climbing_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Craft_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Dancing_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Deception_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Diplomacy_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Driving_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Drug_production_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Engineering_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Evasion.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Fortitude_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Hand_combat.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Heavy_athletics.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Heavy_gun_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Insight_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Interrogation_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Knowledge_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Language_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Leadership_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Light_gun_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Light_saber_crafting.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Light_saber_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Medicine_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Music_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Observation_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Old_weapon_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Pilot_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Programming_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Repair_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Resistance_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Riding_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Saber_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Science_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Security_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Seduction_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Singing_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Sniper_gun_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Starbattle_tactics_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Stealth_class.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Surviing_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Swimming_Skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Throw_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Trading_skill.cs" />
-    <Compile Include="Skills\SW_Skills_management\Skills\Training_pet_skill.cs" />
     <Compile Include="Skills\SW_Skills_management\Skill_manager\00_Skill_manager_init.cs" />
     <Compile Include="Skills\SW_Skills_management\Skill_manager\01_Skill_manager_Method_upload_skill_general_info.cs" />
     <Compile Include="Skills\SW_Skills_management\Skill_manager\02_Skill_manager_Method_upload_skill_limits_due_age.cs" />
@@ -192,27 +109,10 @@
     <Compile Include="Skills\SW_Skills_management\Skill_manager\13_Skill_manager_constructor.cs" />
     <Compile Include="Skills\SW_Skills_management\Skill_template\Skill_Class.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="SW_Feature_management\Features\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="SW_Age_status_management\Database\Age_statuses.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="SW_Attribute_management\Database\Attributes.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="SW_Race_management\Database\Races.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="SW_Range_management\Database\Ranges.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Skills\SW_Skills_management\Database\Skills.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
