@@ -82,8 +82,8 @@ namespace SW_Character_creation
                 _Ranges[index].Combat_skill_limit    = Ranges_skills_limits[0][index];
                 _Ranges[index].Surviving_skill_limit = Ranges_skills_limits[1][index];
                 _Ranges[index].Charming_skill_limit  = Ranges_skills_limits[2][index];
-                _Ranges[index].Tech_skill_limit      = Ranges_skills_limits[0][index];
-                _Ranges[index].Specific_skill_limit  = Ranges_skills_limits[0][index];
+                _Ranges[index].Tech_skill_limit      = Ranges_skills_limits[3][index];
+                _Ranges[index].Specific_skill_limit  = Ranges_skills_limits[4][index];
             }
 
             // Обнуляем коллекции, в которые считываем из базы
